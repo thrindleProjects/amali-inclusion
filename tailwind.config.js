@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+	content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
 	theme: {
+		fontFamily: {
+			poppins: ["\"Poppins\", sans-serif"],
+		},
 		fontSize: {
 			xxs: "0.65rem",
 			xs: "0.75rem",
@@ -25,6 +26,7 @@ module.exports = {
 				"amali-green": "#42B0A8",
 				"amali-steel-blue": "#1B2850",
 				"amali-blue": "#00CFE8",
+				"amali-grey": "F0F2F4",
 			},
 			screens: {
 				xxl: "1280px",
@@ -35,5 +37,3 @@ module.exports = {
 	},
 	plugins: [],
 };
-
-
