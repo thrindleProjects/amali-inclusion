@@ -25,7 +25,7 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 					{isOpen && !largeScreen && <MobileSideNav setIsOpen={setIsOpen} />}
 				</AnimatePresence>
 
-				<main className="relative  h-full   w-screen">
+				<main className="relative  h-full flex-1  w-full">
 					<NavBar toggleSidebar={toggleSidebar} isOpen={isOpen} />
 
 					<div className="w-full flex-1 p-5 pt-5 lg:p-10">{children}</div>

@@ -5,7 +5,7 @@ const dashboard = () => {
 	return (
 		<AuthLayout>
 			<div className="flex">
-				rrrrrhhhhhhhhhh
+				rrrrrhhhhhhhhhhddd
 			</div>
 		</AuthLayout>
 	);
