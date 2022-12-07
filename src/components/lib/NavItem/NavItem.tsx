@@ -19,7 +19,7 @@ const NavItem = () => {
 							<div className="flex items-center gap-3">
 								{/*  eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
 								<Icon icon={item.icon!} className="font-bold" />
-								<p className="text-lg ">{item.name}</p>
+								<p className="text-md ">{item.name}</p>
 							</div>
 
 							{item.subLinks.length !== 0 && (

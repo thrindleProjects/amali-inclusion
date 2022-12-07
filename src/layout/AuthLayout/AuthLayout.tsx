@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import type { FC, PropsWithChildren } from "react";
 import SideNav from "@/components/shared/SideNav";
 import NavBar from "@/components/shared/NavBar";
@@ -25,7 +25,7 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 					{isOpen && !largeScreen && <MobileSideNav setIsOpen={setIsOpen} />}
 				</AnimatePresence>
 
-				<main className="relative  h-full   w-screen">
+				<main className="relative  h-full flex-1  w-full">
 					<NavBar toggleSidebar={toggleSidebar} isOpen={isOpen} />
 
 					<div className="w-full flex-1 p-5 pt-5 lg:p-10">{children}</div>
