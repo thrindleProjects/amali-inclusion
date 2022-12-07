@@ -127,3 +127,22 @@ export const adminNavLinks = [
 		],
 	},
 ];
+
+
+export const profileDropdown = [
+	{
+		id: 1,
+		icon: "material-symbols:person-outline-rounded",
+		name: "My Profile",
+	},
+	{
+		id: 2,
+		icon: "material-symbols:settings",
+		name: "Settings",
+	},
+	{
+		id: 3,
+		icon: "ri:logout-circle-line",
+		name: "Logout",
+	},
+];

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import type { FC, PropsWithChildren } from "react";
 import SideNav from "@/components/shared/SideNav";
 import NavBar from "@/components/shared/NavBar";
