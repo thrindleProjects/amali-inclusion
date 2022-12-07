@@ -18,9 +18,9 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	};
 
 	return (
-		<div className="shadow-xl bg-white w-full p-4 fixed  h-[70px]">
+		<div className="shadow-xl bg-white right-0 p-4 fixed w-full lg:w-[77%]  h-[70px]">
 			{largeScreen && (
-				<div className="flex gap-4 items-center ml-[68%]  w-full">
+				<div className="flex gap-4 items-center ml-[90%]  w-full">
 					<Icon icon="material-symbols:search" className="text-2xl" />
 
 					<div className=" relative cursor-pointer" onClick={toggleAccountDropdown} >
