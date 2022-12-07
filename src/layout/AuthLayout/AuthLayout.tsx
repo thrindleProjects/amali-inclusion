@@ -6,32 +6,30 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import MobileSideNav from "@/components/shared/SideNav/mobileNav/MobileSideNav";
 import { AnimatePresence } from "framer-motion";
 
-
 const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
 
-
 	const toggleSidebar = () => {
-		setIsOpen(prevState => !prevState);
+		setIsOpen((prevState) => !prevState);
 	};
-
 
 	return (
 		<div>
-			<div className="relative flex ">
-				{largeScreen && <SideNav />}
-				<AnimatePresence >
-					{isOpen && !largeScreen && <MobileSideNav setIsOpen={setIsOpen} />}
-				</AnimatePresence>
+			<div className="relative flex justify-between ">
+				{largeScreen && (
+					<div>
+						<SideNav />
+					</div>
+				)}
+				<AnimatePresence>{isOpen && !largeScreen && <MobileSideNav setIsOpen={setIsOpen} />}</AnimatePresence>
 
-				<main className="relative  h-full flex-1  w-full">
+				<main className="  h-full flex-1  main-wrapper">
 					<NavBar toggleSidebar={toggleSidebar} isOpen={isOpen} />
 
-					<div className="w-full flex-1 p-5 pt-5 lg:p-10">{children}</div>
+					<div className="w-full flex-1    wrapper">{children}</div>
 				</main>
 			</div>
-
 		</div>
 	);
 };

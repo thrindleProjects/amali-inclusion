@@ -27,7 +27,7 @@ const MobileSideNav: React.FC<SideNavProps> = ({ setIsOpen }) => {
 					ease: [0.6, 0.05, -0.01, 0.9],
 				}}
 
-				className="shadow-xl bg-white  w-[70%] p-3 h-screen">
+				className="shadow-xl bg-white  w-[70%] p-3  h-screen overflow-y-scroll pb-32">
 				<NavItem />
 			</motion.div>
 		</div>

@@ -26,7 +26,8 @@ module.exports = {
 				"amali-green": "#42B0A8",
 				"amali-steel-blue": "#1B2850",
 				"amali-blue": "#00CFE8",
-				"amali-grey": "F0F2F4",
+				"amali-grey": "#637381",
+				"amali-bg": "#FAFBFE",
 			},
 			screens: {
 				xxl: "1280px",
