@@ -5,6 +5,8 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { NavBarProps } from "./Navbar.props";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import AccountDropdown from "@/components/lib/accountDropdown/AccountDropdown";
+import AmaliLogo from "@/public/assets/amali-logo.png";
+
 
 const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
@@ -49,8 +51,9 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 						<Image
 							width={150}
 							height={150}
-							src="/assets/amali-logo.png"
+							src={AmaliLogo}
 							alt="Amali Logo"
+							blurDataURL=""
 						/>
 					</div>
 
