@@ -1,5 +1,5 @@
 import React from "react";
-import AmaliLogo from "@/public/amali-logo.png";
+import AmaliLogo from "@/public/assets/amali-logo.png";
 import ImageComponent from "@/components/shared/ImageComponent";
 import LoginForm from "@/components/lib/loginForm";
 import Link from "next/link";

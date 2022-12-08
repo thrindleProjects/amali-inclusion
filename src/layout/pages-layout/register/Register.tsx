@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ImageComponent from "@/components/shared/ImageComponent";
-import AmaliLogo from "@/public/amali-logo.png";
+import AmaliLogo from "@/public/assets/amali-logo.png";
 import RegisterForm from "@/components/lib/registerForm";
 
 const Register: React.FC = () => {
