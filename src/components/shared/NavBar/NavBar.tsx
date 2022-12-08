@@ -5,6 +5,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { NavBarProps } from "./Navbar.props";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import AccountDropdown from "@/components/lib/accountDropdown/AccountDropdown";
+import ImageComponent from "../ImageComponent";
 
 const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
@@ -36,13 +37,9 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 						className="text-amali-green text-2xl "
 						onClick={toggleSidebar}
 					/>
-					<figure className="relative  ">
-						<Image
-							width={150}
-							height={100}
-							src="/assets/amali-logo.png"
-							alt="amali Logo"
-						/>
+					<figure className="flex justify-center items-center">
+						<ImageComponent src="/assets/amali-logo.png" alt="Amali Logo" />
+
 					</figure>
 					<div onClick={toggleAccountDropdown}>
 						<Icon icon="mdi:dots-vertical" className="text-amali-green text-2xl" />
