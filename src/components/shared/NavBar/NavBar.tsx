@@ -5,7 +5,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { NavBarProps } from "./Navbar.props";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import AccountDropdown from "@/components/lib/accountDropdown/AccountDropdown";
-import AmaliLogo from "@/public/assets/amali-logo.png";
+import AmaliLogo from "@/public/assets/logo.webp";
 
 
 const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
