@@ -45,7 +45,7 @@ export const masterAgentLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "",
+		link: "/master-agent/dashboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
@@ -58,17 +58,17 @@ export const masterAgentLinks = [
 			{
 				id: 1,
 				subType: MASTER_AGENT,
-				link: "/master-agents",
+				link: "/master-agent/master-agents",
 			},
 			{
 				id: 2,
 				subType: ALL_AGENTS,
-				link: "/all-agents",
+				link: "/master-agent/all-agent/agent",
 			},
 			{
 				id: 3,
 				subType: CREATE_AGENT,
-				link: "/create-agents",
+				link: "/master-agent/create-agent",
 			},
 		],
 	},

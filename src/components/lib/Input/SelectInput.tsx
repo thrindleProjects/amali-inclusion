@@ -7,7 +7,7 @@ const SelectInput: React.FC<SelectInputProps> = ({ label, data }) => {
 			<p className='text-sm mb-2'>{label}</p>
 
 			<div className=" border border-grey-300 h-auto rounded-md   px-3 py-2 ">
-				<select className='w-full h-full outline-none' >
+				<select className='w-full h-full outline-none bg-transparent' >
 					{data.map((item, index) => (
 						<option value={item.value} key={index}>{ item.name}</option>
 					))}

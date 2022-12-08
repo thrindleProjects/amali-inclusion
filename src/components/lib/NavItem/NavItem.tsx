@@ -10,12 +10,11 @@ const NavItem = () => {
 	const router = useRouter();
 	const [expanded, setExpanded] = useState<number | boolean>(1);
 
-	console.log(router);
 	return (
 		<div className="px-4  md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
 			{masterAgentLinks.map((item, index) => (
-				<Link href={`${router.pathname}${item.link}`} key={index}>
-					<div key={index} className=" px-3 mt-4 overflow-hidden text-amali-grey">
+				<Link href={`${item.link}`} key={index}>
+					<div key={index} className=" px-3 mt-4 overflow-hidden text-amali-grey" onClick={() =>router.push(`${item.link}`)}>
 						<div onClick={() => setExpanded(item.id === expanded ? false : item.id)} className="flex justify-between items-center   mx-auto transition-all  duration-200  hover:text-white hover:bg-amali-steel-blue p-2 rounded-md  ease-in-out">
 							<div className="flex items-center gap-3 ">
 								{/*  eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}

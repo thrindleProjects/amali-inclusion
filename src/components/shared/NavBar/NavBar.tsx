@@ -18,19 +18,19 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	};
 
 	return (
-		<div className="shadow-md bg-white right-0 p-4 fixed w-full lg:w-[77%] z-[1000]  h-[70px]">
+		<div className="shadow-md bg-white right-0  fixed w-full lg:w-[77%] z-[1000]  h-[70px]">
 			{largeScreen && (
-				<div className="flex gap-4 items-center ml-[90%]  w-full">
+				<div className="flex gap-4 items-center ml-[90%] p-4  w-full">
 					<Icon icon="material-symbols:search" className="text-2xl" />
 
 					<div className=" relative cursor-pointer" onClick={toggleAccountDropdown} >
-						<Image alt="owner" src="/assets/profile.png" width={50} height={50} className="rounded-full" />
+						<Image alt="owner" src="/assets/profile.png" width={40} height={40} className="rounded-full" />
 					</div>
 				</div>
 			)}
 
 			{!largeScreen && (
-				<div className="flex justify-between items-center w-auto px-2">
+				<div className="flex justify-between items-center w-auto py-4 px-7">
 					<Icon
 						icon={isOpen ? "ic:outline-close" : "ri:menu-2-fill"}
 						className="text-amali-green text-2xl "
