@@ -18,7 +18,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	};
 
 	return (
-		<div className="shadow-md bg-white right-0  fixed w-full lg:w-[77%] z-[1000]  h-[70px]">
+		<div className="shadow-sm bg-white right-0  fixed w-full lg:w-[77%] z-[1000]  h-[70px]">
 			{largeScreen && (
 				<div className="flex gap-4 items-center ml-[90%] p-4  w-full">
 					<Icon icon="material-symbols:search" className="text-2xl" />
@@ -30,7 +30,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 			)}
 
 			{!largeScreen && (
-				<div className="flex justify-between items-center w-auto py-4 px-7">
+				<div className="flex justify-between items-center w-full fixed py-4 px-7">
 					<Icon
 						icon={isOpen ? "ic:outline-close" : "ri:menu-2-fill"}
 						className="text-amali-green text-2xl "
