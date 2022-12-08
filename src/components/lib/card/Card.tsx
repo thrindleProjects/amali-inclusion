@@ -6,7 +6,7 @@ const Card: React.FC<CardProps> = ({  item }) => {
 	return (
 		<div
 			style={{ backgroundColor: `${item.color}` }}
-			className="my-2  w-full  lg:w-[30%] md:w-[48%] px-4 py-6 flex justify-between items-center rounded-lg shadow-md text-white"
+			className="my-6  w-full  lg:w-[30%] md:w-[48%] px-4 py-6 flex justify-between items-center rounded-lg shadow-md text-white"
 		>
 			<div>
 				<p className="font-semi-bold text-xl md:text-2xl mb-4">
