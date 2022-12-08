@@ -9,7 +9,6 @@ import { allSubAgentData } from "@/data/data";
 import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 
 const AllAgents = () => {
