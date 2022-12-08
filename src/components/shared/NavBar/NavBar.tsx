@@ -39,7 +39,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 					<figure className="relative  ">
 						<Image
 							width={150}
-							height={150}
+							height={100}
 							src="/assets/amali-logo.png"
 							alt="amali Logo"
 						/>
