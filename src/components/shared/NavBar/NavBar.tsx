@@ -39,19 +39,25 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 			)}
 
 			{!largeScreen && (
-				<div className="flex justify-between items-center fixed w-full  py-4 px-7">
+				<div className="flex justify-between items-center w-full  py-4 px-7">
 					<Icon
 						icon={isOpen ? "ic:outline-close" : "ri:menu-2-fill"}
 						className="text-amali-green text-2xl "
 						onClick={toggleSidebar}
 					/>
-					<figure className=" relative ">
-						<Image src="/assets/amali-logo.png" alt="Amali Logo"  width={150} height={200} />
-					</figure>
+					<div className="w-[50%]">
+						<Image
+							width={150}
+							height={150}
+							src="/assets/amali-logo.png"
+							alt="Amali Logo"
+						/>
+					</div>
+
 					<div onClick={toggleAccountDropdown}>
 						<Icon
 							icon="mdi:dots-vertical"
-							className="text-amali-green text-2xl"
+							className="text-amali-green text-2xl z-[99999999999999999]"
 						/>
 					</div>
 				</div>
