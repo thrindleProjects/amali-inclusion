@@ -16,7 +16,7 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 
 	return (
 		<div>
-			<div className="relative flex justify-between ">
+			<div className="relative flex justify-between no-scrollbar ">
 				{largeScreen && (
 					<div>
 						<SideNav />
