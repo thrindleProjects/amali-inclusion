@@ -5,7 +5,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { NavBarProps } from "./Navbar.props";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import AccountDropdown from "@/components/lib/accountDropdown/AccountDropdown";
-import AmaliLogo from "@/public/assets/logo.webp";
+import AmaliLogo from "@/public/assets/amali-logo.png";
 
 
 const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
@@ -36,6 +36,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 							height={40}
 							className="rounded-full"
 						/>
+						
 					</div>
 				</div>
 			)}
@@ -54,9 +55,10 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 							src={AmaliLogo}
 							alt="Amali Logo"
 							blurDataURL=""
+							className="object-contain"
+
 						/>
 					</div>
-
 					<div onClick={toggleAccountDropdown}>
 						<Icon
 							icon="mdi:dots-vertical"
