@@ -55,7 +55,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 							src={AmaliLogo}
 							alt="Amali Logo"
 							blurDataURL=""
-							className="object-contain"
+							className="object-contain border-none"
 
 						/>
 					</div>
