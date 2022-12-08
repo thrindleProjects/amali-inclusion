@@ -7,3 +7,12 @@
 body {
     @apply font-poppins;
 }
+
+.wrapper{
+    @apply md:py-28 py-24   lg:pl-[18rem] xl:pl-[25rem] px-8 bg-amali-bg 
+}
+.main-wrapper{
+    @apply  w-[100%] lg:w-[77%]
+}
+
+

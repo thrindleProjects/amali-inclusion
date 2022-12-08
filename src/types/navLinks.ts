@@ -1,148 +1,441 @@
 import {
-	Agents,
-	Dashboard,
-	Master_Agent,
-	All_Agents,
-	Create_Agent,
-	Float_Manager,
-	Due_Loan,
-	Loan_Settings,
-	Active_Float,
-	General_Settings,
+	AGENTS,
+	DASHBOARD,
+	MASTER_AGENT,
+	ALL_AGENTS,
+	CREATE_AGENT,
+	FLOAT_MANAGER,
+	DUE_LOAN,
+	LOAN_SETTINGS,
+	ACTIVE_FLOAT,
+	GENERAL_SETTINGS,
 	KYC_MANAGER,
-	POS_MANGER,
-	Payment_Settings,
-	Profile_Settings,
-	Require_Float,
-	Settings,
-	Settled_Loan,
-	User,
+	POS_MANAGER,
+	PAYMENT_SETTINGS,
+	PROFILE_SETTINGS,
+	REQUIRE_FLOAT,
+	SETTINGS,
+	SETTLED_LOAN,
+	USER,
+	MY_PROFILE,
+	LOGOUT,
+	PAY_BILLS,
+	AIRTIME,
+	CABLE,
+	INTERNET,
+	ELECTRICITY,
+	TERMINALS,
+	ADD_SUB_AGENT,
+	PERFORMANCE,
+	TRANSACTIONS,
+	WALLET_MANAGER,
+	WITHDRAWAL,
+	WALLET_HISTORY,
+	PROFILE,
+	INSURANCE,
+	OPEN_ACCOUNT,
+	SAVINGS,
+	BUY_NOW_PAY_LATER,
+	DEBIT_CARD,
+	MY_LOAN,
+	WALLET_TRANSFER,
 } from "./constants";
 
-export const adminNavLinks = [
+export const masterAgentLinks = [
 	{
 		id: 1,
-		name: Dashboard,
+		name: DASHBOARD,
 		link: "",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
 	{
 		id: 2,
-		name: Agents,
+		name: AGENTS,
 		link: "",
 		icon: "ic:twotone-people",
 		subLinks: [
 			{
 				id: 1,
-				subType: Master_Agent,
+				subType: MASTER_AGENT,
 				link: "/master-agents",
 			},
 			{
 				id: 2,
-				subType: All_Agents,
+				subType: ALL_AGENTS,
 				link: "/all-agents",
 			},
 			{
 				id: 3,
-				subType: Create_Agent,
+				subType: CREATE_AGENT,
 				link: "/create-agents",
 			},
 		],
 	},
 	{
 		id: 3,
-		name: Float_Manager,
+		name: FLOAT_MANAGER,
 		icon: "carbon:percentage",
 		link: "",
 		subLinks: [
 			{
 				id: 1,
-				subType: Require_Float,
+				subType: REQUIRE_FLOAT,
 				link: "/require-float",
 			},
 			{
 				id: 2,
-				subType: Active_Float,
+				subType: ACTIVE_FLOAT,
 				link: "/active-float",
 			},
 			{
 				id: 3,
-				subType: Due_Loan,
+				subType: DUE_LOAN,
 				link: "/due-loan",
 			},
 			{
 				id: 4,
-				subType: Settled_Loan,
+				subType: SETTLED_LOAN,
 				link: "/settled-loan",
 			},
 			{
 				id: 5,
-				subType: Loan_Settings,
+				subType: LOAN_SETTINGS,
 				link: "/loan-settings",
 			},
 		],
 	},
 	{
 		id: 4,
-		name: POS_MANGER,
+		name: PAY_BILLS,
+		icon: "healthicons:bills-outline",
+
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: AIRTIME,
+				link: "/buy-airtime",
+			},
+			{
+				id: 2,
+				subType: INTERNET,
+				link: "/buy-internet",
+			},
+			{
+				id: 3,
+				subType: CABLE,
+				link: "/cable",
+			},
+			{
+				id: 5,
+				subType: ELECTRICITY,
+				link: "/electricity",
+			},
+		],
+	},
+	{
+		id: 5,
+		name: POS_MANAGER,
 		icon: "mdi:printer-outline",
 
 		link: "/pos-manager",
 		subLinks: [],
 	},
 	{
-		id: 5,
+		id: 6,
 		name: KYC_MANAGER,
 		link: "/kyc-manager",
 		icon: "material-symbols:shield-outline",
 		subLinks: [],
 	},
 	{
-		id: 6,
-		name: Settings,
+		id: 7,
+		name: SETTINGS,
 		link: "",
 		icon: "material-symbols:settings",
 		subLinks: [
 			{
 				id: 1,
-				subType: User,
+				subType: USER,
 				link: "/users",
 			},
 			{
 				id: 2,
-				subType: General_Settings,
+				subType: GENERAL_SETTINGS,
 				link: "/general-settings",
 			},
 			{
 				id: 3,
-				subType: Profile_Settings,
+				subType: PROFILE_SETTINGS,
 				link: "/profile-settings",
 			},
 			{
 				id: 4,
-				subType: Payment_Settings,
+				subType: PAYMENT_SETTINGS,
 				link: "/payment-settings",
 			},
 		],
 	},
 ];
 
-
 export const profileDropdown = [
 	{
 		id: 1,
 		icon: "material-symbols:person-outline-rounded",
-		name: "My Profile",
+		name: MY_PROFILE,
 	},
 	{
 		id: 2,
 		icon: "material-symbols:settings",
-		name: "Settings",
+		name: SETTINGS,
 	},
 	{
 		id: 3,
 		icon: "ri:logout-circle-line",
-		name: "Logout",
+		name: LOGOUT,
+	},
+];
+
+export const adminNavLinks = [
+	{
+		id: 1,
+		name: DASHBOARD,
+		link: "",
+		subLinks: [],
+		icon: "ic:round-dashboard",
+	},
+	{
+		id: 2,
+		name: AGENTS,
+		link: "",
+		icon: "ic:twotone-people",
+		subLinks: [
+			{
+				id: 1,
+				subType: TERMINALS,
+				link: "/Terminals",
+			},
+			{
+				id: 2,
+				subType: ADD_SUB_AGENT,
+				link: "/add-sub-agent",
+			},
+		],
+	},
+	{
+		id: 4,
+		name: PAY_BILLS,
+		icon: "healthicons:bills-outline",
+
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: AIRTIME,
+				link: "/buy-airtime",
+			},
+			{
+				id: 2,
+				subType: INTERNET,
+				link: "/buy-internet",
+			},
+			{
+				id: 3,
+				subType: CABLE,
+				link: "/cable",
+			},
+			{
+				id: 5,
+				subType: ELECTRICITY,
+				link: "/electricity",
+			},
+		],
+	},
+	{
+		id: 4,
+		name: PERFORMANCE,
+		link: "",
+		subLinks: [],
+		icon: "mdi:performance",
+	},
+	{
+		id: 5,
+		name: TRANSACTIONS,
+		link: "",
+		subLinks: [],
+		icon: "mdi:printer-outline",
+	},
+	{
+		id: 6,
+		name: WALLET_MANAGER,
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: WITHDRAWAL,
+				link: "/withdrawal",
+			},
+			{
+				id: 2,
+				subType: WALLET_HISTORY,
+				link: "/wallet-history",
+			},
+		],
+		icon: "ph:shopping-bag",
+	},
+	{
+		id: 7,
+		name: SETTINGS,
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: PROFILE,
+				link: "/profile",
+			},
+		],
+		icon: "material-symbols:settings",
+	},
+];
+
+export const subAgentsNavLinks = [
+	{
+		id: 1,
+		name: DASHBOARD,
+		link: "",
+		subLinks: [],
+		icon: "ic:round-dashboard",
+	},
+	{
+		id: 2,
+		name: AGENTS,
+		link: "",
+		icon: "ic:twotone-people",
+		subLinks: [
+			{
+				id: 1,
+				subType: ADD_SUB_AGENT,
+				link: "/add-sub-agent",
+			},
+		],
+	},
+	{
+		id: 3,
+		name: OPEN_ACCOUNT,
+		link: "/open-account",
+		subLinks: [],
+		icon: "ion:person-add-outline",
+	},
+	{
+		id: 4,
+		name: INSURANCE,
+		link: "/insurance",
+		subLinks: [],
+		icon: "lucide:award",
+	},
+	{
+		id: 5,
+		name: SAVINGS,
+		link: "/savings",
+		subLinks: [],
+		icon: "material-symbols:create-new-folder-outline",
+	},
+	{
+		id: 6,
+		name: BUY_NOW_PAY_LATER,
+		link: "/buy-now-pay-later",
+		subLinks: [],
+		icon: "ic:outline-shopping-cart",
+	},
+	{
+		id: 7,
+		name: PAY_BILLS,
+		icon: "healthicons:bills-outline",
+
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: AIRTIME,
+				link: "/buy-airtime",
+			},
+			{
+				id: 2,
+				subType: INTERNET,
+				link: "/buy-internet",
+			},
+			{
+				id: 3,
+				subType: CABLE,
+				link: "/cable",
+			},
+			{
+				id: 5,
+				subType: ELECTRICITY,
+				link: "/electricity",
+			},
+		],
+	},
+	{
+		id: 8,
+		name: DEBIT_CARD,
+		link: "/debit-card",
+		subLinks: [],
+		icon: "material-symbols:credit-card-outline",
+	},
+	{
+		id: 9,
+		name: FLOAT_MANAGER,
+		icon: "carbon:percentage",
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: REQUIRE_FLOAT,
+				link: "/request-float",
+			},
+			{
+				id: 2,
+				subType: MY_LOAN,
+				link: "/my-loan",
+			},
+		],
+	},
+	{
+		id: 10,
+		name: WALLET_MANAGER,
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: WITHDRAWAL,
+				link: "/withdrawal",
+			},
+			{
+				id: 2,
+				subType: WALLET_HISTORY,
+				link: "/wallet-history",
+			},
+			{
+				id: 3,
+				subType: WALLET_TRANSFER,
+				link: "/wallet-transfer",
+			},
+		],
+		icon: "ph:shopping-bag",
+	},
+	{
+		id: 11,
+		name: SETTINGS,
+		link: "",
+		subLinks: [
+			{
+				id: 1,
+				subType: PROFILE,
+				link: "/profile",
+			},
+		],
+		icon: "material-symbols:settings",
 	},
 ];

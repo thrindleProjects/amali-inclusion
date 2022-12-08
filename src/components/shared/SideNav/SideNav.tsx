@@ -17,11 +17,11 @@ const SideNav = () => {
 				ease: [0.6, 0.05, -0.01, 0.9],
 			}}
 
-			className="shadow-xl bg-white w-[20%] h-screen">
-			<figure className="relative mt-2  ">
-				<Image width={200} height={200} src="/assets/logo.png" alt="amali Logo" />
+			className="shadow-xl bg-white w-[23%] h-screen fixed  pb-28 overflow-y-scroll">
+			<figure className="  ml-6 w-full  h-[70px] my-auto fixed bg-white flex items-center ">
+				<Image width={150} height={300} src="/assets/logo.png" alt="amali Logo" className="" />
 			</figure>
-			<div>
+			<div className=" ">
 				<NavItem />
 			</div>
 		</motion.div>

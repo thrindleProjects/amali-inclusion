@@ -4,7 +4,7 @@ import React from "react";
 const dashboard = () => {
 	return (
 		<AuthLayout>
-			<div className="flex">
+			<div className="flex ">
 				rrrrrhhhhhhhhhhddd
 			</div>
 		</AuthLayout>
