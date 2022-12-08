@@ -1,4 +1,3 @@
-import Card from "@/components/lib/card/Card";
 import DateInput from "@/components/lib/Input/Input";
 import Table from "@/components/lib/Table";
 import TableBody from "@/components/lib/Table/TableBody";
@@ -10,6 +9,7 @@ import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { dashboardData, tableData, transactionTypeOption } from "@/data/data";
 import React from "react";
 import SelectInput from "@/components/lib/Input/SelectInput";
+import Card from "@/components/lib/card";
 
 const dashboard = () => {
 	return (
