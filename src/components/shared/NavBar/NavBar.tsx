@@ -40,7 +40,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 						<Image
 							width={150}
 							height={150}
-							src="/assets/logo.png"
+							src="/assets/amali-logo.png"
 							alt="amali Logo"
 						/>
 					</figure>
