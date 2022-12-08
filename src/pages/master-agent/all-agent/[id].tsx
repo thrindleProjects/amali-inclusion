@@ -8,7 +8,7 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import React from "react";
 
-const AllAgents = () => {
+const Agent = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
@@ -27,18 +27,17 @@ const AllAgents = () => {
 					<TableBody>
 						{allSubAgentData.map((item, index) => (
 							<TableRow key={index}>
-								<TableCell>{ index + 1}</TableCell>
-								<TableCell>{ item.superAgent}</TableCell>
-								<TableCell>{ item.agentCode}</TableCell>
-								<TableCell>{ item.name}</TableCell>
-								<TableCell>{ item.email}</TableCell>
-								<TableCell>{ item.phone}</TableCell>
-								<TableCell>{ item.walletBalance}</TableCell>
-								<TableCell>{ item.status}</TableCell>
+								<TableCell>{index + 1}</TableCell>
+								<TableCell>{item.superAgent}</TableCell>
+								<TableCell>{item.agentCode}</TableCell>
+								<TableCell>{item.name}</TableCell>
+								<TableCell>{item.email}</TableCell>
+								<TableCell>{item.phone}</TableCell>
+								<TableCell>{item.walletBalance}</TableCell>
+								<TableCell>{item.status}</TableCell>
 								<TableCell >
 									<div className="flex gap-6">
-										<p className="p-2 text-white text-xs rounded-lg bg-amali-green text-center">View Super Agent</p> 
-										<p className="p-2 text-white text-xs rounded-lg bg-amali-green text-center">View Performance</p> 
+										<p className="p-2 text-white text-xs rounded-lg bg-amali-green text-center cursor-pointer "  >View account</p>
 									</div>
 								</TableCell>
 							</TableRow>
@@ -50,4 +49,4 @@ const AllAgents = () => {
 	);
 };
 
-export default AllAgents;
+export default Agent;
