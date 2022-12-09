@@ -5,6 +5,8 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { NavBarProps } from "./Navbar.props";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import AccountDropdown from "@/components/lib/accountDropdown/AccountDropdown";
+import AmaliLogo from "@/public/assets/amali-logo.png";
+
 
 const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
@@ -18,34 +20,50 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	};
 
 	return (
-		<div className="shadow-xl bg-white right-0 p-4 fixed w-full lg:w-[77%]  h-[70px]">
+		<div className="shadow-sm bg-white right-0  fixed w-full lg:w-[77%] z-[1000]  h-[70px] overflow-hidden">
 			{largeScreen && (
-				<div className="flex gap-4 items-center ml-[90%]  w-full">
+				<div className="flex gap-4 items-center ml-[90%] p-4  w-full">
 					<Icon icon="material-symbols:search" className="text-2xl" />
 
-					<div className=" relative cursor-pointer" onClick={toggleAccountDropdown} >
-						<Image alt="owner" src="/assets/profile.png" width={50} height={50} className="rounded-full" />
+					<div
+						className=" relative cursor-pointer"
+						onClick={toggleAccountDropdown}
+					>
+						<Image
+							alt="owner"
+							src="/assets/profile.png"
+							width={40}
+							height={40}
+							className="rounded-full"
+						/>
+						
 					</div>
 				</div>
 			)}
 
 			{!largeScreen && (
-				<div className="flex justify-between items-center w-auto px-2">
+				<div className="flex justify-between items-center w-full  py-4 px-7">
 					<Icon
 						icon={isOpen ? "ic:outline-close" : "ri:menu-2-fill"}
 						className="text-amali-green text-2xl "
 						onClick={toggleSidebar}
 					/>
-					<figure className="relative  ">
+					<div className="w-[50%]">
 						<Image
 							width={150}
 							height={150}
-							src="/assets/logo.png"
-							alt="amali Logo"
+							src={AmaliLogo}
+							alt="Amali Logo"
+							blurDataURL=""
+							className="object-contain border-none"
+
 						/>
-					</figure>
+					</div>
 					<div onClick={toggleAccountDropdown}>
-						<Icon icon="mdi:dots-vertical" className="text-amali-green text-2xl" />
+						<Icon
+							icon="mdi:dots-vertical"
+							className="text-amali-green text-2xl z-[99999999999999999]"
+						/>
 					</div>
 				</div>
 			)}

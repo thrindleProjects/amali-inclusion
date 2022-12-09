@@ -1,0 +1,25 @@
+.container {
+  @apply relative w-full overflow-x-auto;
+}
+
+.table {
+  @apply min-w-full text-left text-sm;
+
+  &__header {
+    &_row {
+      @apply border-b border-gray-300 font-semibold text-gray-700;
+    }
+
+    &_cell {
+      @apply whitespace-nowrap p-4 text-amali-grey;
+    }
+  }
+
+  &__row {
+    @apply border-b border-amali-grey/50 bg-transparent;
+  }
+
+  &__cell {
+    @apply whitespace-nowrap p-4 text-amali-grey/80;
+  }
+}
