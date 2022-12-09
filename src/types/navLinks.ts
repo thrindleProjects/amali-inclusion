@@ -145,7 +145,7 @@ export const masterAgentLinks = [
 	{
 		id: 6,
 		name: KYC_MANAGER,
-		link: "/kyc-manager",
+		link: "/master-agent/kyc-manager/kyc-manager",
 		icon: "material-symbols:shield-outline",
 		subLinks: [],
 	},
@@ -158,22 +158,22 @@ export const masterAgentLinks = [
 			{
 				id: 1,
 				subType: USER,
-				link: "/users",
+				link: "/master-agent/settings/users",
 			},
 			{
 				id: 2,
 				subType: GENERAL_SETTINGS,
-				link: "/general-settings",
+				link: "/master-agent/settings/general-settings",
 			},
 			{
 				id: 3,
 				subType: PROFILE_SETTINGS,
-				link: "/profile-settings",
+				link: "/master-agent/settings/profile-settings",
 			},
 			{
 				id: 4,
 				subType: PAYMENT_SETTINGS,
-				link: "/payment-settings",
+				link: "/master-agent/settings/payment-settings",
 			},
 		],
 	},

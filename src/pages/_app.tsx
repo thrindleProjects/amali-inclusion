@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -12,6 +12,17 @@ import { toastOptions } from "@/utils/toastConfig";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	const router = useRouter();
+
+	const [showChild, setShowChild] = useState(false);
+
+	useEffect(() => {
+		setShowChild(true);
+	}, []);
+
+	if (!showChild && process.env.NODE_ENV === "development") {
+		return null;
+	}
+
 	return (
 		<CookiesProvider>
 			<Provider store={store}>

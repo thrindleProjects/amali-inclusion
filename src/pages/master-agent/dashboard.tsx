@@ -18,7 +18,7 @@ const dashboard = () => {
 				<p className="font-bold mb-6">Dashboard</p>
 				<div className="md:flex  flex-wrap  justify-between">
 					{dashboardData.map((item, index) => (
-						<Card key={index} item={item} />
+						<Card key={index} item={item} xlWidth="30%" />
 					))}
 					i want that error
 				</div>

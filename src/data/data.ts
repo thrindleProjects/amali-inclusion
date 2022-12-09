@@ -375,3 +375,22 @@ export const allSubAgentData = [
 
 	},
 ];
+
+
+
+export const KycVerificationCardData = [
+	{
+		id: 1,
+		number: "4",
+		text: "Total Verified",
+		image: "material-symbols:person-outline-rounded",
+		color: "#42B0A8",
+	},
+	{
+		id: 1,
+		number: "2",
+		text: "Total Unverified",
+		image: "mdi:person-cancel-outline",
+		color: "#00CFE8",
+	},
+];
