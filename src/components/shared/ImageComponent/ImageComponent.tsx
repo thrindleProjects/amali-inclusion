@@ -12,8 +12,9 @@ const ImageComponent = ({ src, alt, className }: Props) => {
 		<Image
 			src={src}
 			alt={alt}
-			className={`${className ? className : ""} block object-center w-full h-full`}
-			objectFit="contain"
+			className={`${
+				className ? className : ""
+			} block object-center object-contain w-full h-full`}
 			fill={true}
 		/>
 	);

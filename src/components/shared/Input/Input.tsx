@@ -1,6 +1,7 @@
 import { DATE, EMAIL, PASSWORD, TEXT } from "@/types/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
+import InputLabel from "../InputLabel";
 import { MainInput, PasswordInput } from "./styled";
 import { InputProps } from "./types";
 
@@ -29,18 +30,11 @@ const Input: React.FC<InputProps> = ({
 
 	return (
 		<div className="w-full mb-5">
-			{label && !!label.length && (
-				<label
-					className="text-xs md:text-sm font-medium pb-1 text-text-color-a"
-					htmlFor={id}
-				>
-					{label}
-				</label>
-			)}
+			{label && !!label.length && <InputLabel id={id} label={label} />}
 			{type === PASSWORD && (
 				<PasswordInput
 					error={error}
-					className="w-full py-3 lg:py-4 xl:py-5 border-b-8 shadow-inner transition-all ease-in duration-300 flex flex-row items-center px-2 md:px-4"
+					className="w-full py-3 lg:py-4 xl:py-5 border-b-2 shadow-inner transition-all ease-in duration-300 flex flex-row items-center px-2 md:px-4"
 				>
 					<input
 						type={hidden ? PASSWORD : TEXT}
@@ -115,7 +109,7 @@ const Input: React.FC<InputProps> = ({
 					maxLength={maxLength}
 					id={id}
 					name={name}
-					className={`w-full px-2 md:px-4 py-3 lg:py-4 xl:py-5 outline-none text-xs xl:text-sm xl:placeholder:text-sm placeholder:text-xs border-b-8 shadow-inner transition-all ease-in duration-300 ${
+					className={`w-full px-2 md:px-4 py-3 lg:py-4 xl:py-5 outline-none text-xs xl:text-sm xl:placeholder:text-sm placeholder:text-xs border-b-2 shadow-inner transition-all ease-in duration-300 ${
 						className ? className : ""
 					}`}
 					{...rest}
