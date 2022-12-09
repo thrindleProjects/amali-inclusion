@@ -86,7 +86,6 @@ export const GUARANTOR_FORM = "guarantor_form";
 export const ID_CARD = "id_card";
 export const PASSPORT_PHOTO = "passport_photo";
 
-
 // dashboard filter transaction types
 export const CREDIT = "Credit";
 export const DEBIT = "Debit";
@@ -94,3 +93,7 @@ export const BILLS = "Bills";
 export const AIRTIMETYPE = "Airtime";
 export const CABLE_TV = "Cable Tv";
 export const INTERNET_DATA = "Internet Data";
+
+// POS CARD DATA TYPES
+export const ID = "_id";
+export const TOTAL_TERMINALS = "total_terminals";

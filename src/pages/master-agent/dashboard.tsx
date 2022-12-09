@@ -30,7 +30,6 @@ const dashboard = () => {
 						<SelectInput label="Type" data={transactionTypeOption} />
 						<div className="bg-amali-green text-white rounded-md h-11 cursor-pointer mt-6  w-full flex justify-center items-center md:mt-auto ">
 							<p className="text-xs text-center ">Filter Transactions </p>
-
 						</div>
 					</div>
 					<div className="mt-10">
