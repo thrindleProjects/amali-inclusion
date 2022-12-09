@@ -62,7 +62,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 					<div onClick={toggleAccountDropdown}>
 						<Icon
 							icon="mdi:dots-vertical"
-							className="text-amali-green text-2xl z-[99999999999999999]"
+							className="text-amali-green text-2xl "
 						/>
 					</div>
 				</div>

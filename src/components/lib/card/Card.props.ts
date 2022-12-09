@@ -8,4 +8,5 @@ export interface CardDataProps {
 
 export interface CardProps {
 	item: CardDataProps;
+	xlWidth: string;
 }
