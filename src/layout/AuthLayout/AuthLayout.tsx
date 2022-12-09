@@ -15,8 +15,8 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 	};
 
 	return (
-		<div className="h-screen min-w-max">
-			<div className="h-full relative flex justify-between no-scrollbar ">
+		<div className="h-screen ">
+			<div className="relative flex justify-between no-scrollbar ">
 				{largeScreen && (
 					<div>
 						<SideNav />
@@ -25,10 +25,11 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 				<AnimatePresence>
 					{isOpen && !largeScreen && <MobileSideNav setIsOpen={setIsOpen} />}
 				</AnimatePresence>
-				<main className="  h-full flex-1  main-wrapper">
+
+				<main className="h-full flex-1  main-wrapper">
 					<NavBar toggleSidebar={toggleSidebar} isOpen={isOpen} />
-					
-					<div className="w-full flex-1 wrapper">{children}</div>
+
+					<div className="w-full h-full flex-1 wrapper">{children}</div>
 				</main>
 			</div>
 		</div>
