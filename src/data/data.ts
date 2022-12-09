@@ -6,7 +6,6 @@ import {
 	DEBIT,
 	INTERNET_DATA,
 } from "@/types/constants";
-import * as CONSTANTS from "@/types/constants";
 export const dashboardData = [
 	{
 		id: 1,
