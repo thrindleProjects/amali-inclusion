@@ -10,6 +10,7 @@ import {
 	genderOptions,
 	state_options,
 } from "@/types/signupData";
+import InputFile from "@/components/shared/InputFile";
 
 const RegisterForm = () => {
 	const formik = useFormik({
@@ -23,7 +24,7 @@ const RegisterForm = () => {
 	return (
 		<form onSubmit={formik.handleSubmit}>
 			<section>
-				<h3 className="mb-3 font-semibold text-sm md:text-xl">
+				<h3 className="mb-3 font-semibold text-sm md:text-xl border-b border-b-amali-grey">
 					PERSONAL DETAILS
 				</h3>
 				<div className="grid md:grid-cols-2 md:gap-4">
@@ -144,7 +145,7 @@ const RegisterForm = () => {
 				/>
 			</section>
 			<section>
-				<h3 className="mb-3 font-semibold text-sm md:text-xl">
+				<h3 className="mb-3 font-semibold text-sm md:text-xl border-b border-b-amali-grey">
 					BUSINESS INFORMATION
 				</h3>
 				<div className="grid md:grid-cols-2 md:gap-4">
@@ -247,7 +248,7 @@ const RegisterForm = () => {
 				</div>
 			</section>
 			<section>
-				<h3 className="mb-3 font-semibold text-sm md:text-xl">
+				<h3 className="mb-3 font-semibold text-sm md:text-xl border-b border-b-amali-grey">
 					ACCOUNT INFORMATION
 				</h3>
 				<div className="grid md:grid-cols-2 md:gap-4">
@@ -312,6 +313,81 @@ const RegisterForm = () => {
 						}
 						errorText={formik.errors[CONSTANTS.BVN]}
 						required={true}
+					/>
+				</div>
+			</section>
+			<section>
+				<h3 className="mb-3 font-semibold text-sm md:text-xl border-b border-b-amali-grey">
+					DOCUMENT UPLOAD
+				</h3>
+				<div className="grid md:grid-cols-2 md:gap-4">
+					<InputFile
+						label={"Utility Bill"}
+						id={CONSTANTS.UTILITY_BILL}
+						name={CONSTANTS.UTILITY_BILL}
+						type="file"
+						placeholder="Choose File"
+						onChange={formik.setFieldValue}
+						onBlur={formik.handleBlur}
+						value={formik.values[CONSTANTS.UTILITY_BILL]}
+						error={
+							formik.errors[CONSTANTS.UTILITY_BILL] &&
+							formik.touched[CONSTANTS.UTILITY_BILL]
+						}
+						errorText={formik.errors[CONSTANTS.UTILITY_BILL]}
+						required={true}
+					/>
+					<InputFile
+						label={"Guarantor Form"}
+						id={CONSTANTS.GUARANTOR_FORM}
+						name={CONSTANTS.GUARANTOR_FORM}
+						type="file"
+						placeholder="Choose File"
+						onChange={formik.setFieldValue}
+						onBlur={formik.handleBlur}
+						value={formik.values[CONSTANTS.GUARANTOR_FORM]}
+						error={
+							formik.errors[CONSTANTS.GUARANTOR_FORM] &&
+							formik.touched[CONSTANTS.GUARANTOR_FORM]
+						}
+						errorText={formik.errors[CONSTANTS.GUARANTOR_FORM]}
+						required={true}
+					/>
+				</div>
+				<div className="grid md:grid-cols-2 md:gap-4">
+					<InputFile
+						label={"ID Card"}
+						id={CONSTANTS.ID_CARD}
+						name={CONSTANTS.ID_CARD}
+						type="file"
+						placeholder="Choose File"
+						onChange={formik.setFieldValue}
+						onBlur={formik.handleBlur}
+						value={formik.values[CONSTANTS.ID_CARD]}
+						error={
+							formik.errors[CONSTANTS.ID_CARD] &&
+							formik.touched[CONSTANTS.ID_CARD]
+						}
+						errorText={formik.errors[CONSTANTS.ID_CARD]}
+						required={true}
+						extensions="image/*, .doc, .docx, .pdf"
+					/>
+					<InputFile
+						label={"Passport Photograph"}
+						id={CONSTANTS.PASSPORT_PHOTO}
+						name={CONSTANTS.PASSPORT_PHOTO}
+						type="file"
+						placeholder="Choose File"
+						onChange={formik.setFieldValue}
+						onBlur={formik.handleBlur}
+						value={formik.values[CONSTANTS.PASSPORT_PHOTO]}
+						error={
+							formik.errors[CONSTANTS.PASSPORT_PHOTO] &&
+							formik.touched[CONSTANTS.PASSPORT_PHOTO]
+						}
+						errorText={formik.errors[CONSTANTS.PASSPORT_PHOTO]}
+						required={true}
+						extensions="image/*"
 					/>
 				</div>
 			</section>
