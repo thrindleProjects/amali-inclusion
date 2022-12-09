@@ -394,3 +394,84 @@ export const KycVerificationCardData = [
 		color: "#00CFE8",
 	},
 ];
+
+
+export const kycData = [
+	{
+		id: 1,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+	{
+		id: 2,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "pending",
+		date:"25/09/22"
+	},
+	{
+		id: 3,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+	{
+		id: 4,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+	{
+		id: 5,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+	{
+		id: 6,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Pending",
+		date:"25/09/22"
+	},
+	{
+		id: 7,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Pending",
+		date:"25/09/22"
+	},
+	{
+		id: 8,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+	{
+		id: 9,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+	{
+		id: 10,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Pending",
+		date:"25/09/22"
+	},
+	{
+		id: 1,
+		agent: "Master agent",
+		email: "amalimaster@gmail.com",
+		status: "Verified",
+		date:"25/09/22"
+	},
+];
