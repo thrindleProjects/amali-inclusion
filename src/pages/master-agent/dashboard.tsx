@@ -18,7 +18,7 @@ const dashboard = () => {
 				<p className="font-bold mb-6">Dashboard</p>
 				<div className="md:flex  flex-wrap  justify-between">
 					{dashboardData.map((item, index) => (
-						<Card key={index} item={item} />
+						<Card key={index} item={item} xlWidth="30%" />
 					))}
 				</div>
 				<p className="my-4 text-xl text-amali-grey">Recent Transactions</p>

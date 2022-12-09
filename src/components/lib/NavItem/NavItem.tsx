@@ -39,14 +39,14 @@ const NavItem = () => {
 							{item.subLinks.map((subLink, index) => (
 								<Link href={`${subLink.link}`} key={index}>
 									<motion.div
-										className={expanded === item.id ? "my-2 " : ""}
+										className={expanded === item.id ? "my-2" : ""}
 										
 										animate={{
 											height: expanded === item.id ? "100%" : "0",
 										}}
 										transition={{
-											duration: 0.8,
-											ease: [0.6, 0.05, -0.01, 0.9],
+											duration: 0.4,
+											ease: [0.9, 0.05, -0.01, 0.4],
 										}}
 									>
 										<div className="flex gap-3 hover:text-amali-green px-4 ">
