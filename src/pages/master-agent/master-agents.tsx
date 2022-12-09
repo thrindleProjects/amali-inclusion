@@ -42,7 +42,7 @@ const MasterAgents = () => {
 								<TableCell>  <p>{item.businessPhone}</p>  </TableCell>
 								<TableCell>  <p>{item.email}</p>  </TableCell>
 								<TableCell>  <p>{item.dateRegistered}</p>  </TableCell>
-								<TableCell>  <p className="p-2 text-white text-sm bg-amali-green text-center">View</p>  </TableCell>
+								<TableCell>  <p className="p-2 text-white text-sm bg-amali-green text-center cursor-pointer">View</p>  </TableCell>
 							</TableRow>
 						))}
 					</TableBody>
