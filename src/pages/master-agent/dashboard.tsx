@@ -20,6 +20,7 @@ const dashboard = () => {
 					{dashboardData.map((item, index) => (
 						<Card key={index} item={item} />
 					))}
+					i want that error
 				</div>
 				<p className="my-4 text-xl text-amali-grey">Recent Transactions</p>
 				<BodyLayout >
@@ -30,7 +31,6 @@ const dashboard = () => {
 						<SelectInput label="Type" data={transactionTypeOption} />
 						<div className="bg-amali-green text-white rounded-md h-11 cursor-pointer mt-6  w-full flex justify-center items-center md:mt-auto ">
 							<p className="text-xs text-center ">Filter Transactions </p>
-
 						</div>
 					</div>
 					<div className="mt-10">

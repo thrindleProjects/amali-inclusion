@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -10,20 +10,8 @@ import { CookiesProvider } from "react-cookie";
 import { store } from "@/store";
 import { toastOptions } from "@/utils/toastConfig";
 
-
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	const router = useRouter();
-
-	const [showChild, setShowChild] = useState(false);
-
-	useEffect(() => {
-		setShowChild(true);
-	}, []);
-
-	if (!showChild) {
-		return null;
-	}
-
 	return (
 		<CookiesProvider>
 			<Provider store={store}>
@@ -31,8 +19,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 				<Toaster position="top-right" toastOptions={toastOptions} />
 			</Provider>
 		</CookiesProvider>
-
-		
 	);
 };
 

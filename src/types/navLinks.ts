@@ -139,7 +139,7 @@ export const masterAgentLinks = [
 		name: POS_MANAGER,
 		icon: "mdi:printer-outline",
 
-		link: "/pos-manager",
+		link: "pos-manager",
 		subLinks: [],
 	},
 	{
