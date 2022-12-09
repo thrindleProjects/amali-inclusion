@@ -49,7 +49,9 @@ const InputFile: React.FC<InputFileProps<HTMLInputElement>> = ({
 					accept={`${extensions ? extensions : ".doc, .docx, .pdf"}`}
 				/>
 				<div className="grid grid-cols-4 divide-x-2 divide-amali-grey">
-					<span className="col-span-1 py-3 lg:py-4 xl:py-5 text-center">{placeholder}</span>
+					<span className="col-span-1 py-3 lg:py-4 xl:py-5 text-center">
+						{placeholder}
+					</span>
 					<span className="col-span-3 py-3 lg:py-4 xl:py-5 pl-2 flex items-center">
 						{value && typeof value !== "string" ? value.name : "No file chosen"}
 					</span>
