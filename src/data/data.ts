@@ -1,5 +1,12 @@
-import { AIRTIMETYPE, BILLS, CABLE_TV, CREDIT, DEBIT, INTERNET_DATA } from "@/types/constants";
-
+import {
+	AIRTIMETYPE,
+	BILLS,
+	CABLE_TV,
+	CREDIT,
+	DEBIT,
+	INTERNET_DATA,
+} from "@/types/constants";
+import * as CONSTANTS from "@/types/constants";
 export const dashboardData = [
 	{
 		id: 1,
@@ -24,7 +31,6 @@ export const dashboardData = [
 	},
 ];
 
-
 export const tableData = [
 	{
 		id: 1,
@@ -33,7 +39,7 @@ export const tableData = [
 		amount: "10,000",
 		remark: "This is a remark",
 		status: 1,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 2,
@@ -42,7 +48,7 @@ export const tableData = [
 		amount: "1,000",
 		remark: "This is a remark",
 		status: 1,
-		date: "25/07/22"
+		date: "25/07/22",
 	},
 	{
 		id: 3,
@@ -51,7 +57,7 @@ export const tableData = [
 		amount: "10,00000",
 		remark: "This is a remark",
 		status: 5,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 4,
@@ -60,7 +66,7 @@ export const tableData = [
 		amount: "30,000",
 		remark: "This is a remark",
 		status: 6,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 5,
@@ -69,16 +75,16 @@ export const tableData = [
 		amount: "50,000",
 		remark: "This is a remark",
 		status: 5,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 6,
-		agentCode:634,
+		agentCode: 634,
 		type: "Credit",
 		amount: "60,000",
 		remark: "This is a remark",
 		status: 6,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 7,
@@ -87,7 +93,7 @@ export const tableData = [
 		amount: "70,000",
 		remark: "This is a remark",
 		status: 7,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 8,
@@ -96,7 +102,7 @@ export const tableData = [
 		amount: "80,000",
 		remark: "This is a remark",
 		status: 8,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 9,
@@ -105,7 +111,7 @@ export const tableData = [
 		amount: "90,000",
 		remark: "This is a remark",
 		status: 9,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 10,
@@ -114,11 +120,9 @@ export const tableData = [
 		amount: "80,000",
 		remark: "This is a remark",
 		status: 10,
-		date: "25/09/22"
+		date: "25/09/22",
 	},
 ];
-
-
 
 export const allAgentsData = [
 	{
@@ -128,7 +132,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 2,
@@ -137,7 +141,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 3,
@@ -146,7 +150,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 4,
@@ -155,7 +159,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 5,
@@ -164,7 +168,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 6,
@@ -173,7 +177,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 7,
@@ -182,7 +186,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 8,
@@ -191,7 +195,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 9,
@@ -200,7 +204,7 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 	{
 		id: 10,
@@ -209,11 +213,9 @@ export const allAgentsData = [
 		terminals: 2,
 		businessPhone: "09087654766",
 		email: "lasisiKehinde@gmail.com",
-		dateRegistered : "20/08/22"
+		dateRegistered: "20/08/22",
 	},
 ];
-
-
 
 export const transactionTypeOption = [
 	{
@@ -242,36 +244,32 @@ export const transactionTypeOption = [
 	},
 ];
 
-
-
 export const allMasterAgents = [
 	{
 		name: "Lasisi Kehinde",
 	},
 	{
-		name:"Oke Lekan",
+		name: "Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
 	},
 	{
-		name:"Oke Lekan",
+		name: "Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
 	},
 	{
-		name:"Oke Lekan",
+		name: "Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
 	},
 	{
-		name:"Oke Lekan",
+		name: "Oke Lekan",
 	},
-	
 ];
-
 
 export const allSubAgentData = [
 	{
@@ -281,8 +279,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -291,8 +288,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -301,8 +297,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -311,8 +306,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -321,8 +315,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -331,8 +324,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -341,8 +333,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -351,8 +342,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -361,8 +351,7 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 	{
 		superAgent: "amalimaster@gmail.com",
@@ -371,12 +360,9 @@ export const allSubAgentData = [
 		email: "LasisiKendinde@gmail.com",
 		phone: "08025913782",
 		walletBalance: "₦ 0",
-		status:"Active"
-
+		status: "Active",
 	},
 ];
-
-
 
 export const KycVerificationCardData = [
 	{
@@ -392,5 +378,29 @@ export const KycVerificationCardData = [
 		text: "Total Unverified",
 		image: "mdi:person-cancel-outline",
 		color: "#00CFE8",
+	},
+];
+
+export const posCardData = [
+	{
+		id: 1,
+		number: "4",
+		text: "Total Terminals",
+		image: "mdi:printer",
+		color: "#42b0a8",
+	},
+	{
+		id: 2,
+		number: "0",
+		text: "Total Assigned Terminals",
+		image: "bi:person-check-fill",
+		color: "#00CFE8",
+	},
+	{
+		id: 3,
+		number: "3",
+		text: "Total Unassigned Terminals",
+		image: "mdi:file-document-outline",
+		color: "#1B2850",
 	},
 ];

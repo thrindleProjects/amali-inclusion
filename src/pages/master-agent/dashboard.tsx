@@ -20,7 +20,6 @@ const dashboard = () => {
 					{dashboardData.map((item, index) => (
 						<Card key={index} item={item} xlWidth="30%" />
 					))}
-					i want that error
 				</div>
 				<p className="my-4 text-xl text-amali-grey">Recent Transactions</p>
 				<BodyLayout >

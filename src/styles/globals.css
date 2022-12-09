@@ -1,52 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
-  --primary: #FFFFFF;
-  --secondary: #637381;
+	--primary: #ffffff;
+	--secondary: #637381;
 }
 
 @tailwind base;
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--secondary) var(--primary);
+	scrollbar-width: thin;
+	scrollbar-color: var(--secondary) var(--primary);
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--primary);
-  border-radius: 5px;
+	background: var(--primary);
+	border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
-  border-radius: 14px;
-  border: 3px solid var(--primary);
+	background-color: var(--secondary);
+	border-radius: 14px;
+	border: 3px solid var(--primary);
 }
 
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
-    @apply font-poppins;
+	@apply font-poppins;
 }
 
-.wrapper{
-    @apply md:py-28 py-24   lg:pl-[18rem] xl:pl-[22rem] px-8 bg-amali-bg 
+.wrapper {
+	@apply md:py-28 py-24   lg:pl-[18rem] xl:pl-[22rem] px-8 bg-amali-bg h-full;
 }
-.main-wrapper{
-    @apply  w-[100%] lg:w-[80%]
-}
-
-
-input, label {
-    display:block;
+.main-wrapper {
+	@apply w-[100%] lg:w-[80%] h-full;
 }
 
-
+input,
+label {
+	display: block;
+}
