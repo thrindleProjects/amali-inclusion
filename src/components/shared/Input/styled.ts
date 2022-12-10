@@ -17,8 +17,9 @@ export const MainInput = styled.input<{
 	${(props) =>
 		props.type === "date" &&
 		css`
-			-webkit-appearance: textfield;
-			-moz-appearance: textfield;
+			width: 100%;
+			-webkit-appearance: none;
+			-moz-appearance: none;
 		`}
 `;
 
