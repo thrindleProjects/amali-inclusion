@@ -1,8 +1,6 @@
 import Input from "@/components/shared/Input";
 import React from "react";
 import {
-	ACCOUNT_PASSWORD,
-	BUSINESS_PHONE,
 	PASSWORD,
 	TEXT,
 } from "@/types/constants";
@@ -21,11 +19,12 @@ const LoginForm = () => {
 			values.phone = values.phone.trim();
 		},
 	});
+	console.log({ values: formik.values });
 
 	return (
 		<form onSubmit={formik.handleSubmit}>
 			<Input
-				id={BUSINESS_PHONE}
+				id={"phone"}
 				type={TEXT}
 				value={formik.values.phone}
 				placeholder={"Phone Number"}
@@ -37,7 +36,7 @@ const LoginForm = () => {
 				required={true}
 			/>
 			<Input
-				id={ACCOUNT_PASSWORD}
+				id={"password"}
 				type={PASSWORD}
 				value={formik.values.password}
 				placeholder={"Password"}
