@@ -22,7 +22,7 @@ const dashboard = () => {
 					))}
 				</div>
 				<p className="my-4 text-xl text-amali-grey">Recent Transactions</p>
-				<BodyLayout >
+				<BodyLayout>
 					<p className="my-4 text-xl text-amali-grey">Filter Transactions</p>
 					<div className="md:flex justify-between items-center md:gap-6">
 						<DateInput label="From Date" type="date" />
@@ -34,15 +34,17 @@ const dashboard = () => {
 					</div>
 					<div className="mt-10">
 						<Table>
-							<TableHeader items={[
-								"S/N",
-								"Agent Code",
-								"Type",
-								"Amount",
-								"Remark",
-								"Status",
-								"Date",
-							]} />
+							<TableHeader
+								items={[
+									"S/N",
+									"Agent Code",
+									"Type",
+									"Amount",
+									"Remark",
+									"Status",
+									"Date",
+								]}
+							/>
 							<TableBody>
 								{tableData.map((item, index) => (
 									<TableRow key={index}>
@@ -67,13 +69,11 @@ const dashboard = () => {
 										<TableCell>
 											<p>{item.date}</p>
 										</TableCell>
-
 									</TableRow>
 								))}
 							</TableBody>
 						</Table>
 					</div>
-
 				</BodyLayout>
 			</div>
 		</AuthLayout>

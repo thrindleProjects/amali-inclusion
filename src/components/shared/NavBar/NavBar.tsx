@@ -20,7 +20,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	};
 
 	return (
-		<div className="shadow-sm bg-white right-0  fixed w-full lg:w-[77%] z-[1000]  h-[70px] overflow-hidden">
+		<div className="shadow-sm bg-white right-0  fixed w-full lg:w-[77%] z-[50]  h-[70px] overflow-hidden">
 			{largeScreen && (
 				<div className="flex gap-4 items-center ml-[90%] p-4  w-full">
 					<Icon icon="material-symbols:search" className="text-2xl" />
