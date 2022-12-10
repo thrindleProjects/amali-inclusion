@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import {  masterAgentLinks } from "@/types/navLinks";
+import {  adminNavLinks } from "@/types/navLinks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
@@ -12,7 +12,7 @@ const NavItem = () => {
 
 	return (
 		<div className="px-4  md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
-			{masterAgentLinks.map((item, index) => (
+			{adminNavLinks.map((item, index) => (
 				<Link href={`${item.link}`} key={index}>
 					<div key={index} className=" px-3 mt-4 overflow-hidden text-amali-grey" onClick={() =>router.push(`${item.link}`)}>
 						<div onClick={() => setExpanded(item.id === expanded ? false : item.id)} className="flex justify-between items-center   mx-auto transition-all  duration-200  hover:text-white hover:bg-amali-steel-blue p-2 rounded-md  ease-in-out">
