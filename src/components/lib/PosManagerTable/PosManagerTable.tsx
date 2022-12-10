@@ -7,6 +7,7 @@ import TableHeader from "@/components/lib/Table/TableHeader";
 import TableRow from "@/components/lib/Table/TableRow";
 import * as CONSTANTS from "@/types/constants";
 import { formatDate } from "@/utils/formatDate";
+import Link from "next/link";
 
 const PosManagerTable: React.FC<PosManagerTableProps> = ({ data }) => {
 	if (!data) {
@@ -61,7 +62,14 @@ const PosManagerTable: React.FC<PosManagerTableProps> = ({ data }) => {
 								)}
 							</TableCell>
 							<TableCell>
-								<button className="text-white bg-amali-green p-2 rounded-md">View Transactions</button>
+								<Link
+									href={`/master-agent/pos-manager/${
+										item[CONSTANTS.TERMINAL_ID]
+									}`}
+									className="text-white bg-amali-green p-2 rounded-md"
+								>
+									View Transactions
+								</Link>
 							</TableCell>
 						</TableRow>
 					))}

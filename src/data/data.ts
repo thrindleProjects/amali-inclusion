@@ -8,6 +8,8 @@ import {
 } from "@/types/constants";
 
 import * as CONSTANTS from "@/types/constants";
+import { TerminalTransactionsData } from "@/layout/pages-layout/master-agent/pos-manager/terminal_id/types";
+import { formatDateNum } from "@/utils/formatDate";
 
 export const dashboardData = [
 	{
@@ -526,5 +528,67 @@ export const posData: {
 		[CONSTANTS.SERIAL_NO]: "34728192",
 		[CONSTANTS.STATUS]: "inactive",
 		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+];
+
+export const terminalTransactions: TerminalTransactionsData[] = [
+	{
+		[CONSTANTS.REFERENCE_ID]: "TRF-1b25243a-f4e3-4bc9-a7a0-524d2df640e9-DEBIT",
+		[CONSTANTS.AMOUNT]: 800,
+		[CONSTANTS.TRANSACTION_TYPE]: "debit",
+		[CONSTANTS.BALANCE]: 1400000,
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.REFERENCE_ID]: "WDL-21e0786b-5bc1-4d1b-9546-e2e57b16f795-CREDIT",
+		[CONSTANTS.AMOUNT]: 700.35,
+		[CONSTANTS.TRANSACTION_TYPE]: "debit",
+		[CONSTANTS.BALANCE]: 1400000,
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.REFERENCE_ID]: "WDL-9ea53114-fbdc-41a3-b892-9be7b450961e-CREDIT",
+		[CONSTANTS.AMOUNT]: 5000,
+		[CONSTANTS.TRANSACTION_TYPE]: "debit",
+		[CONSTANTS.BALANCE]: 200000,
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.REFERENCE_ID]: "WDL-df81cda7-a4cf-4a39-af79-d6a3e951ccd4-CREDIT",
+		[CONSTANTS.AMOUNT]: 50000,
+		[CONSTANTS.TRANSACTION_TYPE]: "credit",
+		[CONSTANTS.BALANCE]: 100000,
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.REFERENCE_ID]: "WDL-f5944c2c-a6c0-4d79-9221-e21452b54e04-CREDIT",
+		[CONSTANTS.AMOUNT]: 200000,
+		[CONSTANTS.TRANSACTION_TYPE]: "credit",
+		[CONSTANTS.BALANCE]: 1400,
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+];
+
+export const termTransCard = [
+	{
+		id: 1,
+		number: "Term ID",
+		text: "Terminal ID",
+		image: "mdi:printer",
+		color: "#42b0a8",
+	},
+	{
+		id: 2,
+		number: "S/N",
+		text: "Terminal Serial Number",
+		image: "mdi:file-document-outline",
+		color: "#00CFE8",
+	},
+	{
+		id: 3,
+		number: formatDateNum(new Date().toISOString()),
+		text: "Date Created",
+		image: "material-symbols:calendar-today-outline",
+		color: "#1B2850",
 	},
 ];

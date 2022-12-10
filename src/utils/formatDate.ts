@@ -31,3 +31,12 @@ export function formatDate(date: string): string {
 
 	return `${dayOfWeek}, ${dateOfMonth} ${month}, ${year}`;
 }
+
+export function formatDateNum(date: string): string {
+	const d = new Date(date);
+	const year = d.getFullYear();
+	const month = d.getMonth() + 1; // getMonth() returns a zero-based month (0-11), so we need to add 1 to get the month number (1-12)
+	const day = d.getDate();
+
+	return `${year}-${month}-${day}`;
+}

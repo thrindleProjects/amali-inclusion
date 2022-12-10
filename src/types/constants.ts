@@ -102,14 +102,19 @@ export const TOTAL_TERMINALS = "total_terminals";
 export const TERMINAL_ID = "terminal_id";
 export const TERMINAL_NUMBER = "terminal_number";
 
-// POS TABLE VALUES
+// POS TABLE KEYS
 export const AGENT_ASSIGNED = "agent_assigned";
 export const SUB_AGENT_ASSIGNED = "sub_agent_assigned";
 export const SERIAL_NO = "serial_no";
 export const STATUS = "status";
 export const CREATED_AT = "created_at";
 
+// TERMINAL TRANSACTIONS KEYS
+export const REFERENCE_ID = "reference_id";
+export const AMOUNT = "amount";
+export const TRANSACTION_TYPE = "transaction_type";
+export const BALANCE = "balance";
+
 export const AGENT_CODE = "agent_code";
 export const POS_TYPE = "pos_type";
-export const AMOUNT = "amount";
 export const REMARKS = "remarks";
