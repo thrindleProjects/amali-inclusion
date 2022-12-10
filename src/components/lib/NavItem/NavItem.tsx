@@ -6,6 +6,17 @@ import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 
+const variants = {
+	rotate: {
+		rotate: 90,
+		transition: { duration: 0.3, ease: [0.6, 0.05, -0.01, 0.9] },
+	},
+	stop: {
+		rotate: 0,
+		transition: { duration: 0.3, ease: [0.6, 0.05, -0.01, 0.9] },
+	},
+};
+
 const NavItem = () => {
 	const router = useRouter();
 	const [expanded, setExpanded] = useState<number | boolean>(1);
@@ -13,13 +24,14 @@ const NavItem = () => {
 	return (
 		<div className="px-4  md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
 			{masterAgentLinks.map((item, index) => (
-				<Link href={`${item.link}`} key={index}>
+				<div key={index}>
 					<div
 						key={index}
 						className=" px-3 mt-4 overflow-hidden text-amali-grey"
 						onClick={() => router.push(`${item.link}`)}
 					>
-						<div
+						<Link
+							href={`${item.link}`}
 							onClick={() =>
 								setExpanded(item.id === expanded ? false : item.id)
 							}
@@ -31,12 +43,17 @@ const NavItem = () => {
 							</div>
 
 							{!!item.subLinks.length && (
-								<Icon
-									icon="material-symbols:arrow-forward-ios-rounded"
-									className="font-bold "
-								/>
+								<motion.div
+									variants={variants}
+									animate={item.id === expanded ? "rotate" : "stop"}
+								>
+									<Icon
+										icon="material-symbols:arrow-forward-ios-rounded"
+										className="font-bold "
+									/>
+								</motion.div>
 							)}
-						</div>
+						</Link>
 						<AnimatePresence>
 							{!!item.subLinks.length && item.id === expanded && (
 								<motion.div
@@ -48,19 +65,17 @@ const NavItem = () => {
 										ease: [0.6, 0.05, -0.01, 0.9],
 									}}
 								>
-									<div className={"bg-amali-bg rounded-lg flex flex-col py-2"}>
+									<div className={"bg-amali-bg rounded-lg flex flex-col py-2 "}>
 										{item.subLinks.map((subLink, index) => (
 											<Link
 												href={`${subLink.link}`}
 												key={index}
-												className="flex-shrink-0"
+												className="flex-shrink-0 hover:text-amali-green"
 											>
 												<div>
-													<div className="flex gap-3 hover:text-amali-green px-4 ">
+													<div className="flex gap-3 px-4 ">
 														{/* <Icon icon="carbon:dot-mark" className="text-white hover:text-amali-green " /> */}
-														<p className="text-sm text-black my-2">
-															{subLink.subType}
-														</p>
+														<p className="text-s my-2">{subLink.subType}</p>
 													</div>
 												</div>
 											</Link>
@@ -70,7 +85,7 @@ const NavItem = () => {
 							)}
 						</AnimatePresence>
 					</div>
-				</Link>
+				</div>
 			))}
 		</div>
 	);
