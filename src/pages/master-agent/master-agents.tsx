@@ -8,6 +8,7 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { allAgentsData } from "@/data/data";
 import AssignTerminalModal from "@/components/lib/AssignTerminalModal";
+import PrimaryButton from "@/components/lib/Button/PrimaryButton";
 
 const MasterAgents = () => {
 
@@ -16,9 +17,12 @@ const MasterAgents = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
-				<div onClick={() => setShowModal(true)} className="rounded-sm cursor-pointer my-6 bg-amali-green text-white p-2  w-full md:w-[200px] text-center">
-					<p>Assign Terminals</p>
+				<div  className="  w-full md:w-[200px] ">
+					<PrimaryButton onClick={() => setShowModal(true)} text="Assign Terminals" bgColor="#42B0A8" />
+
 				</div>
+
+
 				{showModal && <AssignTerminalModal setShowModal={setShowModal} />}
 
 				<Table >

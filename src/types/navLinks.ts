@@ -201,7 +201,7 @@ export const adminNavLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "",
+		link: "admin/dasboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},

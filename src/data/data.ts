@@ -251,28 +251,27 @@ export const transactionTypeOption = [
 export const allMasterAgents = [
 	{
 		name: "Lasisi Kehinde",
+		value: "Lasisi Kehinde",
 	},
 	{
 		name: "Oke Lekan",
+		value:"Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
+		value: "Lasisi Kehinde",
+
+
 	},
 	{
 		name: "Oke Lekan",
+		value: "Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
+		value: "Lasisi Kehinde",
 	},
-	{
-		name: "Oke Lekan",
-	},
-	{
-		name: "Lasisi Kehinde",
-	},
-	{
-		name: "Oke Lekan",
-	},
+	
 ];
 
 export const allSubAgentData = [
