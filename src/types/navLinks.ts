@@ -139,7 +139,7 @@ export const masterAgentLinks = [
 		name: POS_MANAGER,
 		icon: "mdi:printer-outline",
 
-		link: "pos-manager",
+		link: "/master-agent/pos-manager",
 		subLinks: [],
 	},
 	{
@@ -201,7 +201,7 @@ export const adminNavLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "",
+		link: "admin/dasboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},

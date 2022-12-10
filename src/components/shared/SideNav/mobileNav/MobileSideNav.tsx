@@ -16,7 +16,7 @@ const MobileSideNav: React.FC<SideNavProps> = ({ setIsOpen }) => {
 
 	return (
 		<div className=" fixed right-0 left-0 top-[4.5rem] bottom-0 bg-[rgba(0,0,0,0.6)]  "
-			style={{ zIndex: "1000000000" }}>
+			style={{ zIndex: "50" }}>
 			<motion.div
 				ref={divRef}
 				animate={{ x: !largeScreen ? 0 : "" }}

@@ -3,6 +3,9 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { posCardData } from "@/data/data";
 import Card from "@/components/lib/card";
+import NewTerminalModal from "@/components/lib/NewTerminalModal";
+import PosManagerTable from "@/components/lib/PosManagerTable";
+import { posData } from "@/data/data";
 
 const PosManagerLayout = () => {
 	return (
@@ -15,12 +18,10 @@ const PosManagerLayout = () => {
 						<Card key={item.id} item={item} xlWidth="30%" />
 					))}
 				</div>
-				<button className="bg-amali-green text-white rounded-md py-4 px-2 text-sm lg:text-base">
-					Create New Terminal
-				</button>
+				<NewTerminalModal />
 			</section>
 			<BodyLayout>
-				
+				<PosManagerTable data={posData} />
 			</BodyLayout>
 		</AuthLayout>
 	);
