@@ -97,3 +97,19 @@ export const INTERNET_DATA = "Internet Data";
 // POS CARD DATA TYPES
 export const ID = "_id";
 export const TOTAL_TERMINALS = "total_terminals";
+
+// ADD NEW TERMINAL TYPES
+export const TERMINAL_ID = "terminal_id";
+export const TERMINAL_NUMBER = "terminal_number";
+
+// POS TABLE VALUES
+export const AGENT_ASSIGNED = "agent_assigned";
+export const SUB_AGENT_ASSIGNED = "sub_agent_assigned";
+export const SERIAL_NO = "serial_no";
+export const STATUS = "status";
+export const CREATED_AT = "created_at";
+
+export const AGENT_CODE = "agent_code";
+export const POS_TYPE = "pos_type";
+export const AMOUNT = "amount";
+export const REMARKS = "remarks";

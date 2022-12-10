@@ -6,6 +6,9 @@ import {
 	DEBIT,
 	INTERNET_DATA,
 } from "@/types/constants";
+
+import * as CONSTANTS from "@/types/constants";
+
 export const dashboardData = [
 	{
 		id: 1,
@@ -410,76 +413,118 @@ export const kycData = [
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 2,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "pending",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 3,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 4,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 5,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 6,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Pending",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 7,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Pending",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 8,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 9,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 10,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Pending",
-		date:"25/09/22"
+		date: "25/09/22",
 	},
 	{
 		id: 1,
 		agent: "Master agent",
 		email: "amalimaster@gmail.com",
 		status: "Verified",
-		date:"25/09/22"
+		date: "25/09/22",
+	},
+];
+
+export const posData: {
+	[CONSTANTS.TERMINAL_ID]: string;
+	[CONSTANTS.AGENT_ASSIGNED]: string;
+	[CONSTANTS.SUB_AGENT_ASSIGNED]: string;
+	[CONSTANTS.SERIAL_NO]: string;
+	[CONSTANTS.STATUS]: "active" | "inactive";
+	[CONSTANTS.CREATED_AT]: string;
+}[] = [
+	{
+		[CONSTANTS.TERMINAL_ID]: "terminal_1",
+		[CONSTANTS.AGENT_ASSIGNED]: "Kehinde Lasisi",
+		[CONSTANTS.SUB_AGENT_ASSIGNED]: "Tracy Dolapo",
+		[CONSTANTS.SERIAL_NO]: "12345678",
+		[CONSTANTS.STATUS]: "inactive",
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.TERMINAL_ID]: "terminal_2",
+		[CONSTANTS.AGENT_ASSIGNED]: "Olabisi Bolarin",
+		[CONSTANTS.SUB_AGENT_ASSIGNED]: "Denzel Dumfries",
+		[CONSTANTS.SERIAL_NO]: "23456789",
+		[CONSTANTS.STATUS]: "active",
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.TERMINAL_ID]: "terminal_3",
+		[CONSTANTS.AGENT_ASSIGNED]: "Yinka Olalere",
+		[CONSTANTS.SUB_AGENT_ASSIGNED]: "Granit Xhaka",
+		[CONSTANTS.SERIAL_NO]: "87654321",
+		[CONSTANTS.STATUS]: "active",
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
+	},
+	{
+		[CONSTANTS.TERMINAL_ID]: "terminal_4",
+		[CONSTANTS.AGENT_ASSIGNED]: "Sheyifunmi Stunner",
+		[CONSTANTS.SUB_AGENT_ASSIGNED]: "Argen tina",
+		[CONSTANTS.SERIAL_NO]: "34728192",
+		[CONSTANTS.STATUS]: "inactive",
+		[CONSTANTS.CREATED_AT]: new Date().toISOString(),
 	},
 ];
