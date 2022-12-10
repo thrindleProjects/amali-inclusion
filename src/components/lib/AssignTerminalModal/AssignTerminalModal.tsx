@@ -72,6 +72,7 @@ const AssignTerminalModal: React.FC<AssignTerminalProps> = ({
 					label="Serial Number"
 					type="text"
 					id="serial-number"
+					placeholder="Serial Number"
 				/>
 
 				<div className="mt-6 md:flex justify-between gap-10">
