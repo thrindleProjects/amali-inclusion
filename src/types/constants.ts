@@ -16,7 +16,7 @@ export const SETTINGS = "Settings";
 export const USER = "User";
 export const GENERAL_SETTINGS = "General Settings";
 export const PAYMENT_SETTINGS = "Payment Settings";
-export  const PROFILE_SETTINGS = "Profile Settings";
+export const PROFILE_SETTINGS = "Profile Settings";
 export const LOAN_SETTINGS = "Loan Settings";
 export const PAY_BILLS = "Pay Bills";
 export const AIRTIME = "Purchase of Airtime";
@@ -40,9 +40,7 @@ export const WITHDRAWAL = "Withdrawal";
 export const WALLET_HISTORY = "Wallet History";
 export const PROFILE = "Profile";
 
-
 // SUB_AGENT NAVLINKS
-
 
 export const INSURANCE = "Insurance";
 export const SAVINGS = "Savings";
@@ -63,6 +61,7 @@ export const PASSWORD = "password";
 export const TEXT = "text";
 export const EMAIL = "email";
 export const DATE = "date";
+export const FILE = "file";
 
 // Input IDs
 export const FIRST_NAME = "first_name";
@@ -87,7 +86,6 @@ export const GUARANTOR_FORM = "guarantor_form";
 export const ID_CARD = "id_card";
 export const PASSPORT_PHOTO = "passport_photo";
 
-
 // dashboard filter transaction types
 export const CREDIT = "Credit";
 export const DEBIT = "Debit";
@@ -95,3 +93,7 @@ export const BILLS = "Bills";
 export const AIRTIMETYPE = "Airtime";
 export const CABLE_TV = "Cable Tv";
 export const INTERNET_DATA = "Internet Data";
+
+// POS CARD DATA TYPES
+export const ID = "_id";
+export const TOTAL_TERMINALS = "total_terminals";

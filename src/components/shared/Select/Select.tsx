@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
+import InputLabel from "../InputLabel";
 import { SelectInput } from "./styled";
 import { SelectProps } from "./types";
 
@@ -20,17 +21,10 @@ const Select: React.FC<SelectProps> = ({
 }) => {
 	return (
 		<div className="w-full mb-5">
-			{label && !!label.length && (
-				<label
-					className="text-xs md:text-sm font-medium pb-1 text-text-color-a"
-					htmlFor={id}
-				>
-					{label}
-				</label>
-			)}
+			{label && !!label.length && <InputLabel id={id} label={label} />}
 			<SelectInput
 				error={error}
-				className="w-full outline-none focus:outline-none py-3 lg:py-4 xl:py-5 border-b-8 shadow-inner transition-all ease-in duration-300 flex flex-row items-center px-2 md:px-4 text-xs xl:text-sm xl:placeholder:text-sm placeholder:text-xs"
+				className="w-full outline-none focus:outline-none py-3 lg:py-4 xl:py-5 border-b-2 shadow-inner transition-all ease-in duration-300 flex flex-row items-center px-2 md:px-4 text-xs xl:text-sm xl:placeholder:text-sm placeholder:text-xs"
 				value={value}
 				onChange={onChange}
 				onFocus={onFocus}
