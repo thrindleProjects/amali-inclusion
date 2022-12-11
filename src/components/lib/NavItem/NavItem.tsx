@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import { masterAgentLinks } from "@/types/navLinks";
+import {
+	masterAgentLinks,
+	adminNavLinks,
+	subAgentsNavLinks,
+} from "@/types/navLinks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
@@ -20,10 +24,27 @@ const variants = {
 const NavItem = () => {
 	const router = useRouter();
 	const [expanded, setExpanded] = useState<number | boolean>(1);
+	const [role, setRole] = useState<null | string>();
+
+	const getUserRole = () => {
+		const userRole = localStorage.getItem("userRole");
+		setRole(userRole);
+	};
+
+	const dataToBeRendered =
+		role === "master-agent"
+			? masterAgentLinks
+			: role === "admin"
+				? adminNavLinks
+				: subAgentsNavLinks;
+
+	useEffect(() => {
+		getUserRole();
+	}, []);
 
 	return (
 		<div className="px-4  md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
-			{masterAgentLinks.map((item, index) => (
+			{dataToBeRendered.map((item, index) => (
 				<div key={index}>
 					<div
 						key={index}

@@ -2,14 +2,15 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import React from "react";
 
-const Dashboard = () => {
+const WalletHistory = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
-        Admin Dashboard
+				<p>Wallet History</p>
+
 			</BodyLayout>
 		</AuthLayout>
 	);
 };
 
-export default Dashboard;
+export default WalletHistory;

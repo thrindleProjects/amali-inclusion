@@ -2,14 +2,15 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import React from "react";
 
-const Dashboard = () => {
+const Transactions = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
-        Admin Dashboard
+				<p>Transactions</p>
+
 			</BodyLayout>
 		</AuthLayout>
 	);
 };
 
-export default Dashboard;
+export default Transactions;

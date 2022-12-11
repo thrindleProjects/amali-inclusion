@@ -7,7 +7,6 @@ import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import AccountDropdown from "@/components/lib/accountDropdown/AccountDropdown";
 import AmaliLogo from "@/public/assets/amali-logo.png";
 
-
 const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
 	const [accountDropdown, setAccountDropdown] = useState(false);
@@ -36,7 +35,6 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 							height={40}
 							className="rounded-full"
 						/>
-						
 					</div>
 				</div>
 			)}
@@ -56,7 +54,6 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 							alt="Amali Logo"
 							blurDataURL=""
 							className="object-contain border-none"
-
 						/>
 					</div>
 					<div onClick={toggleAccountDropdown}>
@@ -67,7 +64,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 					</div>
 				</div>
 			)}
-			<div className="relative" ref={dropdownRef}>
+			<div className="relative " ref={dropdownRef}>
 				{accountDropdown && <AccountDropdown />}
 			</div>
 		</div>
