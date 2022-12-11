@@ -9,6 +9,17 @@ const nextConfig = {
 				destination: "/master-agent/dashboard",
 				permanent: true,
 			},
+			{
+				source: "/admin",
+				destination: "/admin/dashboard",
+				permanent: true,
+			},
+			{
+				source: "/sub-agent",
+				destination: "/sub-agent/dashboard",
+				permanent: true,
+			},
+
 		];
 	},
 };

@@ -8,8 +8,8 @@ const AccountDropdown = () => {
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
 
 	return (
-		<div className="absolute  pt-1 p-2 top-[0rem]  text-xs right-0  w-52 text-amali-grey">
-			<div className="bg-white shadow-lg rounded-md overflow-hidden p-2">
+		<div className="fixed right-0  pt-1 p-2 text-xs  w-52 text-amali-grey ">
+			<div className="bg-white shadow-lg rounded-md overflow-hidden  p-2">
 				{!largeScreen && (
 					<>
 						<ul>

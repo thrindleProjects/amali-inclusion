@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
+	const router = useRouter();
+	useEffect(() => {
+		router.push("/login");
+
+	},[]);
 	return (
-		<div className="bg-red-300 text-2xl flex flex-col gap-[14px]">
-			<div className="">hello</div>
-			<div>there</div>
-		</div>
+		<></>
 	);
 }

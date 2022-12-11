@@ -201,7 +201,7 @@ export const adminNavLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "admin/dasboard",
+		link: "admin/dashboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
@@ -214,12 +214,12 @@ export const adminNavLinks = [
 			{
 				id: 1,
 				subType: TERMINALS,
-				link: "/Terminals",
+				link: "admin/terminals",
 			},
 			{
 				id: 2,
 				subType: ADD_SUB_AGENT,
-				link: "/add-sub-agent",
+				link: "admin/add-sub-agent",
 			},
 		],
 	},
@@ -255,14 +255,14 @@ export const adminNavLinks = [
 	{
 		id: 4,
 		name: PERFORMANCE,
-		link: "",
+		link: "admin/performance",
 		subLinks: [],
 		icon: "mdi:performance",
 	},
 	{
 		id: 5,
 		name: TRANSACTIONS,
-		link: "",
+		link: "admin/transactions",
 		subLinks: [],
 		icon: "mdi:printer-outline",
 	},
@@ -274,12 +274,12 @@ export const adminNavLinks = [
 			{
 				id: 1,
 				subType: WITHDRAWAL,
-				link: "/withdrawal",
+				link: "admin/withdrawal",
 			},
 			{
 				id: 2,
 				subType: WALLET_HISTORY,
-				link: "/wallet-history",
+				link: "admin/wallet-history",
 			},
 		],
 		icon: "ph:shopping-bag",
@@ -292,7 +292,7 @@ export const adminNavLinks = [
 			{
 				id: 1,
 				subType: PROFILE,
-				link: "/profile",
+				link: "admin/profile",
 			},
 		],
 		icon: "material-symbols:settings",

@@ -2,14 +2,14 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import React from "react";
 
-const Dashboard = () => {
+const AddSubAgent = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
-        Admin Dashboard
+				<p>Add sub agents</p>
 			</BodyLayout>
 		</AuthLayout>
 	);
 };
 
-export default Dashboard;
+export default AddSubAgent;

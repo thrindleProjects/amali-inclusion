@@ -1,5 +1,5 @@
 import Input from "@/components/shared/Input";
-import React from "react";
+import React, { useEffect } from "react";
 import {
 	PASSWORD,
 	TEXT,
@@ -7,8 +7,17 @@ import {
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const LoginForm = () => {
+	const router = useRouter();
+
+	useEffect(() => {
+		localStorage.setItem("userRole", "master-agent");
+
+	}, []);
+
+
 	const formik = useFormik({
 		initialValues: { phone: "", password: "" },
 		validationSchema: Yup.object({
@@ -16,7 +25,18 @@ const LoginForm = () => {
 			password: Yup.string().required("Password is required"),
 		}),
 		onSubmit: (values) => {
-			values.phone = values.phone.trim();
+			if (values.phone === "08161112404" && values.password === "12345678") {
+				router.push("/master-agent");
+			} else if (values.phone === "08011111111" && values.password === "12345678") {
+				router.push("/admin");
+				localStorage.setItem("userRole", "admin");
+			} else if (values.phone === "08166939100" && values.password === "12345678") {
+				router.push("/sub-agent");
+				localStorage.setItem("userRole", "sub-agent");
+
+
+			}
+
 		},
 	});
 	console.log({ values: formik.values });

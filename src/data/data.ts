@@ -11,6 +11,7 @@ import * as CONSTANTS from "@/types/constants";
 import { TerminalTransactionsData } from "@/layout/pages-layout/master-agent/pos-manager/terminal_id/types";
 import { formatDateNum } from "@/utils/formatDate";
 
+
 export const dashboardData = [
 	{
 		id: 1,

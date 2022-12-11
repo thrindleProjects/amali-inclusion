@@ -2,14 +2,14 @@ import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import React from "react";
 
-const Dashboard = () => {
+const Withdrawal = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
-        Admin Dashboard
+				<p>Withdrawal</p>
 			</BodyLayout>
 		</AuthLayout>
 	);
 };
 
-export default Dashboard;
+export default Withdrawal;

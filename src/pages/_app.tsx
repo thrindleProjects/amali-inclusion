@@ -17,6 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
 	useEffect(() => {
 		setShowChild(true);
+
 	}, []);
 
 	if (!showChild && process.env.NODE_ENV === "development") {
