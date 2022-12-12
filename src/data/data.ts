@@ -8,9 +8,8 @@ import {
 } from "@/types/constants";
 
 import * as CONSTANTS from "@/types/constants";
-import { TerminalTransactionsData } from "@/layout/pages-layout/master-agent/pos-manager/terminal_id/types";
+import { TerminalTransactionsData } from "@/components/pages-layout/master-agent/pos-manager/terminal_id/types";
 import { formatDateNum } from "@/utils/formatDate";
-
 
 export const dashboardData = [
 	{
@@ -256,13 +255,11 @@ export const allMasterAgents = [
 	},
 	{
 		name: "Oke Lekan",
-		value:"Oke Lekan",
+		value: "Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
 		value: "Lasisi Kehinde",
-
-
 	},
 	{
 		name: "Oke Lekan",
@@ -272,7 +269,6 @@ export const allMasterAgents = [
 		name: "Lasisi Kehinde",
 		value: "Lasisi Kehinde",
 	},
-	
 ];
 
 export const allSubAgentData = [
@@ -592,3 +588,227 @@ export const termTransCard = [
 		color: "#1B2850",
 	},
 ];
+
+export const airtimeNumberOptions = [
+	{
+		name: CONSTANTS.MY_OWN_NUMBER,
+		value: CONSTANTS.MY_OWN_NUMBER,
+	},
+	{
+		name: CONSTANTS.BENEFICIARY_NUMBER,
+		value: CONSTANTS.BENEFICIARY_NUMBER,
+	},
+];
+
+export const networtProviderOptions = [
+	{
+		name: CONSTANTS._9MOBILE,
+		value: CONSTANTS._9MOBILE,
+	},
+	{
+		name: CONSTANTS.MTN,
+		value: CONSTANTS.MTN,
+	},
+	{
+		name: CONSTANTS.GLO,
+		value: CONSTANTS.GLO,
+	},
+	{
+		name: CONSTANTS.AIRTEL,
+		value: CONSTANTS.AIRTEL,
+	},
+];
+
+export const displayedAmounts = [
+	{
+		amount: "200",
+		to_pay: "180",
+	},
+	{
+		amount: "500",
+		to_pay: "480",
+	},
+	{
+		amount: "700",
+		to_pay: "680",
+	},
+	{
+		amount: "1000",
+		to_pay: "980",
+	},
+	{
+		amount: "1500",
+		to_pay: "1480",
+	},
+	{
+		amount: "2000",
+		to_pay: "1980",
+	},
+];
+
+export const dataPlans = {
+	[CONSTANTS._9MOBILE]: [
+		{
+			amount: "100MB",
+			to_pay: "100",
+			duration: "1 day",
+		},
+		{
+			amount: "650MB",
+			to_pay: "200",
+			duration: "1 day",
+		},
+		{
+			amount: "500MB",
+			to_pay: "500",
+			duration: "30 days",
+		},
+		{
+			amount: "1.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "4.5GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+	],
+	[CONSTANTS.GLO]: [
+		{
+			amount: "105MB",
+			to_pay: "100",
+			duration: "2 days",
+		},
+		{
+			amount: "350MB",
+			to_pay: "200",
+			duration: "4 days",
+		},
+		{
+			amount: "1.05GB",
+			to_pay: "500",
+			duration: "14 days",
+		},
+		{
+			amount: "2.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "5.8GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+		{
+			amount: "7.7GB",
+			to_pay: "2500",
+			duration: "30 days",
+		},
+		{
+			amount: "10GB",
+			to_pay: "3000",
+			duration: "30 days",
+		},
+	],
+	[CONSTANTS.MTN]: [
+		{
+			amount: "100MB",
+			to_pay: "100",
+			duration: "1 day",
+		},
+		{
+			amount: "200MB",
+			to_pay: "200",
+			duration: "2 days",
+		},
+		{
+			amount: "1.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "4.5GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+		{
+			amount: "6GB",
+			to_pay: "1500",
+			duration: "7 days",
+		},
+
+		{
+			amount: "6GB",
+			to_pay: "2500",
+			duration: "30 days",
+		},
+		{
+			amount: "8GB",
+			to_pay: "3000",
+			duration: "30 days",
+		},
+		{
+			amount: "10GB",
+			to_pay: "3500",
+			duration: "30 days",
+		},
+		{
+			amount: "3GB",
+			to_pay: "1500",
+			duration: "30 days",
+		},
+	],
+	[CONSTANTS.AIRTEL]: [
+		{
+			amount: "40MB",
+			to_pay: "50",
+			duration: "1 day",
+		},
+		{
+			amount: "100MB",
+			to_pay: "100",
+			duration: "1 day",
+		},
+		{
+			amount: "200MB",
+			to_pay: "200",
+			duration: "3 days",
+		},
+		{
+			amount: "350MB",
+			to_pay: "300",
+			duration: "7 days",
+		},
+		{
+			amount: "750MB",
+			to_pay: "500",
+			duration: "14 days",
+		},
+		{
+			amount: "1.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "3GB",
+			to_pay: "1500",
+			duration: "30 days",
+		},
+		{
+			amount: "4.5GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+		{
+			amount: "10GB",
+			to_pay: "3000",
+			duration: "30 days",
+		},
+		{
+			amount: "7GB",
+			to_pay: "1500",
+			duration: "7 days",
+		},
+	],
+};

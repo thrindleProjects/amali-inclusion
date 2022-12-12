@@ -21,7 +21,7 @@ export const LOAN_SETTINGS = "Loan Settings";
 export const PAY_BILLS = "Pay Bills";
 export const AIRTIME = "Purchase of Airtime";
 export const CABLE = "Cable TV Subscription";
-export const INTERNET = "Internet Data  Subscription";
+export const INTERNET = "Internet Data Subscription";
 export const ELECTRICITY = "Electricity Bill";
 
 // PROFILE DROPDOWN
@@ -118,3 +118,23 @@ export const BALANCE = "balance";
 export const AGENT_CODE = "agent_code";
 export const POS_TYPE = "pos_type";
 export const REMARKS = "remarks";
+
+// AIRTIME VALUES
+export const MY_OWN_NUMBER = "My Own Number";
+export const BENEFICIARY_NUMBER = "Beneficiary Number";
+
+// AIRTIME FORM KEYS
+export const NUMBER_OWN = "number_own";
+export const NETWORK_PROVIDER = "network_provider";
+export const RECIPIENTS_PHONE = "recipients_phone";
+export const PIN = "pin";
+
+// INTERNET DATA KEYS
+export const VALUE = "value";
+
+// Network Providers
+export const _9MOBILE = "9mobile";
+export const MTN = "MTN";
+export const GLO = "GLO";
+export const AIRTEL = "Airtel";
+export const SMILE = "Smile";
