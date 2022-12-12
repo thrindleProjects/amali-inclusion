@@ -34,6 +34,36 @@ export const dashboardData = [
 		color: "#1B2850",
 	},
 ];
+export const adminDashboardData = [
+	{
+		id: 1,
+		number: "3",
+		text: "Total Customers",
+		image: "bi:person-check-fill",
+		color: "#00CFE8",
+	},
+	{
+		id: 2,
+		number: "0",
+		text: "Transaction Count",
+		image: "mdi:file-document-outline",
+		color: "#1b2850",
+	},
+	{
+		id: 3,
+		number: "0",
+		text: "Transaction count",
+		image: "uil:print",
+		color: "#42B0A8",
+	},
+	{
+		id: 3,
+		number: "13",
+		text: "Total Float (Sub Agents)",
+		image: "mdi:file-document-outline",
+		color: "#28C76F",
+	},
+];
 
 export const tableData = [
 	{
@@ -812,3 +842,33 @@ export const dataPlans = {
 		},
 	],
 };
+
+export const transactionsData = [
+	{
+		id: 1,
+		agentCode: "45373832728864647738984",
+		type: "debit",
+		amount: "₦ 200.00",
+		remark: "NGN 200 Airtime Purchase Was Successful To 08166939205",
+		status: "Successful",
+		date: "22-09-22"
+	},
+	{
+		id: 2,
+		agentCode: "4537383237t43864647738984",
+		type: "debit",
+		amount: "₦ 500.00",
+		remark: "NGN 500 Airtime Purchase Was Successful To 08166939215",
+		status: "Successful",
+		date: "22-09-22"
+	},
+	{
+		id: 1,
+		agentCode: "453738366888864647738984",
+		type: "debit",
+		amount: "₦ 400.00",
+		remark: "NGN 400 Airtime Purchase Was Successful To 08166939205",
+		status: "Successful",
+		date: "22-09-22"
+	},
+];
