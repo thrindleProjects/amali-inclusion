@@ -9,7 +9,7 @@ import {
 	networtProviderOptions,
 } from "@/data/data";
 import Input from "@/components/shared/Input";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import BundleButton from "../BundleButton";
 import InternetModal from "../InternetModal";
 
@@ -49,6 +49,8 @@ const InternetForm = () => {
 		validationSchema,
 		onSubmit: (values) => {
 			console.log({ values });
+			setIsOpen(false);
+			formik.resetForm();
 		},
 	});
 
@@ -190,6 +192,22 @@ const InternetForm = () => {
 							);
 						})}
 					</motion.div>
+					<AnimatePresence>
+						{((formik.errors[CONSTANTS.AMOUNT] &&
+							formik.touched[CONSTANTS.AMOUNT]) ||
+							(formik.errors[CONSTANTS.VALUE] &&
+								formik.touched[CONSTANTS.VALUE])) && (
+							<motion.div
+								initial={{ opacity: 0, x: 20 }}
+								animate={{ opacity: 1, x: 0 }}
+								exit={{ opacity: 0, x: 100 }}
+								transition={{ ease: "easeOut", duration: 0.5 }}
+								className="text-red-300 text-xs font-semibold pt-1 pl-1"
+							>
+								Please select an internet bundle
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			)}
 			<button
@@ -205,6 +223,9 @@ const InternetForm = () => {
 				amount={formik.values[CONSTANTS.AMOUNT]}
 				recipient={formik.values[CONSTANTS.RECIPIENTS_PHONE]}
 				value={formik.values[CONSTANTS.VALUE]}
+				onSubmit={formik.handleSubmit}
+				pinError={formik.errors[CONSTANTS.PIN] && formik.touched[CONSTANTS.PIN]}
+				pinErrorText={formik.errors[CONSTANTS.PIN]}
 			/>
 		</form>
 	);

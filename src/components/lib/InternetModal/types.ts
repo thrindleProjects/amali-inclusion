@@ -1,5 +1,4 @@
 import { FormikErrors, FormikValues } from "formik";
-
 export interface InternetModalProps {
 	isOpen: boolean;
 	handleHideModal(
@@ -12,5 +11,8 @@ export interface InternetModalProps {
 	) => Promise<FormikErrors<FormikValues>> | Promise<void>;
 	amount: string;
 	recipient: string;
-	value: string
+	value: string;
+	onSubmit: (e?: React.FormEvent<HTMLFormElement> | undefined) => void;
+	pinError: boolean | "" | undefined;
+	pinErrorText: string | undefined;
 }

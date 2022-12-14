@@ -138,3 +138,55 @@ export const MTN = "MTN";
 export const GLO = "GLO";
 export const AIRTEL = "Airtel";
 export const SMILE = "Smile";
+
+// CABLE KEYS
+export const CABLE_PROVIDERS = "cable_providers";
+export const CABLE_PLAN = "cable_plan";
+export const CABLE_COST = "cable_cost";
+export const CABLE_DURATION = "cable_duration";
+export const SMARTCARD_NO = "smartcard_no";
+export const CUSTOMER_DETAILS = "customer_details";
+export const PHONE_NO = "phone_no";
+
+// CABLE PROVIDER TYPES
+export const DSTV = "DSTV";
+export const GOTV = "GOTV";
+export const STARTIMES = "STARTIMES";
+
+// CABLE PLANS
+export const DSTV_PADI = "DStv Padi";
+export const DSTV_YANGA = "DStv Yanga";
+export const DSTV_CONFAM = "DStv Confam";
+export const DSTV_COMPACT = "DStv Compact";
+export const DSTV_PREMIUM = "DStv Premium";
+
+export const GOTV_PADI = "GOtv Padi";
+export const GOTV_YANGA = "GOtv Yanga";
+export const GOTV_CONFAM = "GOtv Confam";
+export const GOTV_COMPACT = "GOtv Compact";
+export const GOTV_PREMIUM = "GOtv Premium";
+
+export const STARTIMES_PADI = "Startimes Padi";
+export const STARTIMES_YANGA = "Startimes Yanga";
+export const STARTIMES_CONFAM = "Startimes Confam";
+export const STARTIMES_COMPACT = "Startimes Compact";
+export const STARTIMES_PREMIUM = "Startimes Premium";
+
+// ELECTRICITY BILLS KEYS
+export const ELEC_SERV_TYPE = "type";
+export const ELECT_SERV_PROVIDER = "provider";
+export const METER_NO = "meter_no";
+
+// ELECTRICITY BILLS FORM VALUES
+export const PREPAID = "Prepaid";
+export const POSTPAID = "Postpaid";
+
+export const KANO = "kano";
+export const JOS = "jos";
+export const PH = "portharcourt";
+export const EKO = "eko";
+export const IKEJA = "ikeja";
+export const IBADAN = "ibadan";
+export const EEDC = "eedc";
+export const KADUNA = "kaduna";
+export const AEDC = "aedc";

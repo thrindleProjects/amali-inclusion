@@ -12,4 +12,7 @@ export interface AirtimeModalProps {
 	) => Promise<FormikErrors<FormikValues>> | Promise<void>;
 	amount: string;
 	recipient: string;
+	onSubmit: (e?: React.FormEvent<HTMLFormElement> | undefined) => void;
+	pinError: boolean | "" | undefined;
+	pinErrorText: string | undefined;
 }

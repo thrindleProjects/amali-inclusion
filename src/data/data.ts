@@ -851,7 +851,7 @@ export const transactionsData = [
 		amount: "₦ 200.00",
 		remark: "NGN 200 Airtime Purchase Was Successful To 08166939205",
 		status: "Successful",
-		date: "22-09-22"
+		date: "22-09-22",
 	},
 	{
 		id: 2,
@@ -860,7 +860,7 @@ export const transactionsData = [
 		amount: "₦ 500.00",
 		remark: "NGN 500 Airtime Purchase Was Successful To 08166939215",
 		status: "Successful",
-		date: "22-09-22"
+		date: "22-09-22",
 	},
 	{
 		id: 1,
@@ -869,6 +869,140 @@ export const transactionsData = [
 		amount: "₦ 400.00",
 		remark: "NGN 400 Airtime Purchase Was Successful To 08166939205",
 		status: "Successful",
-		date: "22-09-22"
+		date: "22-09-22",
+	},
+];
+
+export const cableProviders = [
+	{
+		name: CONSTANTS.DSTV,
+		value: CONSTANTS.DSTV,
+	},
+	{
+		name: CONSTANTS.GOTV,
+		value: CONSTANTS.GOTV,
+	},
+	{
+		name: CONSTANTS.STARTIMES,
+		value: CONSTANTS.STARTIMES,
+	},
+];
+
+export const cablePlans = {
+	[CONSTANTS.DSTV]: [
+		{
+			name: CONSTANTS.DSTV_PADI,
+			value: "2150",
+		},
+		{
+			name: CONSTANTS.DSTV_YANGA,
+			value: "2950",
+		},
+		{
+			name: CONSTANTS.DSTV_CONFAM,
+			value: "5300",
+		},
+		{
+			name: CONSTANTS.DSTV_COMPACT,
+			value: "9000",
+		},
+		{
+			name: CONSTANTS.DSTV_PREMIUM,
+			value: "21000",
+		},
+	],
+	[CONSTANTS.GOTV]: [
+		{
+			name: CONSTANTS.GOTV_PADI,
+			value: "2150",
+		},
+		{
+			name: CONSTANTS.GOTV_YANGA,
+			value: "2950",
+		},
+		{
+			name: CONSTANTS.GOTV_CONFAM,
+			value: "5300",
+		},
+		{
+			name: CONSTANTS.GOTV_COMPACT,
+			value: "9000",
+		},
+		{
+			name: CONSTANTS.GOTV_PREMIUM,
+			value: "21000",
+		},
+	],
+	[CONSTANTS.STARTIMES]: [
+		{
+			name: CONSTANTS.STARTIMES_PADI,
+			value: "2150",
+		},
+		{
+			name: CONSTANTS.STARTIMES_YANGA,
+			value: "2950",
+		},
+		{
+			name: CONSTANTS.STARTIMES_CONFAM,
+			value: "5300",
+		},
+		{
+			name: CONSTANTS.STARTIMES_COMPACT,
+			value: "9000",
+		},
+		{
+			name: CONSTANTS.STARTIMES_PREMIUM,
+			value: "21000",
+		},
+	],
+};
+
+export const elecServiceType = [
+	{
+		name: CONSTANTS.PREPAID,
+		value: CONSTANTS.PREPAID,
+	},
+	{
+		name: CONSTANTS.POSTPAID,
+		value: CONSTANTS.POSTPAID,
+	},
+];
+
+export const elecServiceProvider = [
+	{
+		name: CONSTANTS.KANO,
+		value: CONSTANTS.KANO,
+	},
+	{
+		name: CONSTANTS.JOS,
+		value: CONSTANTS.JOS,
+	},
+	{
+		name: CONSTANTS.PH,
+		value: CONSTANTS.PH,
+	},
+	{
+		name: CONSTANTS.EKO,
+		value: CONSTANTS.EKO,
+	},
+	{
+		name: CONSTANTS.IKEJA,
+		value: CONSTANTS.IKEJA,
+	},
+	{
+		name: CONSTANTS.IBADAN,
+		value: CONSTANTS.IBADAN,
+	},
+	{
+		name: CONSTANTS.EEDC,
+		value: CONSTANTS.EEDC,
+	},
+	{
+		name: CONSTANTS.KADUNA,
+		value: CONSTANTS.KADUNA,
+	},
+	{
+		name: CONSTANTS.AEDC,
+		value: CONSTANTS.AEDC,
 	},
 ];

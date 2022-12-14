@@ -1,30 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { initialValues, validationSchema } from "./validation";
+import * as CONSTANTS from "@/types/constants";
 import Select from "@/components/shared/Select";
 import {
-	airtimeNumberOptions,
 	displayedAmounts,
-	networtProviderOptions,
+	elecServiceType,
+	elecServiceProvider,
 } from "@/data/data";
-import * as CONSTANTS from "@/types/constants";
 import Input from "@/components/shared/Input";
 import InputLabel from "@/components/shared/InputLabel";
 import AmountButton from "../AmountButton";
-import AirtimeModal from "../AirtimeModal";
 
-type NUMBER_OWN = typeof CONSTANTS.NUMBER_OWN;
 type AMOUNT = typeof CONSTANTS.AMOUNT;
-type RECIPIENTS_PHONE = typeof CONSTANTS.RECIPIENTS_PHONE;
-type NETWORK_PROVIDER = typeof CONSTANTS.NETWORK_PROVIDER;
-const AirtimeForm = () => {
-	const formik = useFormik({
-		initialValues,
-		validationSchema,
-		onSubmit: (values) => {
-			console.log({ values });
-		},
-	});
+type PROVIDER = typeof CONSTANTS.ELECT_SERV_PROVIDER;
+type METER_TYPE = typeof CONSTANTS.ELEC_SERV_TYPE;
+type PHONE = typeof CONSTANTS.PHONE_NO;
+type METER = typeof CONSTANTS.METER_NO;
+
+const ElectricityForm = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const handleModalOpen = async (
@@ -33,11 +27,7 @@ const AirtimeForm = () => {
 		e.preventDefault();
 		formik.validateForm();
 
-		type ALL_FORM_KEYS =
-			| NUMBER_OWN
-			| AMOUNT
-			| RECIPIENTS_PHONE
-			| NETWORK_PROVIDER;
+		type ALL_FORM_KEYS = PROVIDER | AMOUNT | METER_TYPE | METER | PHONE;
 
 		const all_form_keys: ALL_FORM_KEYS[] = Object.keys(formik.values).filter(
 			(key) => key !== CONSTANTS.PIN
@@ -55,12 +45,13 @@ const AirtimeForm = () => {
 		}
 	};
 
-	const handleHideModal = (
-		e: React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>
-	) => {
-		e.preventDefault();
-		setIsOpen(false);
-	};
+	const formik = useFormik({
+		initialValues,
+		validationSchema,
+		onSubmit: (values) => {
+			console.log(values);
+		},
+	});
 
 	const handleAmountBtnClick = (
 		field: AMOUNT,
@@ -71,60 +62,86 @@ const AirtimeForm = () => {
 		formik.setFieldValue(field, value, shouldValidate);
 	};
 
-	useEffect(() => {
-		formik.setFieldTouched(CONSTANTS.NUMBER_OWN, true, true);
-	}, []);
-
 	return (
 		<form onSubmit={formik.handleSubmit} className="pb-6">
 			<Select
-				id={CONSTANTS.NUMBER_OWN}
+				id={CONSTANTS.ELEC_SERV_TYPE}
 				onChange={formik.handleChange}
-				options={airtimeNumberOptions}
-				value={formik.values[CONSTANTS.NUMBER_OWN]}
-				placeholder={"Select one"}
-				label={"Whose number do you want to send the airtime to?"}
-				name={CONSTANTS.NUMBER_OWN}
+				options={elecServiceType}
+				value={formik.values[CONSTANTS.ELEC_SERV_TYPE]}
+				placeholder={"Select meter type"}
+				label={"Meter type"}
+				name={CONSTANTS.ELEC_SERV_TYPE}
 				onBlur={formik.handleBlur}
 				error={
-					formik.errors[CONSTANTS.NUMBER_OWN] &&
-					formik.touched[CONSTANTS.NUMBER_OWN]
+					formik.errors[CONSTANTS.ELEC_SERV_TYPE] &&
+					formik.touched[CONSTANTS.ELEC_SERV_TYPE]
 				}
-				errorText={formik.errors[CONSTANTS.NUMBER_OWN]}
+				errorText={formik.errors[CONSTANTS.ELEC_SERV_TYPE]}
 				required={true}
 			/>
 			<Select
-				id={CONSTANTS.NETWORK_PROVIDER}
+				id={CONSTANTS.ELECT_SERV_PROVIDER}
 				onChange={formik.handleChange}
-				options={networtProviderOptions}
-				value={formik.values[CONSTANTS.NETWORK_PROVIDER]}
-				placeholder={"Select a network provider"}
-				name={CONSTANTS.NETWORK_PROVIDER}
+				options={elecServiceProvider}
+				value={formik.values[CONSTANTS.ELECT_SERV_PROVIDER]}
+				placeholder={"Select service provider"}
+				label={"Service Provider"}
+				name={CONSTANTS.ELECT_SERV_PROVIDER}
 				onBlur={formik.handleBlur}
 				error={
-					formik.errors[CONSTANTS.NETWORK_PROVIDER] &&
-					formik.touched[CONSTANTS.NETWORK_PROVIDER]
+					formik.errors[CONSTANTS.ELECT_SERV_PROVIDER] &&
+					formik.touched[CONSTANTS.ELECT_SERV_PROVIDER]
 				}
-				label="Select a network provider"
-				errorText={formik.errors[CONSTANTS.NETWORK_PROVIDER]}
+				errorText={formik.errors[CONSTANTS.ELECT_SERV_PROVIDER]}
 				required={true}
+			/>
+			<Input
+				id={CONSTANTS.METER_NO}
+				type={CONSTANTS.TEXT}
+				value={formik.values[CONSTANTS.METER_NO]}
+				placeholder="Enter your meter number"
+				onChange={formik.handleChange}
+				onBlur={formik.handleBlur}
+				error={
+					formik.errors[CONSTANTS.METER_NO] &&
+					formik.touched[CONSTANTS.METER_NO]
+				}
+				errorText={formik.errors[CONSTANTS.METER_NO]}
+				required={true}
+				label={"Meter number"}
+			/>
+			<Input
+				id={CONSTANTS.CUSTOMER_DETAILS}
+				type={CONSTANTS.TEXT}
+				value={formik.values[CONSTANTS.CUSTOMER_DETAILS]}
+				placeholder="Enter your name"
+				onChange={formik.handleChange}
+				onBlur={formik.handleBlur}
+				error={
+					formik.errors[CONSTANTS.CUSTOMER_DETAILS] &&
+					formik.touched[CONSTANTS.CUSTOMER_DETAILS]
+				}
+				errorText={formik.errors[CONSTANTS.CUSTOMER_DETAILS]}
+				required={true}
+				label={"Customer Name"}
 			/>
 			<div className="flex gap-2">
 				<div className="flex-shrink-0 text-xs xl:text-sm h-max bg-[#88c3c120] py-3 lg:py-4 xl:py-5 w-max px-3 border-b-2 border-[#88c3c1] cursor-default">
 					🇳🇬 +234
 				</div>
 				<Input
-					id={CONSTANTS.RECIPIENTS_PHONE}
+					id={CONSTANTS.PHONE_NO}
 					type={CONSTANTS.TEXT}
-					value={formik.values[CONSTANTS.RECIPIENTS_PHONE]}
+					value={formik.values[CONSTANTS.PHONE_NO]}
 					placeholder="Enter phone number"
 					onChange={formik.handleChange}
 					onBlur={formik.handleBlur}
 					error={
-						formik.errors[CONSTANTS.RECIPIENTS_PHONE] &&
-						formik.touched[CONSTANTS.RECIPIENTS_PHONE]
+						formik.errors[CONSTANTS.PHONE_NO] &&
+						formik.touched[CONSTANTS.PHONE_NO]
 					}
-					errorText={formik.errors[CONSTANTS.RECIPIENTS_PHONE]}
+					errorText={formik.errors[CONSTANTS.PHONE_NO]}
 					required={true}
 				/>
 			</div>
@@ -162,18 +179,8 @@ const AirtimeForm = () => {
 			>
 				Next
 			</button>
-			<AirtimeModal
-				isOpen={isOpen}
-				handleHideModal={handleHideModal}
-				onChange={formik.setFieldValue}
-				amount={formik.values[CONSTANTS.AMOUNT]}
-				recipient={formik.values[CONSTANTS.RECIPIENTS_PHONE]}
-				onSubmit={formik.handleSubmit}
-				pinError={formik.errors[CONSTANTS.PIN] && formik.touched[CONSTANTS.PIN]}
-				pinErrorText={formik.errors[CONSTANTS.PIN]}
-			/>
 		</form>
 	);
 };
 
-export default AirtimeForm;
+export default ElectricityForm;

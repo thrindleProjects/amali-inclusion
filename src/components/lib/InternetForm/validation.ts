@@ -37,5 +37,8 @@ export const validationSchema = Yup.object({
 	),
 	[CONSTANTS.AMOUNT]: Yup.string().required("Please specify amount"),
 	[CONSTANTS.VALUE]: Yup.string().required("Please specify value"),
-	[CONSTANTS.PIN]: Yup.string().required("Please specify PIN"),
+	[CONSTANTS.PIN]: Yup.string()
+		.required("Please specify PIN")
+		.min(4, "Pin must be 4 digits long")
+		.max(4, "Pin must be 4 digits long"),
 });
