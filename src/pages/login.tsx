@@ -1,5 +1,5 @@
 import React from "react";
-import LoginLayout from "@/layout/pages-layout/login";
+import LoginLayout from "@/components/pages-layout/login";
 import { NextPage } from "next";
 const Login: NextPage = () => {
 	return (

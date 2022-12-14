@@ -8,9 +8,8 @@ import {
 } from "@/types/constants";
 
 import * as CONSTANTS from "@/types/constants";
-import { TerminalTransactionsData } from "@/layout/pages-layout/master-agent/pos-manager/terminal_id/types";
+import { TerminalTransactionsData } from "@/components/pages-layout/master-agent/pos-manager/terminal_id/types";
 import { formatDateNum } from "@/utils/formatDate";
-
 
 export const dashboardData = [
 	{
@@ -286,13 +285,11 @@ export const allMasterAgents = [
 	},
 	{
 		name: "Oke Lekan",
-		value:"Oke Lekan",
+		value: "Oke Lekan",
 	},
 	{
 		name: "Lasisi Kehinde",
 		value: "Lasisi Kehinde",
-
-
 	},
 	{
 		name: "Oke Lekan",
@@ -302,7 +299,6 @@ export const allMasterAgents = [
 		name: "Lasisi Kehinde",
 		value: "Lasisi Kehinde",
 	},
-	
 ];
 
 export const allSubAgentData = [
@@ -623,6 +619,229 @@ export const termTransCard = [
 	},
 ];
 
+export const airtimeNumberOptions = [
+	{
+		name: CONSTANTS.MY_OWN_NUMBER,
+		value: CONSTANTS.MY_OWN_NUMBER,
+	},
+	{
+		name: CONSTANTS.BENEFICIARY_NUMBER,
+		value: CONSTANTS.BENEFICIARY_NUMBER,
+	},
+];
+
+export const networtProviderOptions = [
+	{
+		name: CONSTANTS._9MOBILE,
+		value: CONSTANTS._9MOBILE,
+	},
+	{
+		name: CONSTANTS.MTN,
+		value: CONSTANTS.MTN,
+	},
+	{
+		name: CONSTANTS.GLO,
+		value: CONSTANTS.GLO,
+	},
+	{
+		name: CONSTANTS.AIRTEL,
+		value: CONSTANTS.AIRTEL,
+	},
+];
+
+export const displayedAmounts = [
+	{
+		amount: "200",
+		to_pay: "180",
+	},
+	{
+		amount: "500",
+		to_pay: "480",
+	},
+	{
+		amount: "700",
+		to_pay: "680",
+	},
+	{
+		amount: "1000",
+		to_pay: "980",
+	},
+	{
+		amount: "1500",
+		to_pay: "1480",
+	},
+	{
+		amount: "2000",
+		to_pay: "1980",
+	},
+];
+
+export const dataPlans = {
+	[CONSTANTS._9MOBILE]: [
+		{
+			amount: "100MB",
+			to_pay: "100",
+			duration: "1 day",
+		},
+		{
+			amount: "650MB",
+			to_pay: "200",
+			duration: "1 day",
+		},
+		{
+			amount: "500MB",
+			to_pay: "500",
+			duration: "30 days",
+		},
+		{
+			amount: "1.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "4.5GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+	],
+	[CONSTANTS.GLO]: [
+		{
+			amount: "105MB",
+			to_pay: "100",
+			duration: "2 days",
+		},
+		{
+			amount: "350MB",
+			to_pay: "200",
+			duration: "4 days",
+		},
+		{
+			amount: "1.05GB",
+			to_pay: "500",
+			duration: "14 days",
+		},
+		{
+			amount: "2.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "5.8GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+		{
+			amount: "7.7GB",
+			to_pay: "2500",
+			duration: "30 days",
+		},
+		{
+			amount: "10GB",
+			to_pay: "3000",
+			duration: "30 days",
+		},
+	],
+	[CONSTANTS.MTN]: [
+		{
+			amount: "100MB",
+			to_pay: "100",
+			duration: "1 day",
+		},
+		{
+			amount: "200MB",
+			to_pay: "200",
+			duration: "2 days",
+		},
+		{
+			amount: "1.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "4.5GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+		{
+			amount: "6GB",
+			to_pay: "1500",
+			duration: "7 days",
+		},
+
+		{
+			amount: "6GB",
+			to_pay: "2500",
+			duration: "30 days",
+		},
+		{
+			amount: "8GB",
+			to_pay: "3000",
+			duration: "30 days",
+		},
+		{
+			amount: "10GB",
+			to_pay: "3500",
+			duration: "30 days",
+		},
+		{
+			amount: "3GB",
+			to_pay: "1500",
+			duration: "30 days",
+		},
+	],
+	[CONSTANTS.AIRTEL]: [
+		{
+			amount: "40MB",
+			to_pay: "50",
+			duration: "1 day",
+		},
+		{
+			amount: "100MB",
+			to_pay: "100",
+			duration: "1 day",
+		},
+		{
+			amount: "200MB",
+			to_pay: "200",
+			duration: "3 days",
+		},
+		{
+			amount: "350MB",
+			to_pay: "300",
+			duration: "7 days",
+		},
+		{
+			amount: "750MB",
+			to_pay: "500",
+			duration: "14 days",
+		},
+		{
+			amount: "1.5GB",
+			to_pay: "1000",
+			duration: "30 days",
+		},
+		{
+			amount: "3GB",
+			to_pay: "1500",
+			duration: "30 days",
+		},
+		{
+			amount: "4.5GB",
+			to_pay: "2000",
+			duration: "30 days",
+		},
+		{
+			amount: "10GB",
+			to_pay: "3000",
+			duration: "30 days",
+		},
+		{
+			amount: "7GB",
+			to_pay: "1500",
+			duration: "7 days",
+		},
+	],
+};
 
 export const transactionsData = [
 	{
@@ -632,7 +851,7 @@ export const transactionsData = [
 		amount: "₦ 200.00",
 		remark: "NGN 200 Airtime Purchase Was Successful To 08166939205",
 		status: "Successful",
-		date: "22-09-22"
+		date: "22-09-22",
 	},
 	{
 		id: 2,
@@ -641,7 +860,7 @@ export const transactionsData = [
 		amount: "₦ 500.00",
 		remark: "NGN 500 Airtime Purchase Was Successful To 08166939215",
 		status: "Successful",
-		date: "22-09-22"
+		date: "22-09-22",
 	},
 	{
 		id: 1,
@@ -650,6 +869,140 @@ export const transactionsData = [
 		amount: "₦ 400.00",
 		remark: "NGN 400 Airtime Purchase Was Successful To 08166939205",
 		status: "Successful",
-		date: "22-09-22"
+		date: "22-09-22",
+	},
+];
+
+export const cableProviders = [
+	{
+		name: CONSTANTS.DSTV,
+		value: CONSTANTS.DSTV,
+	},
+	{
+		name: CONSTANTS.GOTV,
+		value: CONSTANTS.GOTV,
+	},
+	{
+		name: CONSTANTS.STARTIMES,
+		value: CONSTANTS.STARTIMES,
+	},
+];
+
+export const cablePlans = {
+	[CONSTANTS.DSTV]: [
+		{
+			name: CONSTANTS.DSTV_PADI,
+			value: "2150",
+		},
+		{
+			name: CONSTANTS.DSTV_YANGA,
+			value: "2950",
+		},
+		{
+			name: CONSTANTS.DSTV_CONFAM,
+			value: "5300",
+		},
+		{
+			name: CONSTANTS.DSTV_COMPACT,
+			value: "9000",
+		},
+		{
+			name: CONSTANTS.DSTV_PREMIUM,
+			value: "21000",
+		},
+	],
+	[CONSTANTS.GOTV]: [
+		{
+			name: CONSTANTS.GOTV_PADI,
+			value: "2150",
+		},
+		{
+			name: CONSTANTS.GOTV_YANGA,
+			value: "2950",
+		},
+		{
+			name: CONSTANTS.GOTV_CONFAM,
+			value: "5300",
+		},
+		{
+			name: CONSTANTS.GOTV_COMPACT,
+			value: "9000",
+		},
+		{
+			name: CONSTANTS.GOTV_PREMIUM,
+			value: "21000",
+		},
+	],
+	[CONSTANTS.STARTIMES]: [
+		{
+			name: CONSTANTS.STARTIMES_PADI,
+			value: "2150",
+		},
+		{
+			name: CONSTANTS.STARTIMES_YANGA,
+			value: "2950",
+		},
+		{
+			name: CONSTANTS.STARTIMES_CONFAM,
+			value: "5300",
+		},
+		{
+			name: CONSTANTS.STARTIMES_COMPACT,
+			value: "9000",
+		},
+		{
+			name: CONSTANTS.STARTIMES_PREMIUM,
+			value: "21000",
+		},
+	],
+};
+
+export const elecServiceType = [
+	{
+		name: CONSTANTS.PREPAID,
+		value: CONSTANTS.PREPAID,
+	},
+	{
+		name: CONSTANTS.POSTPAID,
+		value: CONSTANTS.POSTPAID,
+	},
+];
+
+export const elecServiceProvider = [
+	{
+		name: CONSTANTS.KANO,
+		value: CONSTANTS.KANO,
+	},
+	{
+		name: CONSTANTS.JOS,
+		value: CONSTANTS.JOS,
+	},
+	{
+		name: CONSTANTS.PH,
+		value: CONSTANTS.PH,
+	},
+	{
+		name: CONSTANTS.EKO,
+		value: CONSTANTS.EKO,
+	},
+	{
+		name: CONSTANTS.IKEJA,
+		value: CONSTANTS.IKEJA,
+	},
+	{
+		name: CONSTANTS.IBADAN,
+		value: CONSTANTS.IBADAN,
+	},
+	{
+		name: CONSTANTS.EEDC,
+		value: CONSTANTS.EEDC,
+	},
+	{
+		name: CONSTANTS.KADUNA,
+		value: CONSTANTS.KADUNA,
+	},
+	{
+		name: CONSTANTS.AEDC,
+		value: CONSTANTS.AEDC,
 	},
 ];

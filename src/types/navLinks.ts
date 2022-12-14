@@ -115,22 +115,22 @@ export const masterAgentLinks = [
 			{
 				id: 1,
 				subType: AIRTIME,
-				link: "/buy-airtime",
+				link: "/master-agent/bills-payment/airtime",
 			},
 			{
 				id: 2,
 				subType: INTERNET,
-				link: "/buy-internet",
+				link: "/master-agent/bills-payment/internet",
 			},
 			{
 				id: 3,
 				subType: CABLE,
-				link: "/cable",
+				link: "/master-agent/bills-payment/cable",
 			},
 			{
 				id: 5,
 				subType: ELECTRICITY,
-				link: "/electricity",
+				link: "/master-agent/bills-payment/electricity",
 			},
 		],
 	},

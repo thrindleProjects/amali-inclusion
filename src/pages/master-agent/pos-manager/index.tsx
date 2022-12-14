@@ -1,4 +1,4 @@
-import PosManager from "@/layout/pages-layout/master-agent/pos-manager";
+import PosManager from "@/components/pages-layout/master-agent/pos-manager";
 import { NextPage } from "next";
 import React from "react";
 

@@ -39,7 +39,6 @@ const LoginForm = () => {
 
 		},
 	});
-	console.log({ values: formik.values });
 
 	return (
 		<form onSubmit={formik.handleSubmit}>
