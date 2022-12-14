@@ -36,10 +36,10 @@ body {
 }
 
 .wrapper {
-	@apply md:py-28 py-24   lg:pl-[18rem] xl:pl-[22rem] px-8 bg-amali-bg h-full;
+	@apply md:py-28 py-24   lg:pl-[18rem]  px-8 bg-amali-bg h-full;
 }
 .main-wrapper {
-	@apply w-[100%] lg:w-[80%] h-full ;
+	@apply w-[100%] lg:w-[80%] h-full;
 }
 
 input,
