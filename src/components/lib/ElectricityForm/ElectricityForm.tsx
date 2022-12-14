@@ -19,7 +19,7 @@ type PHONE = typeof CONSTANTS.PHONE_NO;
 type METER = typeof CONSTANTS.METER_NO;
 
 const ElectricityForm = () => {
-	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [, setIsOpen] = useState<boolean>(false);
 
 	const handleModalOpen = async (
 		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
