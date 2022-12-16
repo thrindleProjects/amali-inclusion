@@ -1,26 +1,22 @@
-import React from "react";
-
-import Card from "@/components/lib/card/Card";
-import {
-	adminDashboardData,
-	transactionsData,
-	transactionTypeOption,
-} from "@/data/data";
+import PrimaryButton from "@/components/lib/Button/PrimaryButton";
+import Card from "@/components/lib/card";
+import Table from "@/components/lib/Table";
+import TableBody from "@/components/lib/Table/TableBody";
+import TableCell from "@/components/lib/Table/TableCell";
+import TableHeader from "@/components/lib/Table/TableHeader";
+import TableRow from "@/components/lib/Table/TableRow";
+import Input from "@/components/shared/Input";
+import Select from "@/components/shared/Select";
+import { subAgentDashboardData, transactionsData, transactionTypeOption } from "@/data/data";
 import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { Icon } from "@iconify/react";
-import * as Yup from "yup";
 import { useFormik } from "formik";
-import Input from "@/components/shared/Input";
-import Select from "@/components/shared/Select";
-import PrimaryButton from "@/components/lib/Button/PrimaryButton";
-import Table from "@/components/lib/Table";
-import TableHeader from "@/components/lib/Table/TableHeader";
-import TableBody from "@/components/lib/Table/TableBody";
-import TableRow from "@/components/lib/Table/TableRow";
-import TableCell from "@/components/lib/Table/TableCell";
+import React from "react";
+import * as Yup from "yup";
 
-const Dashboard = () => {
+
+const DashboardLayout = () => {
 	const formik = useFormik({
 		initialValues: { fromDate: "", toDate: "", type: "" },
 		validationSchema: Yup.object({
@@ -45,7 +41,7 @@ const Dashboard = () => {
 				</div>
 			</div>
 			<div className="md:flex  flex-wrap  justify-between">
-				{adminDashboardData.map((item, index) => (
+				{subAgentDashboardData.map((item, index) => (
 					<Card key={index} item={item} xlWidth="30%" />
 				))}
 			</div>
@@ -96,7 +92,7 @@ const Dashboard = () => {
 							bgColor="#42B0A8"
 						/>
 					</div>
-					<div className="mt-10">
+					<div className="mt-10 ">
 						<Table>
 							<TableHeader
 								items={[
@@ -130,4 +126,4 @@ const Dashboard = () => {
 	);
 };
 
-export default Dashboard;
+export default DashboardLayout;

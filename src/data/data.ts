@@ -1006,3 +1006,35 @@ export const elecServiceProvider = [
 		value: CONSTANTS.AEDC,
 	},
 ];
+
+export const subAgentDashboardData = [
+	{
+		id: 1,
+		number: "3",
+		text: "Total Customers",
+		image: "bi:person-check-fill",
+		color: "#00CFE8",
+	},
+	{
+		id: 2,
+		number: "0",
+		text: "Transaction Count",
+		image: "mdi:file-document-outline",
+		color: "#1b2850",
+	},
+];
+
+export const customerData = [
+	{
+		[CONSTANTS.EMAIL_ADDRESS]: "customer@example.com",
+		[CONSTANTS.PHONE_NO]: "08012345678",
+		[CONSTANTS.ACCOUNT_NAME]: "John Doe",
+		[CONSTANTS.ACCOUNT_NUMBER]: "1234567890",
+	},
+	{
+		[CONSTANTS.EMAIL_ADDRESS]: "newcustomer@example.com",
+		[CONSTANTS.PHONE_NO]: "08023456780",
+		[CONSTANTS.ACCOUNT_NAME]: "Johnny Doep",
+		[CONSTANTS.ACCOUNT_NUMBER]: "0123456789",
+	},
+];

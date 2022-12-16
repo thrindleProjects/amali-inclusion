@@ -316,14 +316,14 @@ export const subAgentsNavLinks = [
 			{
 				id: 1,
 				subType: ADD_SUB_AGENT,
-				link: "/add-sub-agent",
+				link: "/sub-agent/add-sub-agent",
 			},
 		],
 	},
 	{
 		id: 3,
 		name: OPEN_ACCOUNT,
-		link: "/open-account",
+		link: "/sub-agent/customers",
 		subLinks: [],
 		icon: "ion:person-add-outline",
 	},
@@ -358,22 +358,22 @@ export const subAgentsNavLinks = [
 			{
 				id: 1,
 				subType: AIRTIME,
-				link: "/buy-airtime",
+				link: "/sub-agent/bills-payment/airtime",
 			},
 			{
 				id: 2,
 				subType: INTERNET,
-				link: "/buy-internet",
+				link: "/sub-agent/bills-payment/internet",
 			},
 			{
 				id: 3,
 				subType: CABLE,
-				link: "/cable",
+				link: "/sub-agent/bills-payment/cable",
 			},
 			{
 				id: 5,
 				subType: ELECTRICITY,
-				link: "/electricity",
+				link: "/sub-agent/bills-payment/electricity",
 			},
 		],
 	},
