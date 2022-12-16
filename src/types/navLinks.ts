@@ -233,22 +233,22 @@ export const adminNavLinks = [
 			{
 				id: 1,
 				subType: AIRTIME,
-				link: "/buy-airtime",
+				link: "/admin/bills-payment/airtime",
 			},
 			{
 				id: 2,
 				subType: INTERNET,
-				link: "/buy-internet",
+				link: "/admin/bills-payment/internet",
 			},
 			{
 				id: 3,
 				subType: CABLE,
-				link: "/cable",
+				link: "/admin/bills-payment/cable",
 			},
 			{
 				id: 5,
 				subType: ELECTRICITY,
-				link: "/electricity",
+				link: "/admin/bills-payment/electricity",
 			},
 		],
 	},
