@@ -5,7 +5,6 @@ import { useFormik } from "formik";
 import * as CONSTANTS from "@/types/constants";
 import * as Yup from "yup";
 import Input from "@/components/shared/Input";
-import PrimaryButton from "@/components/lib/Button/PrimaryButton";
 
 const CreateCustomerLayout = () => {
 	const formik = useFormik({
