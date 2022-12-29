@@ -1,15 +1,8 @@
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
-import BodyLayout from "@/layout/BodyLayout/BodyLayout";
+import DashboardLayout from "@/components/pages-layout/sub-agent/dashboard";
 import React from "react";
 
 const Dashboard = () => {
-	return (
-		<AuthLayout>
-			<BodyLayout>
-                Admin Dashboard
-			</BodyLayout>
-		</AuthLayout>
-	);
+	return <DashboardLayout />;
 };
 
 export default Dashboard;
