@@ -344,7 +344,7 @@ export const subAgentsNavLinks = [
 	{
 		id: 6,
 		name: BUY_NOW_PAY_LATER,
-		link: "/buy-now-pay-later",
+		link: "/sub-agent/bnpl",
 		subLinks: [],
 		icon: "ic:outline-shopping-cart",
 	},
