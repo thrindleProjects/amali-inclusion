@@ -1038,3 +1038,18 @@ export const customerData = [
 		[CONSTANTS.ACCOUNT_NUMBER]: "0123456789",
 	},
 ];
+
+export const loanPayment = [
+	{ duration: 1, interest: 0, loan_amount: 105000, amount_payable: 105000 },
+	{ duration: 3, interest: 15, loan_amount: 105000, amount_payable: 195000 },
+	{ duration: 6, interest: 25, loan_amount: 105000, amount_payable: 245000 },
+];
+
+export const paymentInstallments = [
+	{ date: "September 17, 2022", amount: "₦35,000.00" },
+	{ date: "October 17, 2022", amount: "₦35,000.00" },
+	{ date: "November 17, 2022", amount: "₦35,000.00" },
+	{ date: "December 17, 2022", amount: "₦35,000.00" },
+	{ date: "January 17, 2023", amount: "₦35,000.00" },
+	{ date: "February 17, 2023", amount: "₦35,000.00" },
+];

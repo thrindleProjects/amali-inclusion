@@ -6,7 +6,6 @@ import {
 	subAgentsNavLinks,
 } from "@/types/navLinks";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -22,7 +21,6 @@ const variants = {
 };
 
 const NavItem = () => {
-	const router = useRouter();
 	const [expanded, setExpanded] = useState<number | boolean>(1);
 	const [role, setRole] = useState<null | string>();
 
@@ -46,35 +44,42 @@ const NavItem = () => {
 		<div className="px-4  md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
 			{dataToBeRendered.map((item, index) => (
 				<div key={index}>
-					<div
-						key={index}
-						className=" px-3 mt-4 overflow-hidden text-amali-grey"
-						onClick={() => router.push(`${item.link}`)}
-					>
-						<Link
-							href={`${item.link}`}
-							onClick={() =>
-								setExpanded(item.id === expanded ? false : item.id)
-							}
-							className="flex justify-between items-center mx-auto hover:text-white hover:bg-amali-steel-blue p-2 rounded-md ease-in-out"
-						>
-							<div className="flex items-center gap-3 ">
-								<Icon icon={item.icon} className="font-bold" />
-								<p className="text-md ">{item.name}</p>
-							</div>
+					<div key={index} className="mt-4 overflow-hidden text-amali-grey">
+						{item.link && item.link.length ? (
+							<Link
+								href={`${item.link}`}
+								className="px-3 flex justify-between items-center mx-auto hover:text-white hover:bg-amali-steel-blue p-2 rounded-md ease-in-out"
+							>
+								<div className="flex items-center gap-3 ">
+									<Icon icon={item.icon} className="font-bold" />
+									<p className="text-md ">{item.name}</p>
+								</div>
+							</Link>
+						) : (
+							<button
+								onClick={() =>
+									setExpanded(item.id === expanded ? false : item.id)
+								}
+								className="px-3 w-full flex justify-between items-center mx-auto hover:text-white hover:bg-amali-steel-blue p-2 rounded-md ease-in-out"
+							>
+								<div className="flex items-center gap-3 ">
+									<Icon icon={item.icon} className="font-bold" />
+									<p className="text-md ">{item.name}</p>
+								</div>
+								{!!item.subLinks.length && (
+									<motion.div
+										variants={variants}
+										animate={item.id === expanded ? "rotate" : "stop"}
+									>
+										<Icon
+											icon="material-symbols:arrow-forward-ios-rounded"
+											className="font-bold "
+										/>
+									</motion.div>
+								)}
+							</button>
+						)}
 
-							{!!item.subLinks.length && (
-								<motion.div
-									variants={variants}
-									animate={item.id === expanded ? "rotate" : "stop"}
-								>
-									<Icon
-										icon="material-symbols:arrow-forward-ios-rounded"
-										className="font-bold "
-									/>
-								</motion.div>
-							)}
-						</Link>
 						<AnimatePresence>
 							{!!item.subLinks.length && item.id === expanded && (
 								<motion.div

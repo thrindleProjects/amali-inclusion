@@ -190,3 +190,5 @@ export const IBADAN = "ibadan";
 export const EEDC = "eedc";
 export const KADUNA = "kaduna";
 export const AEDC = "aedc";
+
+export const LOAN_AMOUNT = "loan_amount";

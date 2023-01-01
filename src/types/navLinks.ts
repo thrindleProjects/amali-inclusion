@@ -303,7 +303,7 @@ export const subAgentsNavLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "",
+		link: "/sub-agent/dashboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
@@ -393,7 +393,7 @@ export const subAgentsNavLinks = [
 			{
 				id: 1,
 				subType: REQUIRE_FLOAT,
-				link: "/request-float",
+				link: "/sub-agent/float/request",
 			},
 			{
 				id: 2,
