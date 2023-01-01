@@ -74,7 +74,7 @@ const ConfirmPaymentPlan: React.FC<ConfirmPaymentPlanProps> = ({
 						<span className="text-amali-green">₦195,000.00</span>
 					</p>
 
-					<div className="grid grid-cols-2 gap-4 mt-8 w-full sm:w-2/3 md:w-1/2 mx-auto">
+					<div className="grid grid-cols-2 gap-4 mt-8 w-full sm:w-2/3 xl:w-1/2 mx-auto">
 						<button
 							onClick={onCancel}
 							className="font-light text-xs md:text-sm lg:text-base w-full py-3 rounded-sm bg-[#6C6C6C] text-amali-bg"
