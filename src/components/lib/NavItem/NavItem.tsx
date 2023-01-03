@@ -4,6 +4,7 @@ import {
 	masterAgentLinks,
 	adminNavLinks,
 	subAgentsNavLinks,
+	agentsNavLinks,
 } from "@/types/navLinks";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
@@ -34,14 +35,16 @@ const NavItem = () => {
 			? masterAgentLinks
 			: role === "admin"
 				? adminNavLinks
-				: subAgentsNavLinks;
+				: role === "sub-agent"
+					? subAgentsNavLinks
+					: agentsNavLinks;
 
 	useEffect(() => {
 		getUserRole();
 	}, []);
 
 	return (
-		<div className="px-4  md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
+		<div className="px-4 md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
 			{dataToBeRendered.map((item, index) => (
 				<div key={index}>
 					<div key={index} className="mt-4 overflow-hidden text-amali-grey">

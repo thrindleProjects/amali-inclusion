@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Table from "@/components/lib/Table";
 import TableBody from "@/components/lib/Table/TableBody";
@@ -6,11 +6,17 @@ import TableHeader from "@/components/lib/Table/TableHeader";
 import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { Icon } from "@iconify/react";
+import AssignTerminalModal from "@/components/lib/AssignTerminalModal";
+import PrimaryButton from "@/components/lib/Button/PrimaryButton";
 
 const Transactions = () => {
+	const [showModal, setShowModal] = useState(false);
+
+
 	return (
 		<AuthLayout>
 			<p className="my-6 text-xl text-amali-grey"> Transactions</p>
+			{showModal && <AssignTerminalModal setShowModal={setShowModal} />}
 
 			<BodyLayout>
 				<div className="md:flex  items-center justify-between">
@@ -49,6 +55,13 @@ const Transactions = () => {
 						/>
 					</div>
 				</div>
+				<div className="w-full mt-4 md:w-[200px] ">
+					<PrimaryButton
+						onClick={() => setShowModal(true)}
+						text="Assign Terminals"
+						bgColor="#42B0A8"
+					/>
+				</div>
 				<div className="mt-10 ">
 					<Table>
 						<TableHeader
@@ -62,11 +75,9 @@ const Transactions = () => {
 								"Action",
 							]}
 						/>
-						<TableBody>
-						</TableBody>
+						<TableBody></TableBody>
 					</Table>
 					<p className="text-center py-4 ">No data available in table</p>
-
 				</div>
 			</BodyLayout>
 		</AuthLayout>

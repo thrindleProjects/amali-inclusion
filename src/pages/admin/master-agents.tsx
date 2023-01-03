@@ -17,9 +17,8 @@ const MasterAgents = () => {
 	return (
 		<AuthLayout>
 			<BodyLayout>
-				<div  className="  w-full md:w-[200px] ">
+				<div  className="w-full md:w-[200px] ">
 					<PrimaryButton onClick={() => setShowModal(true)} text="Assign Terminals" bgColor="#42B0A8" />
-
 				</div>
 
 

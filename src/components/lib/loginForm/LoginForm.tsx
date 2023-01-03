@@ -1,9 +1,6 @@
 import Input from "@/components/shared/Input";
 import React, { useEffect } from "react";
-import {
-	PASSWORD,
-	TEXT,
-} from "@/types/constants";
+import { PASSWORD, TEXT } from "@/types/constants";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
@@ -14,9 +11,7 @@ const LoginForm = () => {
 
 	useEffect(() => {
 		localStorage.setItem("userRole", "master-agent");
-
 	}, []);
-
 
 	const formik = useFormik({
 		initialValues: { phone: "", password: "" },
@@ -27,16 +22,25 @@ const LoginForm = () => {
 		onSubmit: (values) => {
 			if (values.phone === "08161112404" && values.password === "12345678") {
 				router.push("/master-agent");
-			} else if (values.phone === "08011111111" && values.password === "12345678") {
+			} else if (
+				values.phone === "08011111111" &&
+				values.password === "12345678"
+			) {
 				router.push("/admin");
 				localStorage.setItem("userRole", "admin");
-			} else if (values.phone === "08166939100" && values.password === "12345678") {
+			} else if (
+				values.phone === "08166939100" &&
+				values.password === "12345678"
+			) {
 				router.push("/sub-agent");
 				localStorage.setItem("userRole", "sub-agent");
-
-
+			} else if (
+				values.phone === "08022222222" &&
+				values.password === "12345678"
+			) {
+				router.push("/agent");
+				localStorage.setItem("userRole", "agent");
 			}
-
 		},
 	});
 

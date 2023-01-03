@@ -39,6 +39,7 @@ export const WALLET_MANAGER = "Wallet Manager";
 export const WITHDRAWAL = "Withdrawal";
 export const WALLET_HISTORY = "Wallet History";
 export const PROFILE = "Profile";
+export const VIEW_SUB_AGENTS = "View Sub Agents";
 
 // SUB_AGENT NAVLINKS
 

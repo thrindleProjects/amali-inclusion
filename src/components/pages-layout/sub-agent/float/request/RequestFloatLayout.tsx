@@ -11,7 +11,7 @@ import { Stages } from "./types";
 import { variants } from "./variants";
 
 const RequestFloatLayout = () => {
-	const [stage, setStage] = useState<Stages>("done");
+	const [stage, setStage] = useState<Stages>("check");
 
 	const handleSetStage = (stage: Stages) => {
 		setStage(stage);

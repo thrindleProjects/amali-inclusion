@@ -19,7 +19,11 @@ const nextConfig = {
 				destination: "/sub-agent/dashboard",
 				permanent: true,
 			},
-
+			{
+				source: "/agent",
+				destination: "/agent/dashboard",
+				permanent: true,
+			},
 		];
 	},
 };
