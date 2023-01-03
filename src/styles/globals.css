@@ -71,3 +71,21 @@ label {
 	background-color: #04aa6d;
 	color: white;
 }
+
+.layout_wrapper {
+	@apply w-full h-full;
+	@apply grid md:bg-red-500;
+	/* grid-template-columns: 1; */
+}
+
+@media (min-width: 768px) {
+	.layout_wrapper {
+		grid-template-columns: 1fr auto;
+	}
+}
+
+@media (min-width: 1024px) {
+	.layout_wrapper {
+		grid-template-columns: 1fr auto;
+	}
+}
