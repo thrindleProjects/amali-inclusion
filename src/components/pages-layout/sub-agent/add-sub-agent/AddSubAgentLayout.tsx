@@ -34,7 +34,7 @@ const AddSubAgentLayout = () => {
 	return (
 		<MainContentLayout>
 			<BodyLayout>
-				<div className="my-8">
+				<div className="">
 					<div className="md:flex justify-between gap-6  ">
 						<Input
 							id="first-name"

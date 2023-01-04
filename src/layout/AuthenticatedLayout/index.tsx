@@ -30,7 +30,9 @@ const AuthenticatedLayout: React.FC<PropsWithChildren> = ({ children }) => {
 				</AnimatePresence>
 
 				<div className="main_container overflow-auto">
-					<main className="h-full overflow-y-auto">{children}</main>
+					<div className="h-full w-full overflow-hidden">
+						<main className="h-full w-full overflow-y-auto">{children}</main>
+					</div>
 				</div>
 			</div>
 		</div>

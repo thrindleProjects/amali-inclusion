@@ -14,8 +14,8 @@ const MainContentLayout: React.FC<MainContentLayoutProps> = ({
 				overwriteStyles && className
 					? className
 					: className
-						? `py-8 px-7 lg:pl-14 min-h-full h-max ${className}`
-						: "py-8 px-7 lg:pl-14 min-h-full h-max"
+						? `py-8 px-7 lg:pl-14 w-full h-full ${className}`
+						: "py-8 px-7 lg:pl-14 w-full h-full"
 			}`}
 		>
 			{children}

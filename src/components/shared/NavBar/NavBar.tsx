@@ -25,7 +25,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	return (
 		<div className="layout__top_nav">
 			{largeScreen && (
-				<div className="flex gap-4 items-center ml-[90%] p-4  w-full">
+				<div className="flex gap-4 items-center ml-auto p-4 w-max">
 					<Icon icon="material-symbols:search" className="text-2xl" />
 
 					<div
