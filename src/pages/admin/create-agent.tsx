@@ -1,11 +1,11 @@
 import React from "react";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
 import Input from "@/components/shared/Input";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Select from "@/components/shared/Select";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const CreateAgent = () => {
 	const formik = useFormik({
@@ -25,18 +25,19 @@ const CreateAgent = () => {
 			gender: Yup.string().required("Gender is required"),
 			email: Yup.string()
 				.email("Invalid email address")
-				.required("Email is required"),}),
+				.required("Email is required"),
+		}),
 		onSubmit: (values) => {
 			console.log(values);
 		},
 	});
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<BodyLayout>
 				<div className="my-8">
 					<div className="md:flex justify-between gap-6  ">
-						<Input 
-							id='first-name'
+						<Input
+							id="first-name"
 							label="First Name"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -46,8 +47,9 @@ const CreateAgent = () => {
 							type="text"
 							placeholder="First name"
 						/>
-						
-						<Input id='last-name'
+
+						<Input
+							id="last-name"
 							label="Last Name"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -56,12 +58,11 @@ const CreateAgent = () => {
 							required={true}
 							type="text"
 							placeholder="Last name"
-
 						/>
 					</div>
 					<div className="md:flex justify-between mt-6 gap-6 ">
 						<Input
-							id='dob'
+							id="dob"
 							label="Date of birth"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -70,9 +71,9 @@ const CreateAgent = () => {
 							required={true}
 							type="date"
 							placeholder="Date of Birth"
-
 						/>
-						<Input id='phone-number'
+						<Input
+							id="phone-number"
 							label="Phone Number"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -81,11 +82,11 @@ const CreateAgent = () => {
 							required={true}
 							type="text"
 							placeholder="Phone Number"
-
 						/>
 					</div>
 					<div className="md:flex justify-between mt-6 gap-6 ">
-						<Input id='email'
+						<Input
+							id="email"
 							label="Email"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -95,7 +96,9 @@ const CreateAgent = () => {
 							type="email"
 							placeholder="Email"
 						/>
-						<Select label='Gender' id='gender'
+						<Select
+							label="Gender"
+							id="gender"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
 							error={formik.errors.gender && formik.touched.gender}
@@ -104,12 +107,12 @@ const CreateAgent = () => {
 							options={[
 								{ name: "Male", value: "male" },
 								{ name: "Female", value: "Female" },
-							]} />
-						
+							]}
+						/>
 					</div>
 					<div className="md:flex justify-between mt-6 w-full md:w-[48%] ">
 						<Input
-							id='transaction-limit'
+							id="transaction-limit"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
 							error={formik.errors.firstName && formik.touched.firstName}
@@ -129,7 +132,7 @@ const CreateAgent = () => {
 					</div>
 				</div>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

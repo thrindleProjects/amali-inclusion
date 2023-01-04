@@ -1,12 +1,11 @@
 import React from "react";
-
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Input from "@/components/shared/Input";
 import Select from "@/components/shared/Select";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const Withdrawal = () => {
 	const formik = useFormik({
@@ -27,13 +26,13 @@ const Withdrawal = () => {
 		},
 	});
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="my-6 text-xl text-amali-grey"> Withdrawal</p>
 			<BodyLayout>
 				<div className="my-8">
 					<div className="md:flex justify-between gap-6  ">
 						<Input
-							id='amount'
+							id="amount"
 							label="Amount"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -44,7 +43,9 @@ const Withdrawal = () => {
 							placeholder="Amount"
 						/>
 
-						<Select label='Bank Account' id='bank-account'
+						<Select
+							label="Bank Account"
+							id="bank-account"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
 							error={formik.errors.bankAccount && formik.touched.bankAccount}
@@ -53,22 +54,25 @@ const Withdrawal = () => {
 							options={[
 								{ name: "GTBank", value: "GTBank" },
 								{ name: "Wema", value: "Wema" },
-							]} />
+							]}
+						/>
 					</div>
 					<div className="md:flex justify-between mt-6 gap-6 ">
 						<Input
-							id='account-number'
+							id="account-number"
 							label="Date of birth"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
-							error={formik.errors.accountNumber && formik.touched.accountNumber}
+							error={
+								formik.errors.accountNumber && formik.touched.accountNumber
+							}
 							errorText={formik.errors.accountNumber}
 							required={true}
 							type="text"
 							placeholder="Account Number"
-
 						/>
-						<Input id='transfer-note'
+						<Input
+							id="transfer-note"
 							label="Transfer Note"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
@@ -77,7 +81,6 @@ const Withdrawal = () => {
 							required={true}
 							type="text"
 							placeholder="Transfer Note"
-
 						/>
 					</div>
 
@@ -90,7 +93,7 @@ const Withdrawal = () => {
 					</div>
 				</div>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

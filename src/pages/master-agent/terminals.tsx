@@ -3,18 +3,17 @@ import React, { useState } from "react";
 import Table from "@/components/lib/Table";
 import TableBody from "@/components/lib/Table/TableBody";
 import TableHeader from "@/components/lib/Table/TableHeader";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { Icon } from "@iconify/react";
 import AssignTerminalModal from "@/components/lib/AssignTerminalModal";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const Transactions = () => {
 	const [showModal, setShowModal] = useState(false);
 
-
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="my-6 text-xl text-amali-grey"> Transactions</p>
 			{showModal && <AssignTerminalModal setShowModal={setShowModal} />}
 
@@ -80,7 +79,7 @@ const Transactions = () => {
 					<p className="text-center py-4 ">No data available in table</p>
 				</div>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

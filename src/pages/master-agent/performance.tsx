@@ -1,14 +1,14 @@
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import React from "react";
 
 const Performance = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<BodyLayout>
 				<p>Performance</p>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

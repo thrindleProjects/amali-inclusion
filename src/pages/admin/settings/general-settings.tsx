@@ -1,10 +1,10 @@
 import React from "react";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Input from "@/components/shared/Input";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const GeneralSettings = () => {
 	const formik = useFormik({
@@ -24,9 +24,8 @@ const GeneralSettings = () => {
 	});
 
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="my-3 ">SYSTEM SETTINGS</p>
-
 			<BodyLayout>
 				<form className="my-10">
 					<Input
@@ -73,10 +72,9 @@ const GeneralSettings = () => {
 							onClick={formik.handleSubmit}
 						/>
 					</div>
-					
 				</form>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

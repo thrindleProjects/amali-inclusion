@@ -1,4 +1,4 @@
 export interface NavBarProps {
-    toggleSidebar: () => void;
-    isOpen?: boolean;
+	toggleSidebar: (value: boolean) => void;
+	isOpen: boolean;
 }

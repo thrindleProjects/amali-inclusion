@@ -6,15 +6,14 @@ import TableCell from "@/components/lib/Table/TableCell";
 import TableHeader from "@/components/lib/Table/TableHeader";
 import TableRow from "@/components/lib/Table/TableRow";
 import { kycData, KycVerificationCardData } from "@/data/data";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import Link from "next/link";
 import React from "react";
 
 const KYCManager = () => {
 	return (
-		<AuthLayout>
-
+		<MainContentLayout>
 			<BackButton />
 			<p>KYC Verification</p>
 
@@ -52,7 +51,7 @@ const KYCManager = () => {
 								<TableCell>{item.date}</TableCell>
 								<TableCell>
 									<Link href={`/master-agent/kyc-manager/${item.id}`}>
-										<p className="p-2 text-white text-sm bg-amali-green text-center cursor-pointer" >
+										<p className="p-2 text-white text-sm bg-amali-green text-center cursor-pointer">
 											View
 										</p>
 									</Link>
@@ -62,7 +61,7 @@ const KYCManager = () => {
 					</TableBody>
 				</Table>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

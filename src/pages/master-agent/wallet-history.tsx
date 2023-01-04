@@ -1,13 +1,13 @@
 import Table from "@/components/lib/Table";
 import TableBody from "@/components/lib/Table/TableBody";
 import TableHeader from "@/components/lib/Table/TableHeader";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import React from "react";
 
 const WalletHistory = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="my-6 text-xl text-amali-grey"> Wallet History </p>
 
 			<BodyLayout>
@@ -42,18 +42,15 @@ const WalletHistory = () => {
 								"Previous Balance",
 								"CurrentBalance",
 								"Status",
-								"Date"
+								"Date",
 							]}
 						/>
-						<TableBody>
-						</TableBody>
-
+						<TableBody></TableBody>
 					</Table>
 					<p className="text-center py-4 ">No data available in table</p>
-
 				</div>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

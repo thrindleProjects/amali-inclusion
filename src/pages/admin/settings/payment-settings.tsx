@@ -1,10 +1,10 @@
 import React from "react";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Input from "@/components/shared/Input";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const PaymentSettings = () => {
 	const formik = useFormik({
@@ -13,14 +13,18 @@ const PaymentSettings = () => {
 			withdrawalFee: "",
 			transferFee: "",
 			cableCharge: "",
-			electricityCharge:""
+			electricityCharge: "",
 		},
 		validationSchema: Yup.object({
 			depositFee: Yup.string().required("Deposit Fee is required"),
 			withdrawalFee: Yup.string().required("Withdrawal Fee is required"),
 			transferFee: Yup.string().required("Transfer Fee is required"),
-			cableCharge: Yup.string().required("Cable TV Subscription Charge is required"),
-			electricityCharge: Yup.string().required("Electricity Bill Payment Charge is required"),
+			cableCharge: Yup.string().required(
+				"Cable TV Subscription Charge is required"
+			),
+			electricityCharge: Yup.string().required(
+				"Electricity Bill Payment Charge is required"
+			),
 		}),
 		onSubmit: (values) => {
 			console.log(values);
@@ -28,7 +32,7 @@ const PaymentSettings = () => {
 	});
 
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="my-3 ">PAYMENT SETTINGS</p>
 
 			<BodyLayout>
@@ -49,7 +53,9 @@ const PaymentSettings = () => {
 							label="Withdrawal Fee "
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
-							error={formik.errors.withdrawalFee && formik.touched.withdrawalFee}
+							error={
+								formik.errors.withdrawalFee && formik.touched.withdrawalFee
+							}
 							errorText={formik.errors.withdrawalFee}
 							required={true}
 							type="text"
@@ -59,9 +65,7 @@ const PaymentSettings = () => {
 							label="Withdrawal Fee"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
-							error={
-								formik.errors.transferFee && formik.touched.transferFee
-							}
+							error={formik.errors.transferFee && formik.touched.transferFee}
 							errorText={formik.errors.transferFee}
 							required={true}
 							type="text"
@@ -84,7 +88,8 @@ const PaymentSettings = () => {
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
 							error={
-								formik.errors.electricityCharge && formik.touched.electricityCharge
+								formik.errors.electricityCharge &&
+								formik.touched.electricityCharge
 							}
 							errorText={formik.errors.electricityCharge}
 							required={true}
@@ -98,10 +103,9 @@ const PaymentSettings = () => {
 							onClick={formik.handleSubmit}
 						/>
 					</div>
-
 				</form>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

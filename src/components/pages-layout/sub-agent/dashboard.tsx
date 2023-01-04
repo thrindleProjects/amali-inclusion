@@ -7,14 +7,17 @@ import TableHeader from "@/components/lib/Table/TableHeader";
 import TableRow from "@/components/lib/Table/TableRow";
 import Input from "@/components/shared/Input";
 import Select from "@/components/shared/Select";
-import { subAgentDashboardData, transactionsData, transactionTypeOption } from "@/data/data";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
+import {
+	subAgentDashboardData,
+	transactionsData,
+	transactionTypeOption,
+} from "@/data/data";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import { Icon } from "@iconify/react";
 import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
-
 
 const DashboardLayout = () => {
 	const formik = useFormik({
@@ -30,7 +33,7 @@ const DashboardLayout = () => {
 	});
 
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="font-bold mb-6">Dashboard</p>
 			<div className="w-full bg-white rounded-lg shadow-md py-6 px-4 flex gap-4 items-center">
 				<Icon icon="ic:sharp-wallet" className="text-6xl text-[#FF9F43]" />
@@ -122,7 +125,7 @@ const DashboardLayout = () => {
 					</div>
 				</BodyLayout>
 			</div>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

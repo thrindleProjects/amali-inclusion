@@ -1,16 +1,16 @@
 import { termTransCard } from "@/data/data";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import React from "react";
 import { TerminalTransactionProps } from "./types";
 import Card from "@/components/lib/card";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import TermTransTable from "@/components/lib/TermTransTable";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const TerminalTransactionsLayout: React.FC<TerminalTransactionProps> = ({
 	data,
 }) => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<section className="mb-4">
 				<h3 className="font-bold mb-6">Dashboard</h3>
 				<p className="text-sm font-extralight">Terminal Transactions</p>
@@ -23,7 +23,7 @@ const TerminalTransactionsLayout: React.FC<TerminalTransactionProps> = ({
 			<BodyLayout>
 				<TermTransTable data={data} />
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

@@ -4,16 +4,16 @@ import TableCell from "@/components/lib/Table/TableCell";
 import TableHeader from "@/components/lib/Table/TableHeader";
 import TableRow from "@/components/lib/Table/TableRow";
 import { customerData } from "@/data/data";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import React from "react";
 import * as CONSTANTS from "@/types/constants";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const CustomerLayout = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="font-bold mb-6">Dashboard</p>
 			<Link
 				href={"customers/create"}
@@ -53,7 +53,7 @@ const CustomerLayout = () => {
 					</Table>
 				</BodyLayout>
 			</div>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

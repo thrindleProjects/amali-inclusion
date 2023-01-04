@@ -6,7 +6,6 @@ import {
 	transactionsData,
 	transactionTypeOption,
 } from "@/data/data";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import { Icon } from "@iconify/react";
 import * as Yup from "yup";
@@ -19,6 +18,7 @@ import TableHeader from "@/components/lib/Table/TableHeader";
 import TableBody from "@/components/lib/Table/TableBody";
 import TableRow from "@/components/lib/Table/TableRow";
 import TableCell from "@/components/lib/Table/TableCell";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const Dashboard = () => {
 	const formik = useFormik({
@@ -34,7 +34,7 @@ const Dashboard = () => {
 	});
 
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="font-bold mb-6">Dashboard</p>
 			<div className="w-full bg-white rounded-lg shadow-md py-6 px-4 flex gap-4 items-center">
 				<Icon icon="ic:sharp-wallet" className="text-6xl text-[#FF9F43]" />
@@ -126,7 +126,7 @@ const Dashboard = () => {
 					</div>
 				</BodyLayout>
 			</div>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 
