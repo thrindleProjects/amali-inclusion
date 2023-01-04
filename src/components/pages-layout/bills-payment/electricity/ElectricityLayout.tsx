@@ -1,10 +1,10 @@
 import React from "react";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import ElectricityForm from "@/components/lib/ElectricityForm";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const ElectricityLayout = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<section className="mb-4">
 				<h3 className="font-bold mb-6">Electricity</h3>
 				<p className="text-sm font-extralight">
@@ -14,7 +14,7 @@ const ElectricityLayout = () => {
 			<div className="w-full lg:w-2/3 xl:w-1/2 mx-auto mt-10">
 				<ElectricityForm />
 			</div>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

@@ -1,6 +1,4 @@
 import React from "react";
-
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -13,6 +11,7 @@ import TableHeader from "@/components/lib/Table/TableHeader";
 import TableBody from "@/components/lib/Table/TableBody";
 import TableRow from "@/components/lib/Table/TableRow";
 import TableCell from "@/components/lib/Table/TableCell";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const Transactions = () => {
 	const formik = useFormik({
@@ -27,7 +26,7 @@ const Transactions = () => {
 		},
 	});
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="my-6 text-xl text-amali-grey"> Transactions</p>
 
 			<BodyLayout>
@@ -108,7 +107,7 @@ const Transactions = () => {
 					</Table>
 				</div>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

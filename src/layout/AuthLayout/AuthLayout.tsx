@@ -17,11 +17,11 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<div className="h-full">
 			<div className="h-full">
-				{largeScreen && (
-					<SideNav />
-				)}
+				{largeScreen && <SideNav />}
 				<AnimatePresence>
-					{isOpen && !largeScreen && <MobileSideNav setIsOpen={setIsOpen} />}
+					{isOpen && !largeScreen && (
+						<MobileSideNav toggleSidebar={setIsOpen} />
+					)}
 				</AnimatePresence>
 
 				<main className="h-full box-content main-wrapper">

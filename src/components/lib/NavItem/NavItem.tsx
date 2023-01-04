@@ -44,7 +44,7 @@ const NavItem = () => {
 	}, []);
 
 	return (
-		<div className="px-4 md:mt-20 nav-item pb-20 lg:pb-0  bg-white  ">
+		<div className="px-4 nav-item pb-20 lg:pb-0  bg-white">
 			{dataToBeRendered.map((item, index) => (
 				<div key={index}>
 					<div key={index} className="mt-4 overflow-hidden text-amali-grey">

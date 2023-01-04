@@ -1,12 +1,12 @@
 import React from "react";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import BackButton from "@/components/lib/backButton/BackButton";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const SingleKYCManager = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<div className="h-screen">
 				<BackButton />
 				<p className="text-lg text-mali-grey mb-10">View KYC Verification</p>
@@ -14,7 +14,6 @@ const SingleKYCManager = () => {
 					<div className="my-6  md:w-[30%] md:flex justify-between gap-10">
 						<PrimaryButton text="Approve KYC" bgColor="#42B0A8" />
 						<PrimaryButton text="Reject KYC" bgColor="red" />
-
 					</div>
 					<div className="lg:flex justify-between gap-6">
 						<div className=" w-full lg:w-[60%]">
@@ -48,7 +47,7 @@ const SingleKYCManager = () => {
 					</div>
 				</BodyLayout>
 			</div>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

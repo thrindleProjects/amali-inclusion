@@ -1,12 +1,11 @@
 import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import Input from "@/components/shared/Input";
 import Select from "@/components/shared/Select";
 import PrimaryButton from "@/components/lib/Button/PrimaryButton";
-
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const AddSubAgentLayout = () => {
 	const formik = useFormik({
@@ -33,7 +32,7 @@ const AddSubAgentLayout = () => {
 		},
 	});
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<BodyLayout>
 				<div className="my-8">
 					<div className="md:flex justify-between gap-6  ">
@@ -133,7 +132,7 @@ const AddSubAgentLayout = () => {
 					</div>
 				</div>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

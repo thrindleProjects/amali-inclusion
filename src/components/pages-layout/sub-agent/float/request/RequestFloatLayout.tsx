@@ -4,7 +4,7 @@ import ConfirmPaymentPlan from "@/components/lib/ConfirmPaymentPlan";
 import EnterLoanAmount from "@/components/lib/EnterLoanAmount";
 import FloatRequestDone from "@/components/lib/FloatRequestDone";
 import VerifyFloatOTP from "@/components/lib/VerifyFloatOTP";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { Stages } from "./types";
@@ -18,7 +18,7 @@ const RequestFloatLayout = () => {
 	};
 
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<AnimatePresence mode="wait" initial={false}>
 				{stage === "check" && (
 					<CheckEligibility
@@ -64,7 +64,7 @@ const RequestFloatLayout = () => {
 					/>
 				)}
 			</AnimatePresence>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

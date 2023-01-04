@@ -4,13 +4,13 @@ import TableCell from "@/components/lib/Table/TableCell";
 import TableHeader from "@/components/lib/Table/TableHeader";
 import TableRow from "@/components/lib/Table/TableRow";
 import { allSubAgentData } from "@/data/data";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import React from "react";
 
 const Agent = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<BodyLayout>
 				<Table>
 					<TableHeader items={[
@@ -45,7 +45,7 @@ const Agent = () => {
 					</TableBody>
 				</Table>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

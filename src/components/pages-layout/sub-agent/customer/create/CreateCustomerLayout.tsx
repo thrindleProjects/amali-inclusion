@@ -1,10 +1,10 @@
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
 import BodyLayout from "@/layout/BodyLayout/BodyLayout";
 import React from "react";
 import { useFormik } from "formik";
 import * as CONSTANTS from "@/types/constants";
 import * as Yup from "yup";
 import Input from "@/components/shared/Input";
+import MainContentLayout from "@/layout/MainContentLayout";
 
 const CreateCustomerLayout = () => {
 	const formik = useFormik({
@@ -31,7 +31,7 @@ const CreateCustomerLayout = () => {
 		},
 	});
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<p className="font-bold mb-6">Dashboard</p>
 			<BodyLayout>
 				<form onSubmit={formik.handleSubmit}>
@@ -106,7 +106,7 @@ const CreateCustomerLayout = () => {
 					</button>
 				</form>
 			</BodyLayout>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 

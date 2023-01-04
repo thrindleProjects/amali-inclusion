@@ -18,8 +18,12 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 		setAccountDropdown((prevState) => !prevState);
 	};
 
+	const handleToggleSidebar = (isOpen: boolean) => {
+		!isOpen ? toggleSidebar(true) : toggleSidebar(false);
+	};
+
 	return (
-		<div className="shadow-sm bg-white right-0  fixed w-full lg:w-[80%] z-[50]  h-[70px] overflow-hidden">
+		<div className="layout__top_nav">
 			{largeScreen && (
 				<div className="flex gap-4 items-center ml-[90%] p-4  w-full">
 					<Icon icon="material-symbols:search" className="text-2xl" />
@@ -40,27 +44,30 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 			)}
 
 			{!largeScreen && (
-				<div className="flex justify-between items-center w-full  py-4 px-7">
-					<Icon
-						icon={isOpen ? "ic:outline-close" : "ri:menu-2-fill"}
-						className="text-amali-green text-2xl "
-						onClick={toggleSidebar}
-					/>
-					<div className="w-[50%]">
-						<Image
-							width={150}
-							height={150}
-							src={AmaliLogo}
-							alt="Amali Logo"
-							blurDataURL=""
-							className="object-contain border-none"
-						/>
-					</div>
-					<div onClick={toggleAccountDropdown}>
-						<Icon
-							icon="mdi:dots-vertical"
-							className="text-amali-green text-2xl "
-						/>
+				<div className="w-full relative">
+					<div className="flex justify-between items-center w-full py-4 px-7">
+						<button onClick={() => handleToggleSidebar(isOpen)}>
+							<Icon
+								icon={isOpen ? "ic:outline-close" : "ri:menu-2-fill"}
+								className="text-amali-green text-2xl "
+							/>
+						</button>
+						<div className="w-[50%]">
+							<Image
+								width={150}
+								height={150}
+								src={AmaliLogo}
+								alt="Amali Logo"
+								blurDataURL=""
+								className="object-contain border-none"
+							/>
+						</div>
+						<div onClick={toggleAccountDropdown}>
+							<Icon
+								icon="mdi:dots-vertical"
+								className="text-amali-green text-2xl "
+							/>
+						</div>
 					</div>
 				</div>
 			)}

@@ -1,10 +1,10 @@
 import AirtimeForm from "@/components/lib/AirtimeForm";
-import AuthLayout from "@/layout/AuthLayout/AuthLayout";
+import MainContentLayout from "@/layout/MainContentLayout";
 import React from "react";
 
 const AirtimeLayout = () => {
 	return (
-		<AuthLayout>
+		<MainContentLayout>
 			<section className="mb-4">
 				<h3 className="font-bold mb-6">Airtime Purchase</h3>
 				<p className="text-sm font-extralight">
@@ -15,7 +15,7 @@ const AirtimeLayout = () => {
 			<div className="w-full lg:w-2/3 xl:w-1/2 mx-auto mt-10">
 				<AirtimeForm />
 			</div>
-		</AuthLayout>
+		</MainContentLayout>
 	);
 };
 
