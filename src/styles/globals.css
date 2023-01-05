@@ -83,14 +83,8 @@ label {
 .main_wrapper {
 	@apply h-screen w-full overflow-hidden;
 	@apply relative;
-	@apply grid grid-cols-1;
+	@apply grid col-start-1 grid-cols-1;
 	grid-template-rows: auto 1fr;
-}
-
-.layout__side_bar__wrapper {
-	@apply relative;
-	@apply bg-black;
-	@apply col-start-1 col-span-1;
 }
 
 .layout__side_bar {
@@ -121,6 +115,14 @@ label {
 @media (min-width: 1024px) {
 	.layout_wrapper {
 		grid-template-columns: minmax(10rem, 22%) 1fr;
+	}
+	.layout__side_bar__wrapper {
+		@apply relative;
+		@apply bg-black;
+		@apply col-start-1 col-span-1;
+	}
+	.main_wrapper {
+		@apply col-start-2 col-span-1;
 	}
 }
 
