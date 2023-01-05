@@ -11,6 +11,16 @@ import * as CONSTANTS from "@/types/constants";
 import { TerminalTransactionsData } from "@/components/pages-layout/master-agent/pos-manager/terminal_id/types";
 import { formatDateNum } from "@/utils/formatDate";
 
+export const gender = [
+	{ name: "MALE", value: "male" },
+	{ name: "FEMALE", value: "Female" },
+];
+
+export const agentType = [
+	{ name: "MASTER AGENT", value: "MASTER_AGENT" },
+	{ name: "AGENT", value: "AGENT" },
+	{ name: "SUB_AGENT", value: "SUB_AGENT" },
+];
 export const dashboardData = [
 	{
 		id: 1,
