@@ -2,7 +2,6 @@ import {
 	AGENTS,
 	DASHBOARD,
 	MASTER_AGENT,
-	ALL_AGENTS,
 	CREATE_AGENT,
 	FLOAT_MANAGER,
 	DUE_LOAN,
@@ -40,6 +39,7 @@ import {
 	MY_LOAN,
 	WALLET_TRANSFER,
 	VIEW_SUB_AGENTS,
+	SUB_AGENT,
 } from "./constants";
 
 export const adminNavLinks = [
@@ -63,11 +63,17 @@ export const adminNavLinks = [
 			},
 			{
 				id: 2,
-				subType: ALL_AGENTS,
-				link: "/admin/all-agent/agent",
+				subType: AGENTS,
+				link: "/admin/agents",
 			},
 			{
 				id: 3,
+				subType: SUB_AGENT,
+				link: "/admin/sub_agents",
+			},
+			
+			{
+				id: 4,
 				subType: CREATE_AGENT,
 				link: "/admin/create-agent",
 			},

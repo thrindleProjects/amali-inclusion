@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import Select from "@/components/shared/Select";
 import MainContentLayout from "@/layout/MainContentLayout";
+import { agentType, gender } from "@/data/data";
 
 const CreateAgent = () => {
 	const formik = useFormik({
@@ -16,6 +17,8 @@ const CreateAgent = () => {
 			phone: "",
 			email: "",
 			gender: "",
+			transactionLimit: "",
+			agentType:""
 		},
 		validationSchema: Yup.object({
 			firstName: Yup.string().required("First  name is required"),
@@ -23,6 +26,8 @@ const CreateAgent = () => {
 			dob: Yup.string().required("Date of birth is required"),
 			phone: Yup.string().required("Phone is required"),
 			gender: Yup.string().required("Gender is required"),
+			transactionLimit: Yup.string().required("Transaction Limit is required"),
+			agentType: Yup.string().required(" Agent Type is required"),
 			email: Yup.string()
 				.email("Invalid email address")
 				.required("Email is required"),
@@ -104,19 +109,26 @@ const CreateAgent = () => {
 							error={formik.errors.gender && formik.touched.gender}
 							errorText={formik.errors.gender}
 							required={true}
-							options={[
-								{ name: "Male", value: "male" },
-								{ name: "Female", value: "Female" },
-							]}
+							options={gender}
 						/>
 					</div>
-					<div className="md:flex justify-between mt-6 w-full md:w-[48%] ">
+					<div className="md:flex justify-between mt-6 w-full gap-6 ">
+						<Select
+							label="Agent type"
+							id="Agent_type"
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
+							error={formik.errors.agentType && formik.touched.agentType}
+							errorText={formik.errors.agentType}
+							required={true}
+							options={agentType}
+						/>
 						<Input
 							id="transaction-limit"
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
-							error={formik.errors.firstName && formik.touched.firstName}
-							errorText={formik.errors.firstName}
+							error={formik.errors.transactionLimit && formik.touched.transactionLimit}
+							errorText={formik.errors.transactionLimit}
 							required={true}
 							type="text"
 							label="Transaction Limit"

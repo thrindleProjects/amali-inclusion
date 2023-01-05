@@ -3,10 +3,12 @@
 export const DASHBOARD = "Dashboard";
 export const AGENTS = "Agents";
 export const MASTER_AGENT = "Master Agents";
+export const AGENT = "Agents";
+export const SUB_AGENT = "Sub Agents";
 export const ALL_AGENTS = "All Agents";
 export const CREATE_AGENT = "Create Agents";
 export const FLOAT_MANAGER = "Float Manager";
-export const REQUIRE_FLOAT = "Request Float";
+export const REQUIRE_FLOAT = "Float Requested For";
 export const ACTIVE_FLOAT = "Active Float";
 export const DUE_LOAN = "Due Loan";
 export const SETTLED_LOAN = "Settled_Loan";
