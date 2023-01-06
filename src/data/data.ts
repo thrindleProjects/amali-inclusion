@@ -1053,3 +1053,181 @@ export const paymentInstallments = [
 	{ date: "January 17, 2023", amount: "₦35,000.00" },
 	{ date: "February 17, 2023", amount: "₦35,000.00" },
 ];
+
+export const myLoansTableData = [
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+	{
+		reference: "6784903038",
+		amount: 105000,
+		interest: 5000,
+		expected_payment: 110000,
+		dateRequested: formatDateNum(new Date().toISOString()),
+		duration: "3 months",
+		dueDate: formatDateNum(new Date().toISOString()),
+		status: "active",
+	},
+];
+
+export const loanDurations = [
+	{
+		name: "1 week",
+		value: "1 week",
+	},
+	{
+		name: "2 weeks",
+		value: "2 weeks",
+	},
+	{
+		name: "1 month",
+		value: "1 month",
+	},
+	{
+		name: "2 months",
+		value: "2 months",
+	},
+	{
+		name: "3 months",
+		value: "3 months",
+	},
+	{
+		name: "4 months",
+		value: "4 months",
+	},
+	{
+		name: "5 months",
+		value: "5 months",
+	},
+	{
+		name: "6 months",
+		value: "6 months",
+	},
+	{
+		name: "1 year",
+		value: "1 year",
+	},
+];
+
+export const loanFrequency = [
+	{ name: "Daily", value: "Daily" },
+	{ name: "Bi-weeky", value: "Bi-weeky" },
+	{ name: "Weekly", value: "Weekly" },
+	{ name: "Bi-monthly", value: "Bi-monthly" },
+	{ name: "Monthly", value: "Monthly" },
+	{ name: "Quarterly", value: "Quarterly" },
+];
+
+export const loanSettingsData = [
+	{
+		id: 1,
+		duration: "1 week",
+		interest: 12,
+		frequency: "Daily",
+	},
+	{
+		id: 2,
+		duration: "1 month",
+		interest: 12,
+		frequency: "Weekly",
+	},
+	{
+		id: 3,
+		duration: "3 months",
+		interest: 12,
+		frequency: "Monthly",
+	},
+	{
+		id: 4,
+		duration: "6 months",
+		interest: 12,
+		frequency: "Bi-monthly",
+	},
+];

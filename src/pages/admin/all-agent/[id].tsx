@@ -13,17 +13,19 @@ const Agent = () => {
 		<MainContentLayout>
 			<BodyLayout>
 				<Table>
-					<TableHeader items={[
-						"#",
-						"Super Agent",
-						"Agent Code",
-						"Name",
-						"Email",
-						"Phone Number",
-						"Wallet Balance",
-						"Status",
-						"Actions"
-					]} />
+					<TableHeader
+						items={[
+							"#",
+							"Super Agent",
+							"Agent Code",
+							"Name",
+							"Email",
+							"Phone Number",
+							"Wallet Balance",
+							"Status",
+							"Actions",
+						]}
+					/>
 					<TableBody>
 						{allSubAgentData.map((item, index) => (
 							<TableRow key={index}>
@@ -35,9 +37,11 @@ const Agent = () => {
 								<TableCell>{item.phone}</TableCell>
 								<TableCell>{item.walletBalance}</TableCell>
 								<TableCell>{item.status}</TableCell>
-								<TableCell >
+								<TableCell>
 									<div className="flex gap-6">
-										<p className="p-2 text-white text-xs rounded-lg bg-amali-green text-center cursor-pointer "  >View account</p>
+										<p className="p-2 text-white text-xs rounded-lg bg-amali-green text-center cursor-pointer">
+											View account
+										</p>
 									</div>
 								</TableCell>
 							</TableRow>
