@@ -46,7 +46,7 @@ export const adminNavLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "/master-agent/dashboard",
+		link: "/admin/dashboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
@@ -171,7 +171,7 @@ export const masterAgentLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "/master-agent/dashboard",
+		link: "/admin/dashboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
@@ -375,7 +375,7 @@ export const subAgentsNavLinks = [
 		subLinks: [
 			{
 				id: 1,
-				subType: REQUIRE_FLOAT,
+				subType: "Request Float",
 				link: "/sub-agent/float/request",
 			},
 			{
