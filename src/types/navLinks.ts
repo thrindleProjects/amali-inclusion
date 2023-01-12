@@ -108,7 +108,7 @@ export const adminNavLinks = [
 			{
 				id: 5,
 				subType: LOAN_SETTINGS,
-				link: "/loan-settings",
+				link: "/admin/float/settings",
 			},
 		],
 	},
@@ -381,7 +381,7 @@ export const subAgentsNavLinks = [
 			{
 				id: 2,
 				subType: MY_LOAN,
-				link: "/my-loan",
+				link: "/sub-agent/float/my-loan",
 			},
 		],
 	},
