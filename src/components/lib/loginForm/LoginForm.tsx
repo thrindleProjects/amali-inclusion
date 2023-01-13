@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { toast } from "react-hot-toast";
 
 const LoginForm = () => {
 	const router = useRouter();
@@ -22,17 +23,21 @@ const LoginForm = () => {
 		onSubmit: (values) => {
 			if (values.phone === "08161112404" && values.password === "12345678") {
 				router.push("/master-agent");
+				toast.success("Login Successful");
 			} else if (
 				values.phone === "08011111111" &&
 				values.password === "12345678"
 			) {
 				router.push("/admin");
 				localStorage.setItem("userRole", "admin");
+				toast.success("Login Successful");
+
 			} else if (
 				values.phone === "08166939100" &&
 				values.password === "12345678"
 			) {
 				router.push("/sub-agent");
+				toast.success("Login Successful");
 				localStorage.setItem("userRole", "sub-agent");
 			} else if (
 				values.phone === "08022222222" &&
@@ -40,6 +45,8 @@ const LoginForm = () => {
 			) {
 				router.push("/agent");
 				localStorage.setItem("userRole", "agent");
+				toast.success("Login Successful");
+
 			}
 		},
 	});

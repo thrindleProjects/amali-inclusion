@@ -6,23 +6,26 @@ import { useRouter } from "next/router";
 export const Home: NextPageWithLayout = () => {
 	const router = useRouter();
 	useEffect(() => {
-		const role = localStorage.getItem("userRole");
+		router.push("/login");
 
-		if (role) {
-			if (role === "admin") {
-				router.push("/admin");
-			}
-			if (role === "master-agent") {
-				router.push("/master-agent");
-			}
-			if (role === "sub-agent") {
-				router.push("/sub-agent");
-			}
-			if (role === "agent") {
-				router.push("/agent");
-			}
-			router.push("/login");
-		}
+		// const role = localStorage.getItem("userRole");
+
+		// if (role) {
+		// 	if (role === "admin") {
+		// 		router.push("/admin");
+		// 	}
+		// 	if (role === "master-agent") {
+		// 		router.push("/master-agent");
+		// 	}
+		// 	if (role === "sub-agent") {
+		// 		router.push("/sub-agent");
+		// 	}
+		// 	if (role === "agent") {
+		// 		router.push("/agent");
+		// 	}
+		// }else{
+		// 	router.push("/login");
+		// }
 	}, []);
 
 	return <></>;
