@@ -2,10 +2,16 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { profileDropdown } from "@/types/navLinks";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const AccountDropdown = () => {
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
+	const router = useRouter();
+	const logOut = () => {
+		localStorage.removeItem("userRole");
+		router.push("/login");
+	};
 
 	return (
 		<div className="fixed right-0  pt-1 p-2 text-xs  w-52 text-amali-grey ">
@@ -15,6 +21,11 @@ const AccountDropdown = () => {
 						<ul>
 							{profileDropdown.map((item, index) => (
 								<li
+									onClick={() => {
+										if (item.name === "Logout") {
+											logOut();
+										}
+									}}
 									key={index}
 									className=" w-full h- flex flex-row items-center px-2 mb-1 transition-all ease-in-out duration-200  hover:text-white hover:bg-amali-steel-blue p-2 rounded-md   "
 								>
@@ -44,7 +55,9 @@ const AccountDropdown = () => {
 
 						<ul>
 							{profileDropdown.map((item, index) => (
-								<div key={index} className="gap-4 flex items-center hover:text-white hover:bg-amali-steel-blue p-2 rounded-md  transition-all ease-in-out duration-200 ">
+								<div
+								
+									key={index} className="gap-4 flex items-center hover:text-white hover:bg-amali-steel-blue p-2 rounded-md  transition-all ease-in-out duration-200 ">
 									<Icon
 										icon={item.icon}
 										className={
@@ -54,6 +67,11 @@ const AccountDropdown = () => {
 										}
 									/>
 									<li
+										onClick={() =>{
+											if (item.name === "Logout") {
+												logOut();
+											}
+										}}
 										className={
 											item.name === "Logout"
 												? " w-full cursor-pointer h-5 flex flex-row items-center px-2 mb-1 transition-all ease-in-out duration-200 text-red-500 "

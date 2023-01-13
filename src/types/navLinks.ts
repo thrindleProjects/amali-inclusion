@@ -171,7 +171,7 @@ export const masterAgentLinks = [
 	{
 		id: 1,
 		name: DASHBOARD,
-		link: "/admin/dashboard",
+		link: "/master-agent/dashboard",
 		subLinks: [],
 		icon: "ic:round-dashboard",
 	},
