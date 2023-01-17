@@ -4,5 +4,6 @@ export interface FloatSettingsLayoutProps {
 		frequency: string;
 		id: number;
 		duration: string;
+		isActive: boolean;
 	}[];
 }
