@@ -5,6 +5,7 @@ export interface CreateFloatSettingsModalProps {
 		frequency: string;
 		id: number;
 		duration: string;
+		isActive: boolean;
 	}): void;
 	isOpen: boolean;
 }

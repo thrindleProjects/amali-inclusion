@@ -15,9 +15,9 @@ const FloatSettingsLayout: React.FC<FloatSettingsLayoutProps> = ({
 			frequency: string;
 			id: number;
 			duration: string;
+			isActive: boolean;
 		}[]
 	>(settings);
-
 	const [modals, setModals] = useState<{
 		edit: boolean;
 		create: boolean;
@@ -40,17 +40,15 @@ const FloatSettingsLayout: React.FC<FloatSettingsLayoutProps> = ({
 		frequency: string;
 		id: number;
 		duration: string;
+		isActive: boolean;
 	}) => {
-		let updated = false;
 		setLoanTypes((old) => {
-			const newState = old;
-			for (let i = 0; i < newState.length && !updated; i++) {
-				const element = newState[i];
-				if (element && element.id === loan.id) {
-					newState[i] = loan;
-					updated = true;
+			const newState = old.map(item => {
+				if(item.id === loan.id) {
+					return loan;
 				}
-			}
+				return item;
+			});
 			return newState;
 		});
 	};
@@ -111,6 +109,7 @@ const FloatSettingsLayout: React.FC<FloatSettingsLayoutProps> = ({
 		frequency: string;
 		id: number;
 		duration: string;
+		isActive: boolean;
 	}) => {
 		setLoanTypes((old) => old.concat(type));
 	};
@@ -148,6 +147,7 @@ const FloatSettingsLayout: React.FC<FloatSettingsLayoutProps> = ({
 							key={loan.id}
 							loan={loan}
 							handleModals={handleModals}
+							toggleActive={handleEditLoanSettings}
 						/>
 					);
 				})}

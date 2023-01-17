@@ -4,6 +4,7 @@ export interface LoanSettingsProps {
 		frequency: string;
 		id: number;
 		duration: string;
+		isActive: boolean;
 	};
 	handleModals(
 		type: HandleModal,
@@ -12,8 +13,16 @@ export interface LoanSettingsProps {
 			frequency: string;
 			id: number;
 			duration: string;
+			isActive: boolean;
 		}
 	): void;
+	toggleActive(loan: {
+		interest: number;
+		frequency: string;
+		id: number;
+		duration: string;
+		isActive: boolean;
+	}): void;
 }
 
 export type HandleModal =

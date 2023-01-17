@@ -1220,23 +1220,27 @@ export const loanSettingsData = [
 		duration: "1 week",
 		interest: 12,
 		frequency: "Daily",
+		isActive: true,
 	},
 	{
 		id: 2,
 		duration: "1 month",
 		interest: 12,
 		frequency: "Weekly",
+		isActive: true,
 	},
 	{
 		id: 3,
 		duration: "3 months",
 		interest: 12,
 		frequency: "Monthly",
+		isActive: true,
 	},
 	{
 		id: 4,
 		duration: "6 months",
 		interest: 12,
 		frequency: "Bi-monthly",
+		isActive: true,
 	},
 ];

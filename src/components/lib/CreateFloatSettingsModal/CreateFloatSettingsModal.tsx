@@ -18,7 +18,7 @@ const CreateFloatSettingsModal: React.FC<CreateFloatSettingsModalProps> = ({
 		validationSchema,
 		onSubmit: (values) => {
 			const interest = parseInt(String(values.interest));
-			onSubmit({ ...values, id: Date.now(), interest });
+			onSubmit({ ...values, id: Date.now(), interest, isActive: false });
 			handleCloseModal();
 		},
 	});
