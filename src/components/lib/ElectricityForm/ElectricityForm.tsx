@@ -176,6 +176,7 @@ const ElectricityForm = () => {
 			<button
 				className="w-full text-center bg-amali-green text-[#EDF8F7] mt-4 rounded-md py-4 font-bold hover:bg-opacity-80"
 				onClick={handleModalOpen}
+				type="button"
 			>
 				Next
 			</button>

@@ -15,7 +15,7 @@ const ConfirmPaymentPlan: React.FC<ConfirmPaymentPlanProps> = ({
 			initial="initial"
 			animate="animate"
 			exit="exit"
-			className="w-full h-max gap-4"
+			className="flex flex-col items-center justify-start w-full h-full gap-4"
 		>
 			<div className="w-full h-max md:w-2/3 xl:w-1/2 bg-white drop-shadow-lg shadow-lg px-2 md:px-4 lg:px-6 py-8 mx-auto">
 				<section className="bg-[#6C6C6C] text-amali-bg w-full flex flex-col md:flex-row justify-between p-4 rounded-md">

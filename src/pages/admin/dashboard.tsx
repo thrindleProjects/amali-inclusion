@@ -13,8 +13,9 @@ import PrimaryButton from "@/components/lib/Button/PrimaryButton";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import MainContentLayout from "@/layout/MainContentLayout";
+import { NextPage } from "next";
 
-const dashboard = () => {
+const Dashboard: NextPage = () => {
 	const formik = useFormik({
 		initialValues: { fromDate: "", toDate: "", type: "" },
 		validationSchema: Yup.object({
@@ -124,4 +125,4 @@ const dashboard = () => {
 	);
 };
 
-export default dashboard;
+export default Dashboard;

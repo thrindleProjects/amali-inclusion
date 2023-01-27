@@ -30,7 +30,7 @@ const ChoosePaymentPlan: React.FC<ChoosePaymentPlanProps> = ({
 			initial="initial"
 			animate="animate"
 			exit="exit"
-			className="flex flex-col items-center justify-center w-full h-full gap-4 relative"
+			className="flex flex-col items-center justify-start w-full h-full gap-4 relative"
 		>
 			<PaymentPlansList changePlan={changePlan} activePlan={activePlan} />
 			<AnimatePresence mode="wait" initial={false}>

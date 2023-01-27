@@ -50,6 +50,8 @@ const CableForm = () => {
 		},
 	};
 
+	const cableProvider = formik.values[CONSTANTS.CABLE_PROVIDERS];
+
 	useEffect(() => {
 		const selectedProvider = formik.values[CONSTANTS.CABLE_PROVIDERS];
 		if (selectedProvider === "") {
@@ -57,7 +59,7 @@ const CableForm = () => {
 			return;
 		}
 		setActivePlans(cablePlans[selectedProvider]);
-	}, [formik.values[CONSTANTS.CABLE_PROVIDERS]]);
+	}, [formik.values, cableProvider]);
 
 	return (
 		<form className="pb-6" onSubmit={formik.handleSubmit}>
@@ -118,7 +120,7 @@ const CableForm = () => {
 							transition={{ ease: "easeOut", duration: 0.5 }}
 							className="text-red-300 text-xs font-semibold pt-1 pl-1"
 						>
-							Please select a cable provider
+							Please select a cable provider and cable plan
 						</motion.div>
 					)}
 				</AnimatePresence>
@@ -159,7 +161,7 @@ const CableForm = () => {
 			</div>
 			<button
 				className="w-full text-center bg-amali-green text-[#EDF8F7] mt-4 rounded-md py-4 font-bold hover:bg-opacity-80"
-				// disabled={true}
+				type="submit"
 			>
 				Next
 			</button>

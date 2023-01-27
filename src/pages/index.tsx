@@ -26,7 +26,7 @@ export const Home: NextPageWithLayout = () => {
 		// }else{
 		// 	router.push("/login");
 		// }
-	}, []);
+	}, [router]);
 
 	return <></>;
 };

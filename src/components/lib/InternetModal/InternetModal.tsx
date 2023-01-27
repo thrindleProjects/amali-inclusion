@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { InternetModalProps } from "./types";
 import PinInput from "react-pin-input";
@@ -17,8 +17,17 @@ const InternetModal: React.FC<InternetModalProps> = ({
 	pinErrorText,
 	pinError,
 }) => {
+	const [hidePin, setHidePin] = useState<boolean>(false);
+
 	const handleChange = (value: string) => {
 		onChange(CONSTANTS.PIN, value);
+	};
+
+	const handleHidePin = (
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
+		e.preventDefault();
+		setHidePin((old) => !old);
 	};
 
 	return (
@@ -37,12 +46,13 @@ const InternetModal: React.FC<InternetModalProps> = ({
 				},
 				content: {
 					outline: "none",
+					backgroundColor: "white",
 				},
 			}}
 			shouldCloseOnOverlayClick={true}
 			shouldReturnFocusAfterClose={true}
 			ariaHideApp={false}
-			className="bg-white rounded-md flex-shrink-0 w-[90%] md:w-4/6 lg:w-2/6 drop-shadow-2xl"
+			className="rounded-md flex-shrink-0 w-[90%] md:w-4/6 lg:w-2/6 drop-shadow-2xl"
 		>
 			<form onSubmit={onSubmit}>
 				<div className="text-amali-grey text-opacity-90">
@@ -72,10 +82,28 @@ const InternetModal: React.FC<InternetModalProps> = ({
 					<p className="text-xs md:text-sm font-medium pb-1 text-text-color-a">
 						Please enter your 4-digit pin
 					</p>
+					<div className="flex gap-2 text-xs md:text-sm font-medium pb-1 text-text-color-a">
+						<button
+							className={`ml-auto h-4 lg:h-5 aspect-video p-[2px] lg:p-1 flex items-center transition-all duration-500 ${
+								hidePin
+									? "bg-amali-green justify-end"
+									: "bg-amali-grey justify-start"
+							}`}
+							onClick={handleHidePin}
+							type={"button"}
+							title="Hide Pin"
+						>
+							<motion.div
+								className={"w-[45%] h-full bg-amali-bg"}
+								layout
+							></motion.div>
+						</button>
+						<span>Hide Pin</span>
+					</div>
 					<div className="w-full lg:w-3/4 mx-auto">
 						<PinInput
 							length={4}
-							secret={true}
+							secret={hidePin}
 							type={"numeric"}
 							focus={true}
 							style={{
@@ -94,6 +122,7 @@ const InternetModal: React.FC<InternetModalProps> = ({
 								fontSize: "1.5rem",
 								color: "#88c3c1",
 								borderBottom: "2px solid #88c3c1",
+								backgroundColor: "transparent",
 							}}
 							placeholder="*"
 							inputFocusStyle={{
