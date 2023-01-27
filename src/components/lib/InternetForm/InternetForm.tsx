@@ -54,6 +54,8 @@ const InternetForm = () => {
 		},
 	});
 
+	const { setFieldTouched } = formik;
+
 	const handleModalOpen = async (
 		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
 	) => {
@@ -86,6 +88,7 @@ const InternetForm = () => {
 		e: React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>
 	) => {
 		e.preventDefault();
+		formik.setFieldValue(CONSTANTS.PIN, "");
 		setIsOpen(false);
 	};
 
@@ -99,123 +102,126 @@ const InternetForm = () => {
 		await formik.setFieldValue(CONSTANTS.VALUE, value, shouldValidate);
 		await formik.setFieldTouched(CONSTANTS.VALUE, true, shouldValidate);
 	};
-
+	const networkProvider = formik.values[CONSTANTS.NETWORK_PROVIDER];
 	useEffect(() => {
-		const selectedProvider = formik.values[CONSTANTS.NETWORK_PROVIDER];
+		const selectedProvider = networkProvider;
 		if (selectedProvider === "") {
 			setActiveBundles([]);
 			return;
 		}
 		setActiveBundles(dataPlans[selectedProvider]);
-	}, [formik.values[CONSTANTS.NETWORK_PROVIDER]]);
+	}, [networkProvider]);
 
 	useEffect(() => {
-		formik.setFieldTouched(CONSTANTS.NUMBER_OWN, true, true);
-	}, []);
+		setFieldTouched(CONSTANTS.NUMBER_OWN, true, true);
+	}, [setFieldTouched]);
 
 	return (
-		<form onSubmit={formik.handleSubmit} className="pb-6">
-			<Select
-				id={CONSTANTS.NUMBER_OWN}
-				onChange={formik.handleChange}
-				options={airtimeNumberOptions}
-				value={formik.values[CONSTANTS.NUMBER_OWN]}
-				placeholder={"Select one"}
-				label={"Whose number do you want to send the airtime to?"}
-				name={CONSTANTS.NUMBER_OWN}
-				onBlur={formik.handleBlur}
-				error={
-					formik.errors[CONSTANTS.NUMBER_OWN] &&
-					formik.touched[CONSTANTS.NUMBER_OWN]
-				}
-				errorText={formik.errors[CONSTANTS.NUMBER_OWN]}
-				required={true}
-			/>
-			<Select
-				id={CONSTANTS.NETWORK_PROVIDER}
-				onChange={formik.handleChange}
-				options={networtProviderOptions}
-				value={formik.values[CONSTANTS.NETWORK_PROVIDER]}
-				placeholder={"Select a network provider"}
-				name={CONSTANTS.NETWORK_PROVIDER}
-				onBlur={formik.handleBlur}
-				error={
-					formik.errors[CONSTANTS.NETWORK_PROVIDER] &&
-					formik.touched[CONSTANTS.NETWORK_PROVIDER]
-				}
-				label="Select a network provider"
-				errorText={formik.errors[CONSTANTS.NETWORK_PROVIDER]}
-				required={true}
-			/>
-			<div className="flex gap-2">
-				<div className="flex-shrink-0 text-xs xl:text-sm h-max bg-[#88c3c120] py-3 lg:py-4 xl:py-5 w-max px-3 border-b-2 border-[#88c3c1] cursor-default">
-					🇳🇬 +234
-				</div>
-				<Input
-					id={CONSTANTS.RECIPIENTS_PHONE}
-					type={CONSTANTS.TEXT}
-					value={formik.values[CONSTANTS.RECIPIENTS_PHONE]}
-					placeholder="Enter phone number"
+		<>
+			<form onSubmit={formik.handleSubmit} className="pb-6">
+				<Select
+					id={CONSTANTS.NUMBER_OWN}
 					onChange={formik.handleChange}
+					options={airtimeNumberOptions}
+					value={formik.values[CONSTANTS.NUMBER_OWN]}
+					placeholder={"Select one"}
+					label={"Whose number do you want to send the airtime to?"}
+					name={CONSTANTS.NUMBER_OWN}
 					onBlur={formik.handleBlur}
 					error={
-						formik.errors[CONSTANTS.RECIPIENTS_PHONE] &&
-						formik.touched[CONSTANTS.RECIPIENTS_PHONE]
+						formik.errors[CONSTANTS.NUMBER_OWN] &&
+						formik.touched[CONSTANTS.NUMBER_OWN]
 					}
-					errorText={formik.errors[CONSTANTS.RECIPIENTS_PHONE]}
+					errorText={formik.errors[CONSTANTS.NUMBER_OWN]}
 					required={true}
 				/>
-			</div>
-			{!!activeBundles.length && (
-				<div>
-					<p className="text-xs md:text-sm font-medium pb-1 text-text-color-a">
-						Select Internet Bundle
-					</p>
-					<motion.div
-						key={formik.values[CONSTANTS.NETWORK_PROVIDER]}
-						className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4"
-						variants={variants}
-						animate={"show"}
-						initial={"hide"}
-					>
-						{activeBundles.map((bundle, index) => {
-							return (
-								<BundleButton
-									key={index}
-									data={bundle}
-									selected={
-										bundle.amount === formik.values[CONSTANTS.AMOUNT] &&
-										bundle.to_pay === formik.values[CONSTANTS.VALUE]
-									}
-									onClick={handleBundleButtonClick}
-								/>
-							);
-						})}
-					</motion.div>
-					<AnimatePresence>
-						{((formik.errors[CONSTANTS.AMOUNT] &&
-							formik.touched[CONSTANTS.AMOUNT]) ||
-							(formik.errors[CONSTANTS.VALUE] &&
-								formik.touched[CONSTANTS.VALUE])) && (
-							<motion.div
-								initial={{ opacity: 0, x: 20 }}
-								animate={{ opacity: 1, x: 0 }}
-								exit={{ opacity: 0, x: 100 }}
-								transition={{ ease: "easeOut", duration: 0.5 }}
-								className="text-red-300 text-xs font-semibold pt-1 pl-1"
-							>
-								Please select an internet bundle
-							</motion.div>
-						)}
-					</AnimatePresence>
+				<Select
+					id={CONSTANTS.NETWORK_PROVIDER}
+					onChange={formik.handleChange}
+					options={networtProviderOptions}
+					value={formik.values[CONSTANTS.NETWORK_PROVIDER]}
+					placeholder={"Select a network provider"}
+					name={CONSTANTS.NETWORK_PROVIDER}
+					onBlur={formik.handleBlur}
+					error={
+						formik.errors[CONSTANTS.NETWORK_PROVIDER] &&
+						formik.touched[CONSTANTS.NETWORK_PROVIDER]
+					}
+					label="Select a network provider"
+					errorText={formik.errors[CONSTANTS.NETWORK_PROVIDER]}
+					required={true}
+				/>
+				<div className="flex gap-2">
+					<div className="flex-shrink-0 text-xs xl:text-sm h-max bg-[#88c3c120] py-3 lg:py-4 xl:py-5 w-max px-3 border-b-2 border-[#88c3c1] cursor-default">
+						🇳🇬 +234
+					</div>
+					<Input
+						id={CONSTANTS.RECIPIENTS_PHONE}
+						type={CONSTANTS.TEXT}
+						value={formik.values[CONSTANTS.RECIPIENTS_PHONE]}
+						placeholder="Enter phone number"
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
+						error={
+							formik.errors[CONSTANTS.RECIPIENTS_PHONE] &&
+							formik.touched[CONSTANTS.RECIPIENTS_PHONE]
+						}
+						errorText={formik.errors[CONSTANTS.RECIPIENTS_PHONE]}
+						required={true}
+					/>
 				</div>
-			)}
-			<button
-				className="w-full text-center bg-amali-green text-[#EDF8F7] mt-4 rounded-md py-4 font-bold hover:bg-opacity-80"
-				onClick={handleModalOpen}
-			>
-				Next
-			</button>
+				{!!activeBundles.length && (
+					<div>
+						<p className="text-xs md:text-sm font-medium pb-1 text-text-color-a">
+							Select Internet Bundle
+						</p>
+						<motion.div
+							key={formik.values[CONSTANTS.NETWORK_PROVIDER]}
+							className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4"
+							variants={variants}
+							animate={"show"}
+							initial={"hide"}
+						>
+							{activeBundles.map((bundle, index) => {
+								return (
+									<BundleButton
+										key={index}
+										data={bundle}
+										selected={
+											bundle.amount === formik.values[CONSTANTS.AMOUNT] &&
+											bundle.to_pay === formik.values[CONSTANTS.VALUE]
+										}
+										onClick={handleBundleButtonClick}
+									/>
+								);
+							})}
+						</motion.div>
+						<AnimatePresence>
+							{((formik.errors[CONSTANTS.AMOUNT] &&
+								formik.touched[CONSTANTS.AMOUNT]) ||
+								(formik.errors[CONSTANTS.VALUE] &&
+									formik.touched[CONSTANTS.VALUE])) && (
+								<motion.div
+									initial={{ opacity: 0, x: 20 }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: 100 }}
+									transition={{ ease: "easeOut", duration: 0.5 }}
+									className="text-red-300 text-xs font-semibold pt-1 pl-1"
+								>
+									Please select an internet bundle
+								</motion.div>
+							)}
+						</AnimatePresence>
+					</div>
+				)}
+				<button
+					className="w-full text-center bg-amali-green text-[#EDF8F7] mt-4 rounded-md py-4 font-bold hover:bg-opacity-80"
+					onClick={handleModalOpen}
+					type="submit"
+				>
+					Next
+				</button>
+			</form>
 			<InternetModal
 				isOpen={isOpen}
 				handleHideModal={handleHideModal}
@@ -227,7 +233,7 @@ const InternetForm = () => {
 				pinError={formik.errors[CONSTANTS.PIN] && formik.touched[CONSTANTS.PIN]}
 				pinErrorText={formik.errors[CONSTANTS.PIN]}
 			/>
-		</form>
+		</>
 	);
 };
 

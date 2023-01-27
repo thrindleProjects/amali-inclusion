@@ -87,6 +87,10 @@ label {
 	grid-template-rows: auto 1fr;
 }
 
+.layout__side_bar__wrapper {
+		@apply hidden lg:block;
+}
+
 .layout__side_bar {
 	@apply h-screen;
 	@apply overflow-y-auto;

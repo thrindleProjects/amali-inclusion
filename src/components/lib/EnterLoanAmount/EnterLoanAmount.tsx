@@ -24,7 +24,7 @@ const EnterLoanAmount: React.FC<EnterLoanAmountProps> = ({
 			initial="initial"
 			animate="animate"
 			exit="exit"
-			className="flex flex-col items-center justify-center w-full h-full gap-4"
+			className="flex flex-col items-center justify-start w-full h-full gap-4"
 		>
 			<div className="w-full md:w-2/3 xl:w-1/2 flex flex-col items-center justify-center gap-4">
 				<form

@@ -20,6 +20,7 @@ const AmountButton: React.FC<AmountButtonProps> = ({
 			selected={selected}
 			className="flex flex-col items-center p-4 text-xs xl:text-sm transition-all duration-300"
 			onClick={handleOnClick}
+			type="button"
 		>
 			<span>₦{amount}</span>
 			<span>pay ₦{to_pay}</span>

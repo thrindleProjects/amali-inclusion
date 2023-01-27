@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { AirtimeModalProps } from "./types";
 import PinInput from "react-pin-input";
@@ -16,8 +16,17 @@ const AirtimeModal: React.FC<AirtimeModalProps> = ({
 	pinErrorText,
 	pinError,
 }) => {
+	const [hidePin, setHidePin] = useState<boolean>(false);
+
 	const handleChange = (value: string) => {
 		onChange(CONSTANTS.PIN, value);
+	};
+
+	const handleHidePin = (
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
+		e.preventDefault();
+		setHidePin((old) => !old);
 	};
 
 	return (
@@ -36,14 +45,15 @@ const AirtimeModal: React.FC<AirtimeModalProps> = ({
 				},
 				content: {
 					outline: "none",
+					backgroundColor: "white",
 				},
 			}}
 			shouldCloseOnOverlayClick={true}
 			shouldReturnFocusAfterClose={true}
 			ariaHideApp={false}
-			className="bg-white rounded-md flex-shrink-0 w-[90%] md:w-4/6 lg:w-2/6 drop-shadow-2xl"
+			className="rounded-md flex-shrink-0 w-[90%] md:w-4/6 lg:w-2/6 drop-shadow-2xl"
 		>
-			<form onSubmit={onSubmit}>
+			<form onSubmit={onSubmit} action="authenticate">
 				<div className="text-amali-grey text-opacity-90">
 					<section className="flex-shrink-0 border-b border-b-amali-grey border-opacity-40 flex justify-between items-center py-3 px-4">
 						<h1 className="text-bold text-sm md:text-lg lg:text-xl p-3">
@@ -51,7 +61,7 @@ const AirtimeModal: React.FC<AirtimeModalProps> = ({
 						</h1>
 						<Icon
 							icon="ic:outline-close"
-							className="text-amali-grey tex- lg:text-2xl"
+							className="text-amali-grey tex- lg:text-2xl cursor-pointer"
 							onClick={handleHideModal}
 						/>
 					</section>
@@ -71,10 +81,28 @@ const AirtimeModal: React.FC<AirtimeModalProps> = ({
 					<p className="text-xs md:text-sm font-medium pb-1 text-text-color-a">
 						Please enter your 4-digit pin
 					</p>
+					<div className="flex gap-2 text-xs md:text-sm font-medium pb-1 text-text-color-a">
+						<button
+							className={`ml-auto h-4 lg:h-5 aspect-video p-[2px] lg:p-1 flex items-center transition-all duration-500 ${
+								hidePin
+									? "bg-amali-green justify-end"
+									: "bg-amali-grey justify-start"
+							}`}
+							onClick={handleHidePin}
+							type={"button"}
+							title="Hide Pin"
+						>
+							<motion.div
+								className={"w-[45%] h-full bg-amali-bg"}
+								layout
+							></motion.div>
+						</button>
+						<span>Hide Pin</span>
+					</div>
 					<div className="w-full lg:w-3/4 mx-auto">
 						<PinInput
 							length={4}
-							secret={true}
+							secret={hidePin}
 							type={"numeric"}
 							focus={true}
 							style={{
@@ -93,6 +121,7 @@ const AirtimeModal: React.FC<AirtimeModalProps> = ({
 								fontSize: "1.5rem",
 								color: "#88c3c1",
 								borderBottom: "2px solid #88c3c1",
+								backgroundColor: "transparent",
 							}}
 							placeholder="*"
 							inputFocusStyle={{
@@ -115,7 +144,10 @@ const AirtimeModal: React.FC<AirtimeModalProps> = ({
 							)}
 						</AnimatePresence>
 					</div>
-					<button className="w-full text-center bg-amali-green text-[#EDF8F7] mt-4 rounded-md py-4 font-bold hover:bg-opacity-80">
+					<button
+						className="w-full text-center bg-amali-green text-[#EDF8F7] mt-4 rounded-md py-4 font-bold hover:bg-opacity-80"
+						type="submit"
+					>
 						Continue
 					</button>
 				</div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode, ReactElement } from "react";
+import React, { ReactNode, ReactElement, useState, useEffect } from "react";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
@@ -29,7 +29,6 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
 	useEffect(() => {
 		setShowChild(true);
 	}, []);
-
 	if (!showChild && process.env.NODE_ENV === "development") {
 		return null;
 	}

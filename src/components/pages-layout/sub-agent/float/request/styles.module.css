@@ -1,0 +1,5 @@
+.float_wrapper {
+	@apply h-max;
+	@apply grid grid-cols-1 gap-8;
+	grid-template-rows: auto 1fr;
+}

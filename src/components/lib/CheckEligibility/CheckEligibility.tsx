@@ -28,7 +28,7 @@ const CheckEligibility: React.FC<CheckEligibilityProps> = ({
 			initial="initial"
 			animate="animate"
 			exit="exit"
-			className="flex flex-col items-center justify-center w-full h-full gap-4 mx-auto"
+			className="flex flex-col items-center justify-start w-full h-full gap-4 mx-auto"
 		>
 			<div className="w-full md:w-2/3 xl:w-1/2 flex flex-col items-center justify-center gap-4">
 				<section className="bg-white drop-shadow-lg shadow-lg p-6 text-center w-full">

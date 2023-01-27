@@ -19,6 +19,7 @@ const AmountButton: React.FC<CablePlansButtonProps> = ({
 			selected={selected}
 			className="flex flex-col items-center p-4 text-xs xl:text-sm transition-all duration-300"
 			onClick={handleOnClick}
+			type="button"
 		>
 			<span>{name}</span>
 			<span>pay ₦{value}</span>

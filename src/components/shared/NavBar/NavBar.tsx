@@ -25,7 +25,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 	return (
 		<div className="layout__top_nav">
 			{largeScreen && (
-				<div className="flex gap-4 items-center ml-auto p-4 w-max">
+				<div className="hidden lg:flex gap-4 items-center ml-auto p-4 w-max">
 					<Icon icon="material-symbols:search" className="text-2xl" />
 
 					<div
@@ -44,7 +44,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 			)}
 
 			{!largeScreen && (
-				<div className="w-full relative">
+				<div className="block lg:hidden w-full relative">
 					<div className="flex justify-between items-center w-full py-4 px-7">
 						<button onClick={() => handleToggleSidebar(isOpen)}>
 							<Icon
@@ -52,7 +52,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleSidebar, isOpen }) => {
 								className="text-amali-green text-2xl "
 							/>
 						</button>
-						<div className="w-[50%]">
+						<div className="w-[50%] flex items-center justify-center">
 							<Image
 								width={150}
 								height={150}

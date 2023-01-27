@@ -16,6 +16,7 @@ const AmountButton: React.FC<AmountButtonProps> = ({
 	};
 	return (
 		<BundleBtn
+			type="button"
 			selected={selected}
 			className="flex flex-col items-center p-4 text-xs xl:text-sm transition-all duration-300"
 			onClick={handleOnClick}

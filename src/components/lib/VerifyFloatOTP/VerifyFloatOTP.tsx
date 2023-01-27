@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { VerifyFloatOTPProps } from "./types";
 import { AnimatePresence, motion } from "framer-motion";
 import PinInput from "react-pin-input";
@@ -10,6 +10,8 @@ const VerifyFloatOTP: React.FC<VerifyFloatOTPProps> = ({
 	variants,
 	changeStage,
 }) => {
+	const [hidePin, setHidePin] = useState<boolean>(false);
+
 	const formik = useFormik({
 		initialValues,
 		validationSchema,
@@ -18,6 +20,13 @@ const VerifyFloatOTP: React.FC<VerifyFloatOTPProps> = ({
 			changeStage();
 		},
 	});
+
+	const handleHidePin = (
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
+		e.preventDefault();
+		setHidePin((old) => !old);
+	};
 
 	const handleChange = (value: string) => {
 		formik.setFieldValue(CONSTANTS.PIN, value, true);
@@ -29,7 +38,7 @@ const VerifyFloatOTP: React.FC<VerifyFloatOTPProps> = ({
 			initial={"initial"}
 			animate={"animate"}
 			exit={"exit"}
-			className="flex flex-col items-center justify-center w-full h-full gap-4"
+			className="flex flex-col items-center justify-start w-full h-full gap-4"
 		>
 			<div className="w-full md:w-2/3 xl:w-1/2 flex flex-col items-center justify-center gap-4">
 				<section className="bg-white drop-shadow-lg shadow-lg p-6 w-full">
@@ -43,7 +52,7 @@ const VerifyFloatOTP: React.FC<VerifyFloatOTPProps> = ({
 						<div className="w-full lg:w-3/4 mx-auto">
 							<PinInput
 								length={4}
-								secret={true}
+								secret={hidePin}
 								type={"numeric"}
 								focus={true}
 								style={{
@@ -62,6 +71,7 @@ const VerifyFloatOTP: React.FC<VerifyFloatOTPProps> = ({
 									margin: "0",
 									fontSize: "1.5rem",
 									color: "#88c3c1",
+									backgroundColor: "transparent",
 								}}
 								placeholder="*"
 								inputFocusStyle={{
@@ -84,11 +94,33 @@ const VerifyFloatOTP: React.FC<VerifyFloatOTPProps> = ({
 									</motion.div>
 								)}
 							</AnimatePresence>
-							<button className="w-full mx-auto mt-4 lg:mt-8 text-center bg-amali-green text-[#EDF8F7] rounded-md py-2 lg:py-4 font-bold hover:bg-opacity-80 text-xs md:text-sm lg:text-sm xl:text-base">
+							<div className="flex gap-2 text-xs md:text-sm font-medium pb-1 text-text-color-a mt-4">
+								<button
+									className={`ml-auto h-4 lg:h-5 aspect-video p-[2px] lg:p-1 flex items-center transition-all duration-500 ${
+										hidePin
+											? "bg-amali-green justify-end"
+											: "bg-amali-grey justify-start"
+									}`}
+									onClick={handleHidePin}
+									type={"button"}
+									title="Hide Pin"
+								>
+									<motion.div
+										className={"w-[45%] h-full bg-amali-bg"}
+										layout
+									></motion.div>
+								</button>
+								<span>Hide Pin</span>
+							</div>
+							<button
+								className="w-full mx-auto mt-4 lg:mt-8 text-center bg-amali-green text-[#EDF8F7] rounded-md py-2 lg:py-4 font-bold hover:bg-opacity-80 text-xs md:text-sm lg:text-sm xl:text-base"
+								type="submit"
+							>
 								Verify
 							</button>
 							<p className="text-xs lg:text-sm w-full text-end mt-2 text-amali-grey">
-								Didn&apos;t receive code? <span className="text-amali-green cursor-pointer">Resend</span>
+								Didn&apos;t receive code?{" "}
+								<span className="text-amali-green cursor-pointer">Resend</span>
 							</p>
 						</div>
 					</form>
